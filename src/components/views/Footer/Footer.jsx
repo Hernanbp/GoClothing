@@ -1,3 +1,5 @@
+import './styles.css'
+
 
 export const Footer = () => {
 
@@ -8,16 +10,16 @@ export const Footer = () => {
                 <div>
 
                     <div>
-                        <img src="../../../img/logo.png" alt="coral_logo" />
+                        <img src="../assets/logo.png" alt="coral_logo" />
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
                         </p>
                         <div>
-                            <img src="./img/social-icons/twitter.png" alt="link_facebook" />
-                            <img src="../../../img/social-icons/twitter.png" alt="link_twitter" />
-                            <img src="../../../img/social-icons/linkedin.png" alt="link_linkedin" />
-                            <img src="../../../img/social-icons/dribbble.png" alt="link_dribbble" />
+                            <img src="../assets/social-icons/facebook.png" alt="link_facebook" />
+                            <img src="../assets/social-icons/twitter.png" alt="link_twitter" />
+                            <img src="../assets/social-icons/linkedin.png" alt="link_linkedin" />
+                            <img src="../assets/social-icons/dribbble.png" alt="link_dribbble" />
                         </div>
                     </div>
 
@@ -54,10 +56,10 @@ export const Footer = () => {
             <section className="more">
                 <div>
                     <label>© 2022 Coral , Inc.</label>
-                    <img src="../../../img/icons_payment 1.png" alt="icons_payment" />
+                    <img src="../assets/icons_payment 1.png" alt="icons_payment" />
                     <div>
                         <label>Scroll to top</label>
-                        <img src="../../../img/Arrow_top.png" alt="arrow_top" />
+                        <img src="../assets/Arrow_top.png" alt="arrow_top" />
                     </div>
                 </div>
             </section>
