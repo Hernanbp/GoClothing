@@ -1,9 +1,12 @@
 import React from 'react'
+import "./auth.styles.css"
 
-function Login() {
+function Register() {
   return (
-    <div>Register</div>
+    <div>
+      <h2>Register</h2>
+    </div>
   )
 }
 
-export default Login
+export default Register
