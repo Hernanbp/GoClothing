@@ -1,0 +1,12 @@
+
+
+.data {
+    background-color: #ffff;
+    padding-top: 140px;
+    padding-bottom: 90px;
+}
+
+.data > div {
+    display: flex;
+    max-width: 1300px;
+}
