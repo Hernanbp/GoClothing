@@ -19,9 +19,9 @@ const Register = () => {
  }
 
  const validationSchema = Yup.object().shape({
-    email: Yup.string().email("Email inválido").required("Campo obligatorio"),
-    password: Yup.string().min(6, "6 caracteres mínimo").required("Campo obligatorio"),
-    repeatPassword: Yup.string().min(6, "6 caracteres mínimo").required("Campo obligatorio")
+    email: Yup.string().email("* Email inválido").required("* Campo obligatorio"),
+    password: Yup.string().min(6, "* Debe contener 6 caracteres mínimo").required("* Campo obligatorio"),
+    repeatPassword: Yup.string().min(6, "* Debe contener 6 caracteres mínimo").required("* Campo obligatorio")
  });
 
  const onSubmit = () => {
@@ -55,11 +55,13 @@ const Register = () => {
           <div> 
             <label>Repetir contraseña</label>
             <input onChange={handleChange} value={values.repeatPassword} name="repeatPassword" type="password"/>
-            {errors.password && <div className="error-color">{errors.password}</div>}
+            {errors.repeatPassword && <div className="error-color">{errors.repeatPassword}</div>}
           </div>
           <button type="submit">Iniciar Sesión</button>
           <div>
-            <Link to="/"> ¿Ya tenes cuenta? ¡Inicia Sesión..! </Link>
+            <p>
+                ¿Ya tenes cuenta? <Link to="/">¡Inicia Sesión..!</Link>
+            </p>
           </div>
         </form>
     </div>

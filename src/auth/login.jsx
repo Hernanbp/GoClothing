@@ -18,8 +18,8 @@ const Login = () => {
  }
 
  const validationSchema = Yup.object().shape({
-    email: Yup.string().email("Email válido").required("Campo obligatorio"),
-    password: Yup.string().min(6, "6 caracteres mínimo").required("Campo obligatorio")
+    email: Yup.string().email("Email válido").required("* Campo obligatorio"),
+    password: Yup.string().min(6, "* Debe contener 6 caracteres mínimo").required("* Campo obligatorio")
  });
 
  const onSubmit = () => {
@@ -40,17 +40,21 @@ const Login = () => {
           <h1> Iniciar Sesión</h1>
           <div>
             <label>Email</label>
-            <input onChange={handleChange} value={values.email} name="email" />
-          </div>
+            <input onChange={handleChange} value={values.email} name="email" /> 
             {errors.email && <div className="error-color">{errors.email}</div>}
+          </div>
+           
           <div> 
             <label>Contraseña</label>
-            <input onChange={handleChange} value={values.password} name="password" type="password"/>
-          </div>
+            <input onChange={handleChange} value={values.password} name="password" type="password"/> 
             {errors.password && <div className="error-color">{errors.password}</div>}
+          </div>
+           
           <button type="submit">Iniciar Sesión</button>
           <div>
-            <Link to="/register"> ¿No tenes cuenta? ¡Crea Una! </Link>
+            <p>
+              ¿No tenes cuenta?<Link to="/register">¡Crea Una!</Link>
+            </p>
           </div>
         </form>
     </div>

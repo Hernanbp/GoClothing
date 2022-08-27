@@ -7,10 +7,11 @@
 
 .auth > form {
     width: 450px;
-    border: 1px solid lightgrey;
+    border: 2px solid lightgrey;
     border-radius: var(--global-radius);
     padding: 1.25em;
     box-shadow: var(--global-color-4) 0px 48px 100px 0px;
+    background-color: var(--global-color-bg);
 }
 .auth > form > h1{
     padding: 0.6em 0;
