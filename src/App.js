@@ -1,14 +1,19 @@
-import {Routes, Route} from "react-router-dom"
+//dependencies
+import { Routes, Route } from "react-router-dom";
+//components
+import Login from "./auth/login";
+import Register from "./auth/Register";
+import Home from "./components/Home/Home";
 
 const App = () => {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/login" element={<Login />} />
+      <Route path="/login" element={<Home />} />
+      <Route path="/" element={<Login />} />
       <Route path="/register" element={<Register />} />
-      <Route to="/cart" element={<Cart />} />
+      <Route to="/cart" element={"CART"} />
     </Routes>
-  )
-}
+  );
+};
 
-export default App
+export default App;
