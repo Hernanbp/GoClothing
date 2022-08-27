@@ -1,5 +1,12 @@
+import React from 'react'
+import { Footer } from './components/views/Footer/Footer'
+import './styles.css'
+
 const App = () => {
-  return <h1>GoClothing</h1>
+
+  return (
+    <Footer />
+  )
 }
 
 export default App
