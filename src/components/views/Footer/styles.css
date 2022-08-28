@@ -4,9 +4,51 @@
     background-color: #ffff;
     padding-top: 140px;
     padding-bottom: 90px;
+    display: flex;
+    justify-content: center;
 }
 
 .data > div {
     display: flex;
     max-width: 1300px;
+    width: 88%;
+    gap: 20px;
+    justify-content: space-around;
 }
+
+
+.data > div > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.data > div > div > h4 {
+    margin-bottom: 25px;
+}
+
+
+.social {
+    max-width: 367px;
+}
+
+.social p {
+    margin-bottom: 39px;
+}
+
+.social > div {
+    display: flex;
+    gap: 36px;
+}
+
+.social > img {
+    width: 180px;
+    height: 34px;
+    margin-bottom: 30px;
+}
+
+
+
+
+
+
+

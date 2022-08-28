@@ -9,7 +9,7 @@ export const Footer = () => {
             <section className="data">
                 <div>
 
-                    <div>
+                    <div className='social'>
                         <img src="../assets/logo.png" alt="coral_logo" />
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -25,29 +25,35 @@ export const Footer = () => {
 
                     <div className="catalog">
                         <h4>CATALOG</h4>
-                        <label>Necklaces</label>
-                        <label>hoodies</label>
-                        <label>Jewelry Box</label>
-                        <label>t-shirt</label>
-                        <label>jacket</label>
+                        <ul>
+                            <li>Necklaces</li>
+                            <li>hoodies</li>
+                            <li>Jewelry Box</li>
+                            <li>t-shirt</li>
+                            <li>jacket</li>
+                        </ul>
                     </div>
 
                     <div className="about-us">
                         <h4>ABOUT US</h4>
-                        <label>Our Producers</label>
-                        <label>Sitemap</label>
-                        <label>FAQ</label>
-                        <label>About Us</label>
-                        <label>Terms & Conditions</label>
+                        <ul>
+                            <li>Our Producers</li>
+                            <li>Sitemap</li>
+                            <li>FAQ</li>
+                            <li>About Us</li>
+                            <li>Terms & Conditions</li>
+                        </ul>
                     </div>
 
                     <div className="customer-services">
                         <h4>CUSTOMER SERVICES</h4>
-                        <label>Contact Us</label>
-                        <label>Track Your Order</label>
-                        <label>Product Care & Repair</label>
-                        <label>Book an Appointment</label>
-                        <label>Shipping & Returns</label>
+                        <ul>
+                            <li>Contact Us</li>
+                            <li>Track Your Order</li>
+                            <li>Product Care & Repair</li>
+                            <li>Book an Appointment</li>
+                            <li>Shipping & Returns</li>
+                        </ul>
                     </div>
 
                 </div>
