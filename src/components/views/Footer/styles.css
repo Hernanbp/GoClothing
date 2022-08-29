@@ -1,5 +1,48 @@
 
 
+img {
+    cursor: pointer;
+}
+
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+li {
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 14px;
+    color: #292929;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 30px;
+    font-size: 15px;
+    color: #292929;
+}
+
+h4 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: #000;
+}
+
+label, a {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;  
+    color: #ffff;
+}
+
+
 .data {
     background-color: #ffff;
     padding-top: 140px;
@@ -26,7 +69,6 @@
     margin-bottom: 25px;
 }
 
-
 .social {
     max-width: 367px;
 }
@@ -47,8 +89,47 @@
 }
 
 
+.disclaimer {
+    width: 100%;
+    height: 52px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: #1E2832;
+}
 
+.disclaimer > div {
+    display: flex;
+    max-width: 1300px;
+    justify-content: space-between;
+    width: 88%;
+}
 
+.top {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+}
 
+.disclaimer > div > img {
+    width: 283px;
+    height: 24px;
+}
+
+@media only screen and (max-width: 860px) {
+
+    .data > div {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 660px) {
+
+    .disclaimer > div > img {
+        display: none;
+    }
+}
 
 

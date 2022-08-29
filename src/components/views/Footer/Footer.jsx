@@ -59,14 +59,14 @@ export const Footer = () => {
                 </div>
             </section>
 
-            <section className="more">
+            <section className="disclaimer">
                 <div>
                     <label>© 2022 Coral , Inc.</label>
                     <img src="../assets/icons_payment 1.png" alt="icons_payment" />
-                    <div>
-                        <label>Scroll to top</label>
+                    <a className='top' href='#header'>
+                        <span>Scroll to top</span>
                         <img src="../assets/Arrow_top.png" alt="arrow_top" />
-                    </div>
+                    </a>
                 </div>
             </section>
         </footer>
