@@ -1,145 +1,140 @@
-
 header {
-    display: flex;
-    justify-content: center;
-    padding: 225px 394px 60px 296px;
-    background: #F1F1F1;
-    position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 5em 10em;
+  background: #f1f1f1;
+  position: relative;
 }
 
-
 header img {
-    width: 432px;
+  width: 432px;
 }
 
 header h1 {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 74px;
-    line-height: 55px;
-    margin-bottom: 52px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 4rem;
+  line-height: 55px;
+  margin-bottom: 52px;
 }
 
 header p {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 55px;
-    margin-bottom: 66px;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin-bottom: 66px;
+  text-transform: capitalize;
 }
 
 header a {
-    text-decoration: none;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 29px;
-    line-height: 55px;
-    color: #FFFFFF;
+  text-decoration: none;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 29px;
+  line-height: 55px;
+  color: #ffffff;
 }
 
 .FlowerPatternOne {
-    position: absolute;
-    z-index: 1;
-    right: 0;
-    bottom: 108px;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  bottom: 108px;
 }
 
 .header-container-img {
-    width: 100%;
-    z-index: 1000;
+  z-index: 1000;
+  transform: scale(0.8);
 }
 
 .container {
-    display: flex;
-    max-width: 1230px;
-    justify-content: space-between;
-    gap: 102px;
+  display: flex;
+  max-width: 1230px;
+  justify-content: space-between;
+  gap: 102px;
 }
 
 .call-to-action {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-width: 434px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 434px;
 }
 
 .shop-now {
-    background: #1E2832;
-    padding: 8px 26px;
-    width: fit-content;
+  background: #1e2832;
+  padding: 0.05em 1em;
+  width: fit-content;
 }
 
 .shop-now > a {
-    display: flex;
-    align-items: center;
+  display: flex;
+  font-size: 1.25rem;
+  align-items: center;
+  text-transform: capitalize;
 }
 .shop-now > a > svg {
-    margin-right: 8px;
+  margin-right: 8px;
+  transform: scale(0.8);
 }
 
-
 @media only screen and (max-width: 1200px) {
-    
-    header {
-        padding: 4em 2em;
-    }
+  header {
+    padding: 4em 2em;
+  }
 
-    .header-container-img {
-        width: 40%;
-    }
+  .header-container-img {
+    width: 40%;
+  }
 
-    header img {
-        width: 100%;
-        min-width: 308px;
-    }
+  header img {
+    width: 100%;
+    min-width: 308px;
+  }
 
-    header h1 {
-        font-size: 46px;
-        margin-bottom: 26px;
-    }
+  header h1 {
+    font-size: 46px;
+    margin-bottom: 26px;
+  }
 
-    header a {
-        font-size: 20px;
-    }
+  header a {
+    font-size: 20px;
+  }
 
-    .shop-now {
-        padding: 4px 16px;
-    }
+  .shop-now {
+    padding: 4px 16px;
+  }
 
-    header p {
-        font-size: 22px;
-        line-height: 42px;
-        margin-bottom: 42px;
-    }
+  header p {
+    font-size: 22px;
+    line-height: 42px;
+    margin-bottom: 42px;
+  }
 
-    .container {
-        gap: 0;
-    }
+  .container {
+    gap: 0;
+  }
 
-    .call-to-action {
-        width: 434px;
-    }
-
-
+  .call-to-action {
+    width: 434px;
+  }
 }
 
 @media only screen and (max-width: 800px) {
+  .container {
+    flex-direction: column;
+    gap: 6em;
+    align-items: center;
+  }
 
-    .container {
-        flex-direction: column;
-        gap: 6em;
-        align-items: center;
-    }
+  .FlowerPatternOne {
+    top: 70px;
+  }
 
-    .FlowerPatternOne {
-        top: 70px;
-    }
-
-    .header-container-img {
-        width: 80%;
-        }
-
+  .header-container-img {
+    width: 80%;
+  }
 }
