@@ -44,6 +44,7 @@ header a {
     position: absolute;
     z-index: 1;
     right: 0;
+    bottom: 108px;
 }
 
 .header-container-img {
@@ -131,6 +132,10 @@ header a {
         flex-direction: column;
         gap: 6em;
         align-items: center;
+    }
+
+    .FlowerPatternOne {
+        top: 70px;
     }
 
     .header-container-img {
