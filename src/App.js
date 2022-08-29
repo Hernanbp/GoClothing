@@ -1,7 +1,5 @@
 import {Routes, Route} from "react-router-dom"
-import Login from "./auth/login"
-import Register from "./auth/Register"
-import Home from "./components/Home/Home"
+import { Home, Login, Register, Cart } from './components/views'
 
 
 const App = () => {
@@ -10,7 +8,7 @@ const App = () => {
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
- <Route path="/cart" element={<Cart />} /> 
+      <Route path="/cart" element={<Cart />} /> 
 
     </Routes>
   )

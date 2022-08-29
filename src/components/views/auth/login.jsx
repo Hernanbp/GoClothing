@@ -4,7 +4,9 @@ import { useFormik } from "formik"
 import * as Yup from 'yup';
 import Swal from 'sweetalert2';
 import "./auth.styles.css"
-const Login = () => {
+
+
+export const Login = () => {
 
   // const navigate = useNavigate()
 
@@ -51,5 +53,3 @@ const Login = () => {
     </div>
   )
 }
-
-export default Login
