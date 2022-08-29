@@ -66,16 +66,19 @@ header a {
 
 .shop-now {
   background: #1e2832;
-  padding: 8px 26px;
+  padding: 0.05em 1em;
   width: fit-content;
 }
 
 .shop-now > a {
   display: flex;
+  font-size: 1.25rem;
   align-items: center;
+  text-transform: capitalize;
 }
 .shop-now > a > svg {
   margin-right: 8px;
+  transform: scale(0.8);
 }
 
 @media only screen and (max-width: 1200px) {
