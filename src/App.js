@@ -1,14 +1,18 @@
-import React from 'react'
-// import { Footer } from './components/views/Footer/Footer'
-// import { Header } from './components/views/Header/Header'
-import './styles.css'
+import {Routes, Route} from "react-router-dom"
+import Login from "./auth/login"
+import Register from "./auth/Register"
+import Home from "./components/Home/Home"
+
 
 const App = () => {
-
   return (
-    // <Header />
-    <>
-    </>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+ <Route path="/cart" element={<Cart />} /> 
+
+    </Routes>
   )
 }
 
