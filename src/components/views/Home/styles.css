@@ -1,0 +1,31 @@
+.main-product {
+  display: flex;
+  align-items: center;
+}
+
+.main-product > p {
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+  letter-spacing: 0.03em;
+  font-size: 2.125rem;
+}
+
+.container-home {
+  display: flex;
+  justify-content: center;
+  padding: 5em 10em;
+  background: #fff;
+  width: 100%;
+}
+
+.featured-products {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.grid-products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
+}

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins&family=Roboto:wght@300;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins&family=Roboto:wght@300;400;500&display=swap");
 
 *,
 ::after,
@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+* {
+  font-family: "open sans";
+}
+
 li {
-  list-style:none
+  list-style: none;
 }
