@@ -9,7 +9,7 @@ export const Header = () => {
         <div className="call-to-action">
           <h1>Collections</h1>
           <p>
-            you can explore any shop many different collections <br /> from
+            you can explore any shop many different collections from
             various brands are here.
           </p>
           <div className="shop-now" type="button">
