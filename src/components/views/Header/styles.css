@@ -1,7 +1,7 @@
 header {
   display: flex;
   justify-content: center;
-  padding: 5em 30em;
+  padding: 5em 10em;
   background: #f1f1f1;
   position: relative;
 }
@@ -21,11 +21,11 @@ header h1 {
 
 header p {
   font-family: "Roboto";
-  font-style: normal;
   font-weight: 400;
-  font-size: 30px;
-  line-height: 55px;
+  font-size: 1.25rem;
+  line-height: 1.5;
   margin-bottom: 66px;
+  text-transform: capitalize;
 }
 
 header a {
@@ -46,8 +46,8 @@ header a {
 }
 
 .header-container-img {
-  width: 100%;
   z-index: 1000;
+  transform: scale(0.8);
 }
 
 .container {
