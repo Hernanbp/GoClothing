@@ -1,6 +1,11 @@
 .main-product {
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+.main-product > img {
+  transform: scale(0.99);
 }
 
 .main-product > p {
@@ -21,6 +26,7 @@
 .featured-products {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 1em;
 }
 
