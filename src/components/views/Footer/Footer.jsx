@@ -1,5 +1,7 @@
 import './styles.css'
 
+import { TwitterIcon, FacebookIcon, LinkedinIcon, DribbbleIcon, ArrowTopIcon } from '../../svgs'
+
 
 export const Footer = () => {
 
@@ -16,10 +18,10 @@ export const Footer = () => {
                             elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
                         </p>
                         <div>
-                            <img src="../assets/social-icons/facebook.png" alt="link_facebook" />
-                            <img src="../assets/social-icons/twitter.png" alt="link_twitter" />
-                            <img src="../assets/social-icons/linkedin.png" alt="link_linkedin" />
-                            <img src="../assets/social-icons/dribbble.png" alt="link_dribbble" />
+                            <a href='#/'><FacebookIcon /></a>
+                            <a href='#/'><TwitterIcon /></a>
+                            <a href='#/'><LinkedinIcon /></a>
+                            <a href='#/'><DribbbleIcon /></a>
                         </div>
                     </div>
 
@@ -65,7 +67,7 @@ export const Footer = () => {
                     <img src="../assets/icons_payment 1.png" alt="icons_payment" />
                     <a className='top' href='#header'>
                         <span>Scroll to top</span>
-                        <img src="../assets/Arrow_top.png" alt="arrow_top" />
+                        <ArrowTopIcon />
                     </a>
                 </div>
             </section>

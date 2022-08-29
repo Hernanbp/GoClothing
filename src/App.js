@@ -1,11 +1,12 @@
 import React from 'react'
-import { Footer } from './components/views/Footer/Footer'
+// import { Footer } from './components/views/Footer/Footer'
+import { Header } from './components/views/Header/Header'
 import './styles.css'
 
 const App = () => {
 
   return (
-    <Footer />
+    <Header />
   )
 }
 
