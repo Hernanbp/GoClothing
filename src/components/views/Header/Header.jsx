@@ -1,9 +1,10 @@
-import { BagIcon } from '../../svgs'
+import { BagIcon, FlowerPatternOne } from '../../svgs'
 import './styles.css'
 
 export const Header = () => {
   return (
     <header>
+        <FlowerPatternOne className='FlowerPatternOne'/>
         <div className='container'>
             <div className='call-to-action'>
                 <h1>Collections</h1>

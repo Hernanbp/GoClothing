@@ -4,11 +4,9 @@ header {
     justify-content: center;
     padding: 225px 394px 60px 296px;
     background: #F1F1F1;
+    position: relative;
 }
 
-.header-container-img {
-    width: 100%;
-}
 
 img {
     width: 432px;
@@ -40,6 +38,17 @@ a {
     font-size: 29px;
     line-height: 55px;
     color: #FFFFFF;
+}
+
+.FlowerPatternOne {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+}
+
+.header-container-img {
+    width: 100%;
+    z-index: 1000;
 }
 
 .container {
