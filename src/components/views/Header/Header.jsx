@@ -9,15 +9,15 @@ export const Header = () => {
         <div className="call-to-action">
           <h1>Collections</h1>
           <p>
-            you can explore any shop many different collections from
-            various brands are here.
+            you can explore any shop many different collections from various
+            brands are here.
           </p>
-          <div className="shop-now" type="button">
+          <button className="shop-now">
             <a href="#shop">
               <BagIcon stroke="#fff" />
               shop now
             </a>
-          </div>
+          </button>
         </div>
 
         <div className="header-container-img">
