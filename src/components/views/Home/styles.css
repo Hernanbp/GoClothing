@@ -35,3 +35,14 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 1em;
 }
+
+@media only screen and (max-width: 1200px) {
+  .brands {
+    transform: scale(0.8);
+  }
+
+  .featured-products {
+    display: flex;
+    transform: scale(0.8);
+  }
+}

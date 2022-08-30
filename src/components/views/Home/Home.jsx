@@ -7,7 +7,7 @@ export function Home() {
   return (
     <>
       <Header />
-      <section>
+      <section className="home-section">
         <div className="container-home">
           <div className="brands">
             <img src={brand} alt="" />

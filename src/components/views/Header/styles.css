@@ -90,6 +90,11 @@ header a {
     width: 40%;
   }
 
+  header p {
+    min-width: 400px;
+    max-width: 550px;
+  }
+
   header img {
     width: 100%;
     min-width: 308px;
@@ -119,7 +124,8 @@ header a {
   }
 
   .call-to-action {
-    width: 434px;
+    min-width: 400px;
+    max-width: 550px;
   }
 }
 
