@@ -38,8 +38,9 @@
 .auth > form > div > div {
     color: red;
 }
-.task-form input.error {
-   border: 1px solid red;
+.auth > form > div > input.error {
+   border: 3px solid red;
+   padding: 80px;
 }
 .auth > form > button {
     padding: 1em;
