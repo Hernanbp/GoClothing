@@ -86,7 +86,6 @@
 
   .featured-products {
     grid-column: 1 / 13;
-    padding: 1em;
     transform: scale(0.8);
   }
 }
