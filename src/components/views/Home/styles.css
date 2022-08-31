@@ -73,6 +73,23 @@
   transform: translateY(0);
 }
 
+@media only screen and (max-width: 1366px) {
+  .home-section {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .container-home {
+    grid-column: 1 / 13;
+    transform: scale(0.8);
+  }
+
+  .featured-products {
+    grid-column: 1 / 13;
+    transform: scale(0.8);
+  }
+}
+
 @media only screen and (max-width: 1200px) {
   .brands {
     transform: scale(0.8);
