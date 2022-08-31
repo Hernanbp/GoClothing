@@ -34,7 +34,8 @@ const Register = () => {
  }
 
   const formik = useFormik( {initialValues, validationSchema, onSubmit} );
-  const {handleSubmit, handleChange, values, errors} = formik
+  const { handleSubmit, handleChange, errors, touched, handleBlur, values } = formik;
+
 
   return (
     <div className="auth">
@@ -42,20 +43,26 @@ const Register = () => {
           <h1>Registrarse</h1>
           <div>
             <label>Email</label>
-            <input onChange={handleChange} value={values.email} name="email" /> 
-            {errors.email && <div className="error-color">{errors.email}</div>}
+            <input onChange={handleChange} onBlur={handleBlur} value={values.email} name="email" 
+              className={errors.userName && touched.userName ? "error" : ""}
+            /> 
+            {errors.email && touched.email && <div className="error-color">{errors.email}</div>}
           </div>
            
           <div> 
             <label>Contraseña</label>
-            <input onChange={handleChange} value={values.password} name="password" type="password"/>
-            {errors.password && <div className="error-color">{errors.password}</div>}
+            <input onChange={handleChange} onBlur={handleBlur} value={values.password} name="password" type="password"
+              className={errors.password && touched.password ? "error" : ""}
+              />
+            {errors.password && touched.password && <div className="error-color">{errors.password}</div>}
           </div>
           
           <div> 
             <label>Repetir contraseña</label>
-            <input onChange={handleChange} value={values.repeatPassword} name="repeatPassword" type="password"/>
-            {errors.repeatPassword && <div className="error-color">{errors.repeatPassword}</div>}
+            <input onChange={handleChange} onBlur={handleBlur} value={values.repeatPassword} name="repeatPassword" type="password"
+              className={errors.repeatPassword && touched.repeatPassword ? "error" : ""}
+              />
+            {errors.repeatPassword && touched.repeatPassword && <div className="error-color">{errors.repeatPassword}</div>}
           </div>
           <button type="submit">Iniciar Sesión</button>
           <div>
