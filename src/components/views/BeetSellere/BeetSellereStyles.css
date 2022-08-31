@@ -1,4 +1,43 @@
+.beetSellere-section{
+    display: flex;
+    flex-direction: column;
+}
 .beetSellere-header{
-    background-image: url('../../../../public/assets/bgBell.png');
+    background-image: url('./img/bgBell.png');
     background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 800px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.beetSellere-header > div{
+    padding: 200px;
+}
+
+.beetSellere-header > div >h1{
+    font-size: 100px;
+    margin: 0;
+    padding: 0;
+}
+
+.beetSellere-header > div > p{
+    font-size: 1rem;
+    margin: 1rem 0;
+    width: 20rem;
+}
+
+.beetSellere-header > div > button{
+    border-radius: 0.3rem;
+    color: black;
+    background-color: white;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.beetSellere-main {
+    display: flex;
+    justify-content: center;
 }
