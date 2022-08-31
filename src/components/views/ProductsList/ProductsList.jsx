@@ -33,7 +33,7 @@ export function ProductsList() {
 
   return (
     <>
-      <div> 
+      <div className="card-container"> 
         P list
         {fetchedData && fetchedData.map( (item)=>{
           return (
