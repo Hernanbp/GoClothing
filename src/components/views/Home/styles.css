@@ -54,17 +54,18 @@
   background-color: #1e2832;
   color: #fff;
   width: 100%;
-  transition: 0.3s ease-in-out;
+  transition: 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
   opacity: 0;
   transform: translateY(40px);
 }
 
 .img-container img {
-  transition: 0.5s ease-in-out;
+  transition: 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 .img-container:hover img {
   transform: scale(1.1);
+  filter: brightness(0.8);
 }
 
 .img-container:hover .tooltip {
