@@ -1,9 +1,7 @@
 //dependencies
 import { Routes, Route } from "react-router-dom";
 //components
-import Login from "./auth/login";
-import Register from "./auth/Register";
-import Home from "./components/Home/Home";
+import { Home, Login, Register, Cart } from "./components/views";
 
 const App = () => {
   return (
@@ -11,7 +9,7 @@ const App = () => {
       <Route path="/login" element={<Home />} />
       <Route path="/" element={<Login />} />
       <Route path="/register" element={<Register />} />
-      <Route to="/cart" element={"CART"} />
+      <Route path="/cart" element={<Cart />} />
     </Routes>
   );
 };
