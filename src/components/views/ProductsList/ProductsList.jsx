@@ -39,7 +39,7 @@ export function ProductsList() {
           return (
           <div key={item.id} className="item"> 
             <h2>{item.title} </h2>
-            <img src={item.image} />
+            <img src={item.image} alt=""/>
             <p> {item.rating.rate} Estrellitas</p>
             <p> {item.price}</p>
             <p> {item.category}</p>
