@@ -7,7 +7,7 @@ import MenuIcon from "@mui/icons-material/Menu"
 import logo from "../../svgs/logo.svg"
 import { useResize } from "../../hooks/useResize"
 
-export function NavBar() {
+export function Navbar() {
   const [show, setShow] = useState()
   const { phoneScreen } = useResize()
 
