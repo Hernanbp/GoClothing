@@ -1,10 +1,11 @@
 import "./styles.css"
-import { useEffect, useState } from "react"
+//import { useEffect, useState } from "react"
+import ProductZara from "../BeetSellere/ProductZara"
 
-export function ProductsList() {
 
-  const [fetchedData, setFetchedData] = useState(null)
-
+  export function ProductsList() {
+  //const [fetchedData, setFetchedData] = useState(null)
+  /* 
   useEffect(() => {
     (async function () {
       const res = await fetch('https://fakestoreapi.com/products')
@@ -30,10 +31,13 @@ export function ProductsList() {
       //   })
       //   .catch(err => console.error(err))
   },[])
-
+*/
   return (
     <>
+    {
+      /*
       <div className="card-container"> 
+    
         P list
         {fetchedData && fetchedData.map( (item)=>{
           return (
@@ -44,6 +48,35 @@ export function ProductsList() {
             <p> {item.price}</p>
             <p> {item.category}</p>
             <h6> {item.description}</h6>
+          </div>
+          )
+        })
+        }
+      </div>
+      
+      */
+
+    }
+      <div className="card-container"> 
+        {
+        ProductZara.map( (item)=>{
+          return (
+          <div key={item.id} className="item"> 
+          <div className="item-title">
+            <img src={item.url} alt=""/>
+            <button>SALE</button>
+          </div >
+          <div className="item-description">
+            <h3> {item.description}</h3>
+              <div>
+                <p> {item.category}</p>
+                <div>
+                  <p> {item.beforePrice}</p>
+                  <p> {item.price}</p>
+                </div>
+              </div>
+          </div>
+            
           </div>
           )
         })

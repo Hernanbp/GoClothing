@@ -1,5 +1,8 @@
 import "./BeetSellereStyles.css"
 
+import  {ProductsList} from "../ProductsList/ProductsList"
+
+
 export default function AllProducts(props) {
     const {title} = props;
   return (
@@ -16,14 +19,11 @@ export default function AllProducts(props) {
                         </ul>
                         <button>Show All</button>
                     </div>
-                    <div>
-                        {
-                        //un MAP de las CARDS
-                        }
+                    <div className="beetSellere-products">
+                        <ProductsList></ProductsList>
                     </div>
                 </div>
             </div>
-            
         </div>
     </>
   )

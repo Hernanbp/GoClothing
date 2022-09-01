@@ -1,6 +1,7 @@
 import "./BeetSellereStyles.css"
 import  AllProducts  from "./AllProducts"
 
+
 export function BeetSellere() {
   return (
     <>
