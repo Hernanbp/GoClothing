@@ -5,7 +5,7 @@
     flex-direction: column;
 }
 .beetSellere-header{
-    background-image: url('./img/zaraBackground.png');
+    background-image: url('/public/assets/zaraBackground.png');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -45,34 +45,60 @@
     padding: 0.5rem;
 }
 
-.beetSellere-main {
+
+.beetSellere-footer{
+    text-align: center;
+    background-color: #F1F1F1;
+    margin-top: 50px;
+}
+.beetSellere-footer h2{
+    font-family: Roboto;
+    font-size: 45px;
+    font-weight: 500;
+    line-height: 53px;
+    letter-spacing: 0.1em;
+    margin: 50px auto 20px auto;
+}
+.beetSellere-footer ul {
     display: flex;
+    flex-direction: row;
     justify-content: center;
 }
-
-
-/* -------------------------------------- ALL PRODUCTS --------------------------------------*/
-.beetSellere-main > div > h2{
-    font-size: 40px;
-    text-align: center;
+.beetSellere-footer ul li{
+    margin: 10px;
 }
-.beetSellere-main > div > div > div {
-    display: flex;
-    justify-content: space-between;
-    width: 70%;
-    margin: auto;
+.beetSellere-footer ul li img{
+    width: 200px;
+    height: 200px;
 }
-.beetSellere-main > div > div > div > ul > li{
-    display: inline;
+.beetSellere-footer h3{
+    font-family: Roboto;
+    font-size: 45px;
+    font-weight: 500;
+    line-height: 53px;
+    letter-spacing: 0.1em;
+    margin: 20px auto 50px auto;
+}
+
+.beetSellere-footer div{
+    color:white;
+    margin-bottom: 30px;
+}
+.beetSellere-footer div input{
+    width: 40%;
+    margin: 20px 20px;
+    padding: 5px 20px;
+    background:none;
+    border: none;
+    outline: 0px;
+    border-bottom: 2px solid #000;
+}
+.beetSellere-footer div button{
+    font-weight: bold;
+    padding: 5px 20px;
+    background:none;
+    border: none;
+    outline: 0px;
+    border-bottom: 2px solid #000;
     cursor: pointer;
-    padding: 0.5rem;
 }
-.beetSellere-main > div > div > div > button{
-    border: 1px solid #000;
-    padding: 0.2rem;
-    background-color: #000;
-    color: white;
-}
-
-/* -------------------------------------- PRODUCTS --------------------------------------*/
-
