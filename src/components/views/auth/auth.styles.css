@@ -1,3 +1,37 @@
+
+.auth-page {
+    display: flex;
+    width: 100%;
+}
+
+.auth-img {
+    width: 960px;
+    height: 1080px;
+}
+
+.auth-img img {
+    width: 50%;
+}
+
+.auth-container {
+    width: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 .auth{
     display: flex;
     justify-content: center;
@@ -14,7 +48,6 @@
 }
 .auth > form > h1{
     padding: 0.6em 0;
-    /* font-size: 2rem; */
 }
 .auth > form > div {
     display: flex;
@@ -24,13 +57,11 @@
 }
 .auth > form > div > input {
     border-color: var(--global-color-4);
-    /* border-radius: var(--global-radius); */
     font-size: 1rem;
     padding: 0.5em;
 }
 .auth > form > div >  select {
     border-color: var(--global-color-4);
-    /* border-radius: var(--global-radius); */
     font-size: 1rem;
     padding: 0.5em;
 }
@@ -45,5 +76,6 @@
 }
 .auth > form > button:hover{
     background-color: lightblue;
-    /* color: white; */
+
 } 
+*/
