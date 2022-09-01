@@ -71,7 +71,7 @@ import ProductZara from "../BeetSellere/ProductZara"
               <div>
                 <p> {item.category}</p>
                 <div>
-                  <p> {item.beforePrice}</p>
+                  <p className={item.beforePrice === "" ? "": "discount"}> {item.beforePrice}</p>
                   <p> {item.price}</p>
                 </div>
               </div>
