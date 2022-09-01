@@ -1,4 +1,5 @@
 import "./BeetSellereStyles.css"
+import  AllProducts  from "./AllProducts"
 
 export function BeetSellere() {
   return (
@@ -18,25 +19,8 @@ export function BeetSellere() {
                 <button>See Collection</button>
             </div>
         </div>
-        <div className="beetSellere-main">
-            <div>
-                <h2>Best Sellers</h2>
-                <div>
-                    <div>
-                        <ul>
-                            <li>All Products</li>
-                            <li>T-Shirt</li>
-                            <li>Jacket</li>
-                        </ul>
-                        <button>Show All</button>
-                    </div>
-                    <div>
-                        las 4 CARDS
-                    </div>
-                </div>
-            </div>
-            
-        </div>
+        <AllProducts title={"New Product"}></AllProducts>
+        <AllProducts title={"Best Sellers"}></AllProducts>
         <div className="beetSellere-footer">
                <h2>Follow Products And Discounts On Instagram</h2>
                <ul>

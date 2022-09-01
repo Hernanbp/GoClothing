@@ -4,11 +4,34 @@
   /* display: flex;
   align-items: center;
   justify-content: center; */
-  border: 2px black solid;
 }
-.card-container div > img{
-  max-width: 10%;
+
+.item > div {
+  position: relative;
 }
+.item > div > img{
+  width: 100%;
+  height: 200px;
+  position: relative;
+}
+
+.item > div > button{
+  font-size: 12px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  z-index: 0;
+  color: white;
+  background-color: black;
+  padding: 0 0.2rem;
+}
+.card-container{
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  margin: auto;
+}
+
 
 /* .main-product {
   display: flex;
