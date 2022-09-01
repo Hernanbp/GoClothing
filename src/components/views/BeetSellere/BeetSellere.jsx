@@ -1,4 +1,4 @@
-import "./beetSellereStyles.css"
+import "./BeetSellereStyles.css"
 
 export function BeetSellere() {
   return (
