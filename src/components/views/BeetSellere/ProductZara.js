@@ -1,0 +1,43 @@
+const ProductZara = [
+  {
+    url: require(`./img/zaraBackground.png`),
+    title: "Nike Sportswear Futura Luxe Sportswear Futura Luxe",
+    description: "Nike Sportswear Futura Luxe",
+    price: 1300,
+    beforePrice: 1200,
+    category: "bag",
+    rating: 4,
+    id: 0,
+  },
+  {
+    url: require(`./img/zaraBackground.png`),
+    title: "Nike Sportswear Futura Luxe Sportswear Futura Luxe",
+    description: "Nike Sportswear Futura Luxe",
+    price: 1300,
+    beforePrice: 700,
+    category: "bag",
+    rating: 4,
+    id: 1,
+  },
+  {
+    url: require(`./img/zaraBackground.png`),
+    title: "Nike Sportswear Futura Luxe Sportswear Futura Luxe",
+    description: "Nike Sportswear Futura Luxe",
+    price: 1300,
+    beforePrice: "",
+    category: "bag",
+    rating: 4,
+    id: 2,
+  },
+  {
+    url: require(`./img/zaraBackground.png`),
+    title: "Nike Sportswear Futura Luxe Sportswear Futura Luxe",
+    description: "Nike Sportswear Futura Luxe",
+    price: 1300,
+    beforePrice: "",
+    category: "bag",
+    rating: 4,
+    id: 3,
+  },
+];
+export default ProductZara;
