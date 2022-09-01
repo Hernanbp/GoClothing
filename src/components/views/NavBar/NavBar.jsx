@@ -9,7 +9,7 @@ import { useResize } from "../../hooks/useResize";
 
 
 
-export function Navbar() {
+export function NavBar() {
   const [show, setShow]=useState()
   const {phoneScreen} = useResize();
 

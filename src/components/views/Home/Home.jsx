@@ -1,4 +1,4 @@
-import { Navbar, Header, Footer } from "../../views"
+import { NavBar, Header, Footer } from "../../views"
 import brand from "../../svgs/brand.svg"
 import "./styles.css"
 
@@ -28,7 +28,7 @@ export function Home() {
 
   return (
     <>
-    <Navbar />
+    <NavBar />
       <Header />
       <section className="home-section">
         <div className="container-home">
