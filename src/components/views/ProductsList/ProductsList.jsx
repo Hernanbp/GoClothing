@@ -63,7 +63,7 @@ import ProductZara from "../BeetSellere/ProductZara"
           return (
           <div key={item.id} className="item"> 
           <div className="item-title">
-            <img src={item.url} alt=""/>
+            <img src="../assets/p1.png" alt=""/>
             <button>SALE</button>
           </div >
           <div className="item-description">

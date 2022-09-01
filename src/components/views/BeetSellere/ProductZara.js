@@ -1,6 +1,5 @@
 const ProductZara = [
   {
-    url: require(`./img/p1.png`),
     title: "Nike",
     description: "Nike Sportswear Futura Luxe",
     price: 1300,
@@ -10,7 +9,6 @@ const ProductZara = [
     id: 0,
   },
   {
-    url: require(`./img/p2.png`),
     title: "Nike",
     description: "Nike Sportswear Futura Luxe",
     price: 1300,
@@ -20,7 +18,6 @@ const ProductZara = [
     id: 1,
   },
   {
-    url: require(`./img/p3.png`),
     title: "Nike",
     description: "Nike Sportswear Futura Luxe",
     price: 1300,
@@ -30,7 +27,6 @@ const ProductZara = [
     id: 2,
   },
   {
-    url: require(`./img/p4.png`),
     title: "Nike",
     description: "Nike Sportswear Futura Luxe",
     price: 1300,

@@ -26,12 +26,12 @@ export function BeetSellere() {
             <h2>Follow Products And Discounts On Instagram</h2>
 
             <ul>
-                <li><img src="./img/ig01.png" alt="" /></li>
-                <li><img src="./img/ig02.png" alt="" /></li>
-                <li><img src="./img/ig03.png" alt="" /></li>
-                <li><img src="./img/ig04.png" alt="" /></li>
-                <li><img src="./img/ig05.png" alt="" /></li>
-                <li><img src="./img/ig06.png" alt="" /></li>
+                <li><img src="../assets/ig01.png" alt="NO se encutgenas" /></li>
+                <li><img src="../assets/ig02.png" alt="NO se encutgenas" /></li>
+                <li><img src="../assets/ig03.png" alt="NO se encutgenas" /></li>
+                <li><img src="../assets/ig04.png" alt="NO se encutgenas" /></li>
+                <li><img src="../assets/ig05.png" alt="NO se encutgenas" /></li>
+                <li><img src="../assets/ig06.png" alt="NO se encutgenas" /></li>
             </ul>
 
             <h3>Or Suscribe To The Newsletter</h3>
