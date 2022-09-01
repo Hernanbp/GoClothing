@@ -1,4 +1,4 @@
-import "./BeetSellereStyles.css"
+import "./AllProductsStyles.css"
 
 import  {ProductsList} from "../ProductsList/ProductsList"
 

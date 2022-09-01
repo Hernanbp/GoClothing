@@ -1,5 +1,5 @@
 import "./BeetSellereStyles.css"
-import  AllProducts  from "./AllProducts"
+import  AllProducts  from "../AllProducts/AllProducts"
 
 
 export function BeetSellere() {

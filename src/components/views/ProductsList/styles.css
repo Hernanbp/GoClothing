@@ -31,10 +31,16 @@
   width: 100%;
   margin: auto;
 }
+
+.item-description h3{
+  margin-top: 5px;
+}
 .item-description div{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
 }
 .item-description div div p{
   padding: 2px;
