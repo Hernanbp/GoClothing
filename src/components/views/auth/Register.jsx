@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link} from "react-router-dom"
+import { Link, useNavigate} from "react-router-dom"
 // useNavigatef rom "react-router-dom"
 import { useFormik } from "formik"
 import * as Yup from 'yup';
@@ -9,7 +9,7 @@ import axios from "axios"
 
 export const Register = () => {
 
-  // const navigate = useNavigate()
+  const navigate = useNavigate()
 
   let initialValues = {
     email:"",
@@ -42,8 +42,23 @@ export const Register = () => {
       region: "Otro"
     }
   })
-  .then(data=> console.log(data))
-  .catch(err => console.log(err))
+  .then(data=> {
+    console.log(data)
+    Swal.fire({
+      icon: "success",
+      title: "Registered!",
+      timer: 2500
+    })
+    navigate("/login", {replace:true})
+  })
+  .catch(err => {
+    console.log(err)
+    Swal.fire({
+      icon: "error",
+      title: "There´s already an account with those credentials",
+      timer: 2500
+    })
+  })
 
   Swal.fire({
     icon: "success",
