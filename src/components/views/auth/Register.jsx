@@ -5,7 +5,7 @@ import { useFormik } from "formik"
 import * as Yup from 'yup';
 import Swal from 'sweetalert2';
 import "./auth.styles.css"
-
+import axios from "axios"
 
 export const Register = () => {
 
@@ -22,6 +22,17 @@ export const Register = () => {
  });
 
  const onSubmit = () => {
+  // axios.post("https://goscrum-api.alkemy.org/auth/register", {
+  //   user: {
+  //     userName: "1prueba1",
+  //     password: "1prueba1",
+  //     email: "1prueba1@gmail.com",
+  //     teamID: "9cdbd108-f924-4383-947d-8f0c651d0dad",
+  //     role: "Team Leader",
+  //     continent: "America",
+  //     region: "Otro"
+  //   }
+  // })
   Swal.fire({
     icon: "success",
     title: "submitted",
