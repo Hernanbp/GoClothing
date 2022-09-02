@@ -23,6 +23,15 @@ export const Register = () => {
 
  const onSubmit = () => {
   axios.post("https://goscrum-api.alkemy.org/auth/register", {
+    // user: {
+    //   userName: values.userName,
+    //   password: values.password,
+    //   email: values.email,
+    //   teamID: values.teamId,
+    //   role: values.role,
+    //   continent: values.continent,
+    //   region: values.region
+    // }
     user: {
       userName: "1prueba2",
       password: "1prueba2",
