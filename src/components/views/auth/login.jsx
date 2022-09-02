@@ -22,37 +22,9 @@ export const Login = () => {
     password: Yup.string().min(6, "6 caracteres mínimo").required("Campo obligatorio")
  });
 
- const onSubmit = () => {
-  axios.post("https://goscrum-api.alkemy.org/auth/login", {
-      // userName: "federico",
-      // password: "123456789"
-      userName: values.userName,
-      password: values.password
-  })
-  .then(data => {
-    // console.log(data)
-    const token = data.data.result.token;
-    console.log(token)
-    localStorage.setItem("token", token)
-    Swal.fire({
-      icon: "success",
-      title: "Logged in!",
-      timer: 2500
-    })
-    navigate("/", {replace:true})
-  })
-  .catch(err => {
-    console.error(err)
-    Swal.fire({
-      icon: "error",
-      title: "Wrong username or password",
-      timer: 2000
-    })
-  })
-
-  
-  // navigate("/", {replace:true})
- }
+const onSubmit = ()=>{
+  console.log("va")
+}
 
   const formik = useFormik( {initialValues, validationSchema, onSubmit} );
   const {handleSubmit, handleChange, values, errors} = formik
@@ -86,3 +58,32 @@ export const Login = () => {
     </>
   )
 }
+
+// const onSubmit = () => {
+//   axios.post("https://goscrum-api.alkemy.org/auth/login", {
+//       // userName: "federico",
+//       // password: "123456789"
+//       userName: values.userName,
+//       password: values.password
+//   })
+//   .then(data => {
+//     // console.log(data)
+//     const token = data.data.result.token;
+//     console.log(token)
+//     localStorage.setItem("token", token)
+//     Swal.fire({
+//       icon: "success",
+//       title: "Logged in!",
+//       timer: 2500
+//     })
+//     navigate("/", {replace:true})
+//   })
+//   .catch(err => {
+//     console.error(err)
+//     Swal.fire({
+//       icon: "error",
+//       title: "Wrong username or password",
+//       timer: 2000
+//     })
+//   })
+// }

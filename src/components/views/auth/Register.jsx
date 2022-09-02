@@ -21,52 +21,9 @@ export const Register = () => {
     password: Yup.string().min(6, "6 caracteres mínimo").required("Campo obligatorio")
  });
 
- const onSubmit = () => {
-  axios.post("https://goscrum-api.alkemy.org/auth/register", {
-    // user: {
-    //   userName: values.userName,
-    //   password: values.password,
-    //   email: values.email,
-    //   teamID: values.teamId,
-    //   role: values.role,
-    //   continent: values.continent,
-    //   region: values.region
-    // }
-    user: {
-      userName: "1prueba2",
-      password: "1prueba2",
-      email: "1prueba2@gmail.com",
-      teamID: "9cdbd108-f924-4383-947d-8f0c651d0dad",
-      role: "Team Leader",
-      continent: "America",
-      region: "Otro"
-    }
-  })
-  .then(data=> {
-    console.log(data)
-    Swal.fire({
-      icon: "success",
-      title: "Registered!",
-      timer: 2500
-    })
-    navigate("/login", {replace:true})
-  })
-  .catch(err => {
-    console.log(err)
-    Swal.fire({
-      icon: "error",
-      title: "There´s already an account with those credentials",
-      timer: 2500
-    })
-  })
-
-  Swal.fire({
-    icon: "success",
-    title: "submitted",
-    timer: 2000
-  })
-  // navigate("/", {replace:true})
- }
+const onSubmit = () => {
+  console.log("fue ")
+}
 
   const formik = useFormik( {initialValues, validationSchema, onSubmit} );
   const {handleSubmit, handleChange, values, errors} = formik
@@ -100,3 +57,49 @@ export const Register = () => {
     </>
   )
 }
+
+// const onSubmit = () => {
+//   axios.post("https://goscrum-api.alkemy.org/auth/register", {
+//     // user: {
+//     //   userName: values.userName,
+//     //   password: values.password,
+//     //   email: values.email,
+//     //   teamID: values.teamId,
+//     //   role: values.role,
+//     //   continent: values.continent,
+//     //   region: values.region
+//     // }
+//     user: {
+//       userName: "1prueba2",
+//       password: "1prueba2",
+//       email: "1prueba2@gmail.com",
+//       teamID: "9cdbd108-f924-4383-947d-8f0c651d0dad",
+//       role: "Team Leader",
+//       continent: "America",
+//       region: "Otro"
+//     }
+//   })
+//   .then(data=> {
+//     console.log(data)
+//     Swal.fire({
+//       icon: "success",
+//       title: "Registered!",
+//       timer: 2500
+//     })
+//     navigate("/login", {replace:true})
+//   })
+//   .catch(err => {
+//     console.log(err)
+//     Swal.fire({
+//       icon: "error",
+//       title: "There´s already an account with those credentials",
+//       timer: 2500
+//     })
+//   })
+
+//   Swal.fire({
+//     icon: "success",
+//     title: "submitted",
+//     timer: 2000
+//   })
+//  }
