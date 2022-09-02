@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link} from "react-router-dom"
-// useNavigatef rom "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import { useFormik } from "formik"
 import * as Yup from 'yup';
 import Swal from 'sweetalert2';
@@ -10,7 +10,7 @@ import axios from 'axios';
 
 export const Login = () => {
 
-  // const navigate = useNavigate()
+  const navigate = useNavigate()
 
   let initialValues = {
     email:"",
@@ -23,14 +23,18 @@ export const Login = () => {
  });
 
  const onSubmit = () => {
-  // axios.post("https://goscrum-api.alkemy.org/auth/login", {
-  //   user:{
-  //     userName: "1prueba2",
-  //     password: "1prueba2"
-  //   }
-  // })
-  // .then(data => console.log(data))
-  // .catch(err => console.error(err))
+  axios.post("https://goscrum-api.alkemy.org/auth/login", {
+      userName: "federico",
+      password: "123456789"
+  })
+  .then(data => {
+    // console.log(data)
+    const token = data.data.result.token;
+    console.log(token)
+    localStorage.setItem("token", token)
+    navigate("/", {replace:true})
+  })
+  .catch(err => console.error(err))
 
   Swal.fire({
     icon: "success",
