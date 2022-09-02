@@ -28,7 +28,7 @@ export function Home() {
 
   return (
     <>
-    <Navbar />
+      <Navbar />
       <Header />
       <section className="home-section">
         <div className="container-home">
@@ -44,7 +44,7 @@ export function Home() {
           <div className="grid-products">
             {products.map(({ img, name, quantity }) => (
               <div className="img-container">
-                <img src={img} alt="" />
+                <img src={img} alt={name} />
                 <div className="tooltip">
                   <p>{name}</p>
                   <p>{quantity} Products</p>
