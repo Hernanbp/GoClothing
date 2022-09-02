@@ -22,17 +22,20 @@ export const Register = () => {
  });
 
  const onSubmit = () => {
-  // axios.post("https://goscrum-api.alkemy.org/auth/register", {
-  //   user: {
-  //     userName: "1prueba1",
-  //     password: "1prueba1",
-  //     email: "1prueba1@gmail.com",
-  //     teamID: "9cdbd108-f924-4383-947d-8f0c651d0dad",
-  //     role: "Team Leader",
-  //     continent: "America",
-  //     region: "Otro"
-  //   }
-  // })
+  axios.post("https://goscrum-api.alkemy.org/auth/register", {
+    user: {
+      userName: "1prueba2",
+      password: "1prueba2",
+      email: "1prueba2@gmail.com",
+      teamID: "9cdbd108-f924-4383-947d-8f0c651d0dad",
+      role: "Team Leader",
+      continent: "America",
+      region: "Otro"
+    }
+  })
+  .then(data=> console.log(data))
+  .catch(err => console.log(err))
+
   Swal.fire({
     icon: "success",
     title: "submitted",

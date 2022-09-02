@@ -5,6 +5,7 @@ import { useFormik } from "formik"
 import * as Yup from 'yup';
 import Swal from 'sweetalert2';
 import "./auth.styles.css"
+import axios from 'axios';
 
 
 export const Login = () => {
@@ -22,6 +23,15 @@ export const Login = () => {
  });
 
  const onSubmit = () => {
+  // axios.post("https://goscrum-api.alkemy.org/auth/login", {
+  //   user:{
+  //     userName: "1prueba2",
+  //     password: "1prueba2"
+  //   }
+  // })
+  // .then(data => console.log(data))
+  // .catch(err => console.error(err))
+
   Swal.fire({
     icon: "success",
     title: "submitted",
