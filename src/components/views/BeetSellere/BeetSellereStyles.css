@@ -1,104 +1,104 @@
 /* -------------------------------------- BEETSELLERE --------------------------------------*/
 
-.beetSellere-section{
-    display: flex;
-    flex-direction: column;
+.beetSellere-section {
+  display: flex;
+  flex-direction: column;
 }
-.beetSellere-header{
-    background-image: url('/public/assets/zaraBackground.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 800px;
-    display: flex;
-    justify-content: end;
-    align-items: center;
-}
-
-.beetSellere-header > div{
-    padding: 200px;
+.beetSellere-header {
+  background-image: url("/public/assets/zaraBackground.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 800px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-top: 10em;
 }
 
-.beetSellere-header > div >h1{
-    font-size: 100px;
-    margin: 0;
-    padding: 0;
-    color: #ffff;
+.beetSellere-header > div {
+  padding: 200px;
 }
 
-.beetSellere-header > div > p{
-    font-family: Roboto;
-    font-size: 26px;
-    font-weight: 400;
-    line-height: 30px;
-    letter-spacing: 0em;
-    text-align: left;
-    margin: 1rem 0;
-    width: 20rem;
-    color: #ffff;
+.beetSellere-header > div > h1 {
+  font-size: 100px;
+  margin: 0;
+  padding: 0;
+  color: #ffff;
 }
 
-.beetSellere-header > div > button{
-    color: #000;
-    background-color: #ffff;
-    cursor: pointer;
-    padding: 0.5rem;
+.beetSellere-header > div > p {
+  font-family: Roboto;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin: 1rem 0;
+  width: 20rem;
+  color: #ffff;
 }
 
-
-.beetSellere-footer{
-    text-align: center;
-    background-color: #F1F1F1;
-    margin-top: 50px;
+.beetSellere-header > div > button {
+  color: #000;
+  background-color: #ffff;
+  cursor: pointer;
+  padding: 0.5rem;
 }
-.beetSellere-footer h2{
-    font-family: Roboto;
-    font-size: 45px;
-    font-weight: 500;
-    line-height: 53px;
-    letter-spacing: 0.1em;
-    margin: 50px auto 20px auto;
+
+.beetSellere-footer {
+  text-align: center;
+  background-color: #f1f1f1;
+  margin-top: 50px;
+}
+.beetSellere-footer h2 {
+  font-family: Roboto;
+  font-size: 45px;
+  font-weight: 500;
+  line-height: 53px;
+  letter-spacing: 0.1em;
+  margin: 50px auto 20px auto;
 }
 .beetSellere-footer ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
-.beetSellere-footer ul li{
-    margin: 10px;
+.beetSellere-footer ul li {
+  margin: 10px;
 }
-.beetSellere-footer ul li img{
-    width: 200px;
-    height: 200px;
+.beetSellere-footer ul li img {
+  width: 200px;
+  height: 200px;
 }
-.beetSellere-footer h3{
-    font-family: Roboto;
-    font-size: 45px;
-    font-weight: 500;
-    line-height: 53px;
-    letter-spacing: 0.1em;
-    margin: 20px auto 50px auto;
+.beetSellere-footer h3 {
+  font-family: Roboto;
+  font-size: 45px;
+  font-weight: 500;
+  line-height: 53px;
+  letter-spacing: 0.1em;
+  margin: 20px auto 50px auto;
 }
 
-.beetSellere-footer div{
-    color:white;
-    margin-bottom: 30px;
+.beetSellere-footer div {
+  color: white;
+  margin-bottom: 30px;
 }
-.beetSellere-footer div input{
-    width: 40%;
-    margin: 20px 20px;
-    padding: 5px 20px;
-    background:none;
-    border: none;
-    outline: 0px;
-    border-bottom: 2px solid #000;
+.beetSellere-footer div input {
+  width: 40%;
+  margin: 20px 20px;
+  padding: 5px 20px;
+  background: none;
+  border: none;
+  outline: 0px;
+  border-bottom: 2px solid #000;
 }
-.beetSellere-footer div button{
-    font-weight: bold;
-    padding: 5px 20px;
-    background:none;
-    border: none;
-    outline: 0px;
-    border-bottom: 2px solid #000;
-    cursor: pointer;
+.beetSellere-footer div button {
+  font-weight: bold;
+  padding: 5px 20px;
+  background: none;
+  border: none;
+  outline: 0px;
+  border-bottom: 2px solid #000;
+  cursor: pointer;
 }
