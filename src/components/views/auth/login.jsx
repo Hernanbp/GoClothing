@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link} from "react-router-dom"
-// import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import { useFormik } from "formik"
 import * as Yup from 'yup';
 import "./auth.styles.css"
 import logo from '../../svgs/logo.svg'
-// import Swal from 'sweetalert2';
-// import axios from 'axios';
+import Swal from 'sweetalert2';
+import axios from 'axios';
 
 
 export const Login = () => {
@@ -21,7 +21,7 @@ export const Login = () => {
     marginLeft: '6px'
   };
 
-// navigate = useNavigate()
+const navigate = useNavigate()
 
   let initialValues = {
     userName:"",
@@ -33,8 +33,33 @@ export const Login = () => {
     password: Yup.string().min(6, "* Minimo 6 caracteres").required("* Campo obligatorio")
  });
 
-const onSubmit = ()=>{
-  // console.log("va")
+const onSubmit = () => {
+  axios.post("https://goscrum-api.alkemy.org/auth/login", {
+      // userName: "federico",
+      // password: "123456789"
+      userName: values.userName,
+      password: values.password
+  })
+  .then(data => {
+    // console.log(data)
+    const token = data.data.result.token;
+    console.log(token)
+    localStorage.setItem("token", token)
+    Swal.fire({
+      icon: "success",
+      title: "Logged in!",
+      timer: 2500
+    })
+    navigate("/", {replace:true})
+  })
+  .catch(err => {
+    console.error(err)
+    Swal.fire({
+      icon: "error",
+      title: "Wrong username or password",
+      timer: 2000
+    })
+  })
 }
 
   const formik = useFormik( {initialValues, validationSchema, onSubmit} );
@@ -97,31 +122,3 @@ const onSubmit = ()=>{
   )
 }
 
-// const onSubmit = () => {
-//   axios.post("https://goscrum-api.alkemy.org/auth/login", {
-//       // userName: "federico",
-//       // password: "123456789"
-//       userName: values.userName,
-//       password: values.password
-//   })
-//   .then(data => {
-//     // console.log(data)
-//     const token = data.data.result.token;
-//     console.log(token)
-//     localStorage.setItem("token", token)
-//     Swal.fire({
-//       icon: "success",
-//       title: "Logged in!",
-//       timer: 2500
-//     })
-//     navigate("/", {replace:true})
-//   })
-//   .catch(err => {
-//     console.error(err)
-//     Swal.fire({
-//       icon: "error",
-//       title: "Wrong username or password",
-//       timer: 2000
-//     })
-//   })
-// }
