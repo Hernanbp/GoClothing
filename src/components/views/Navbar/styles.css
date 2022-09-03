@@ -28,19 +28,26 @@
   font-family: Poppins, sans-serif;
 }
 
-.navbar_phone{
+.navbar_phone {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.showing{  display: flex }
-.hidden{  display: none }
+.showing {
+  display: flex;
+}
+.hidden {
+  display: none;
+}
 
 @media (max-width: 901px) {
-  .showing{
+  .showing {
     align-items: center;
+    gap: 1em;
+    background-color: #f1f1f1;
     flex-direction: column;
-    border: solid 3px green;
+    border-bottom: solid 1px #989898;
+    padding: 1em 0;
     width: 100%;
   }
 }

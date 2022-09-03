@@ -1,6 +1,7 @@
 import { Navbar, Header, Footer } from "../../views"
 import brand from "../../svgs/brand.svg"
 import "./styles.css"
+import { BeetSellere } from "../BeetSellere"
 
 export function Home() {
   const products = [
@@ -53,6 +54,7 @@ export function Home() {
             ))}
           </div>
         </div>
+        <BeetSellere />
       </section>
       <Footer />
     </>
