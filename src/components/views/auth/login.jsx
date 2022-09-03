@@ -1,34 +1,30 @@
 import React from 'react'
 import { Link} from "react-router-dom"
-// useNavigatef rom "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import { useFormik } from "formik"
 import * as Yup from 'yup';
 import Swal from 'sweetalert2';
 import "./auth.styles.css"
+import axios from 'axios';
 
 
 export const Login = () => {
 
-  // const navigate = useNavigate()
+  const navigate = useNavigate()
 
   let initialValues = {
-    email:"",
+    userName:"",
     password:""
  }
 
  const validationSchema = Yup.object().shape({
-    email: Yup.string().email("Email válido").required("Campo obligatorio"),
+    userName: Yup.string().required("Campo obligatorio"),
     password: Yup.string().min(6, "6 caracteres mínimo").required("Campo obligatorio")
  });
 
- const onSubmit = () => {
-  Swal.fire({
-    icon: "success",
-    title: "submitted",
-    timer: 2000
-  })
-  // navigate("/", {replace:true})
- }
+const onSubmit = ()=>{
+  console.log("va")
+}
 
   const formik = useFormik( {initialValues, validationSchema, onSubmit} );
   const {handleSubmit, handleChange, values, errors} = formik
@@ -42,10 +38,10 @@ export const Login = () => {
             <form onSubmit={handleSubmit}>
               <h1> Log In</h1>
               <div>
-                <label>Email</label>
-                <input onChange={handleChange} value={values.email} name="email" />
+                <label>Username</label>
+                <input onChange={handleChange} value={values.userName} name="userName" />
               </div>
-                {errors.email && <div className="error-color">{errors.email}</div>}
+                {errors.userName && <div className="error-color">{errors.userName}</div>}
               <div> 
                 <label>Password</label>
                 <input onChange={handleChange} value={values.password} name="password" type="password"/>
@@ -62,3 +58,32 @@ export const Login = () => {
     </>
   )
 }
+
+// const onSubmit = () => {
+//   axios.post("https://goscrum-api.alkemy.org/auth/login", {
+//       // userName: "federico",
+//       // password: "123456789"
+//       userName: values.userName,
+//       password: values.password
+//   })
+//   .then(data => {
+//     // console.log(data)
+//     const token = data.data.result.token;
+//     console.log(token)
+//     localStorage.setItem("token", token)
+//     Swal.fire({
+//       icon: "success",
+//       title: "Logged in!",
+//       timer: 2500
+//     })
+//     navigate("/", {replace:true})
+//   })
+//   .catch(err => {
+//     console.error(err)
+//     Swal.fire({
+//       icon: "error",
+//       title: "Wrong username or password",
+//       timer: 2000
+//     })
+//   })
+// }
