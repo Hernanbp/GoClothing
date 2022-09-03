@@ -69,7 +69,12 @@
 }
 .beetSellere-footer ul li img{
     width: 200px;
-    height: 200px;
+    height: 200px; 
+    opacity: 1;
+}
+.beetSellere-footer ul li img:hover{
+    transition: all 1s;
+    opacity: 0.5;
 }
 .beetSellere-footer h3{
     font-family: Roboto;
