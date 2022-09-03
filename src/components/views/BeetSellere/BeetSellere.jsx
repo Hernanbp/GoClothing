@@ -20,7 +20,7 @@ export function BeetSellere() {
             </div>
         </div>
         <AllProducts title={"New Product"}></AllProducts>
-        <AllProducts title={"Best Sellers"}></AllProducts>
+        {/* <AllProducts title={"Best Sellers"}></AllProducts> */}
         <div className="beetSellere-footer">
             <h2>Follow Products And Discounts On Instagram</h2>
 
