@@ -3,13 +3,13 @@ import { Link, useNavigate} from "react-router-dom"
 // useNavigatef rom "react-router-dom"
 import { useFormik } from "formik"
 import * as Yup from 'yup';
-import Swal from 'sweetalert2';
+// import Swal from 'sweetalert2';
 import "./auth.styles.css"
-import axios from "axios"
+// import axios from "axios"
 
 export const Register = () => {
 
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
 
   let initialValues = {
     email:"",
