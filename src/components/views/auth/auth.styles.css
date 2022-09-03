@@ -18,8 +18,13 @@
 
 .auth-page input {
     background: #F6EFE9;
+    padding: 11px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(24, 39, 58, 0.94);
 }
-
 
 .auth-page {
     display: flex;
