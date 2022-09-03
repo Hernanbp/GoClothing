@@ -67,7 +67,7 @@
 .beetSellere-footer ul li {
   margin: 10px;
 }
-<<<<<<< HEAD
+
 .beetSellere-footer ul li img{
     width: 200px;
     height: 200px; 
@@ -76,11 +76,11 @@
 .beetSellere-footer ul li img:hover{
     transition: all 1s;
     opacity: 0.5;
-=======
+}
 .beetSellere-footer ul li img {
   width: 200px;
   height: 200px;
->>>>>>> 74be396f80d8d7b6ef1ef06d85614ae0e5180eca
+
 }
 .beetSellere-footer h3 {
   font-family: Roboto;
