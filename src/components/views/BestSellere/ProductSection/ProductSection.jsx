@@ -1,13 +1,13 @@
-import "./AllProductsStyles.css"
+import "./ProductSectionStyles.css"
 
-import  {ProductsList} from "../ProductsList/ProductsList"
+import  {Product} from "../../Product/Product"
 
 
-export default function AllProducts(props) {
+export default function ProductSection(props) {
     const {title} = props;
   return (
     <>
-      <div className="beetSellere-main">
+      <div className="bestSellere-main">
             <div>
                 <h2>{title}</h2>
                 <div>
@@ -19,8 +19,8 @@ export default function AllProducts(props) {
                         </ul>
                         <button>Show All</button>
                     </div>
-                    <div className="beetSellere-products">
-                        <ProductsList></ProductsList>
+                    <div className="bestSellere-products">
+                        <Product />
                     </div>
                 </div>
             </div>

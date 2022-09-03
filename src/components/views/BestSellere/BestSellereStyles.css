@@ -1,10 +1,10 @@
-/* -------------------------------------- BEETSELLERE --------------------------------------*/
+/* -------------------------------------- bestSellere --------------------------------------*/
 
-.beetSellere-section{
+.bestSellere-section{
     display: flex;
     flex-direction: column;
 }
-.beetSellere-header{
+.bestSellere-header{
     background-image: url('/public/assets/zaraBackground.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -15,18 +15,18 @@
     align-items: center;
 }
 
-.beetSellere-header > div{
+.bestSellere-header > div{
     padding: 200px;
 }
 
-.beetSellere-header > div >h1{
+.bestSellere-header > div >h1{
     font-size: 100px;
     margin: 0;
     padding: 0;
     color: #ffff;
 }
 
-.beetSellere-header > div > p{
+.bestSellere-header > div > p{
     font-family: Roboto;
     font-size: 26px;
     font-weight: 400;
@@ -38,20 +38,19 @@
     color: #ffff;
 }
 
-.beetSellere-header > div > button{
+.bestSellere-header > div > button{
     color: #000;
     background-color: #ffff;
     cursor: pointer;
     padding: 0.5rem;
 }
 
-
-.beetSellere-footer{
+.bestSellere-footer{
     text-align: center;
     background-color: #F1F1F1;
     margin-top: 50px;
 }
-.beetSellere-footer h2{
+.bestSellere-footer h2{
     font-family: Roboto;
     font-size: 45px;
     font-weight: 500;
@@ -59,19 +58,19 @@
     letter-spacing: 0.1em;
     margin: 50px auto 20px auto;
 }
-.beetSellere-footer ul {
+.bestSellere-footer ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
-.beetSellere-footer ul li{
+.bestSellere-footer ul li{
     margin: 10px;
 }
-.beetSellere-footer ul li img{
+.bestSellere-footer ul li img{
     width: 200px;
     height: 200px;
 }
-.beetSellere-footer h3{
+.bestSellere-footer h3{
     font-family: Roboto;
     font-size: 45px;
     font-weight: 500;
@@ -80,11 +79,11 @@
     margin: 20px auto 50px auto;
 }
 
-.beetSellere-footer div{
+.bestSellere-footer div{
     color:white;
     margin-bottom: 30px;
 }
-.beetSellere-footer div input{
+.bestSellere-footer div input{
     width: 40%;
     margin: 20px 20px;
     padding: 5px 20px;
@@ -93,7 +92,7 @@
     outline: 0px;
     border-bottom: 2px solid #000;
 }
-.beetSellere-footer div button{
+.bestSellere-footer div button{
     font-weight: bold;
     padding: 5px 20px;
     background:none;

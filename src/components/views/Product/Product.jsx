@@ -1,9 +1,9 @@
 import "./styles.css"
 //import { useEffect, useState } from "react"
-import ProductZara from "../BeetSellere/ProductZara"
+import ProductZara from "../BestSellere/ProductZara"
 
 
-  export function ProductsList() {
+  export function Product() {
   //const [fetchedData, setFetchedData] = useState(null)
   /* 
   useEffect(() => {

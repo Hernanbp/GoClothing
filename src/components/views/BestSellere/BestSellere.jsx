@@ -1,12 +1,12 @@
-import "./BeetSellereStyles.css"
-import  AllProducts  from "../AllProducts/AllProducts"
+import "./BestSellereStyles.css"
+import  ProductSection  from "./ProductSection/ProductSection"
 
 
-export function BeetSellere() {
+export function BestSellere() {
   return (
     <>
-      <section className="beetSellere-section">
-        <div className="beetSellere-header">
+      <section className="bestSellere-section">
+        <div className="bestSellere-header">
             {
                 /*
                 Es la palabra ZARA, de fondo, GRIS
@@ -20,9 +20,9 @@ export function BeetSellere() {
                 <button>See Collection</button>
             </div>
         </div>
-        <AllProducts title={"New Product"}></AllProducts>
-        <AllProducts title={"Best Sellers"}></AllProducts>
-        <div className="beetSellere-footer">
+        <ProductSection title={"New Product"}></ProductSection>
+        <ProductSection title={"Best Sellers"}></ProductSection>
+        <div className="bestSellere-footer">
             <h2>Follow Products And Discounts On Instagram</h2>
 
             <ul>
