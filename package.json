@@ -12,7 +12,11 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
+<<<<<<< HEAD
     "add": "^2.0.6",
+=======
+    "axios": "^0.27.2",
+>>>>>>> 74be396f80d8d7b6ef1ef06d85614ae0e5180eca
     "formik": "^2.2.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

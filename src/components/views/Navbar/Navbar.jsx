@@ -11,23 +11,40 @@ export function Navbar() {
   const [show, setShow] = useState()
   const { phoneScreen } = useResize()
 
+  const handleToggle = ()=>{
+    setShow((prevState) => !prevState)
+  }
+
   return (
     <div className="nav-container">
-      <nav className="navbar">
-        <div className="top">
-          {<SearchIcon />}
-          <img src={logo} alt="e-commerce" />
-          <div>
-            {<PersonIcon />}
-            {<ShoppingBagIcon />}
-          </div>
-        </div>
-
         {phoneScreen ? (
-          <div className="bottom-phone-show">
-            <MenuIcon />
-          </div>
+            <nav className="navbar_phone">
+              <img src={logo} alt="e-commerce" />
+              <div>
+                {<PersonIcon />}
+                {<ShoppingBagIcon />}
+                <MenuIcon onClick={handleToggle}/>
+              </div>
+              <div className={show ? "showing": "hidden"}>
+                <p>Jewelry & Accessories</p>
+                <p>Clothing & Shoes</p>
+                <p>Home & Living</p>
+                <p>Wedding & Party</p>
+                <p>Toys & Entertainment</p>
+                <p>Art & Collectibles </p>
+                <p>Craft Supplies & Tools </p>
+              </div>
+           </nav>
         ) : (
+          <nav className="navbar_desktop">
+            <div className="top">
+              {<SearchIcon />}
+              <img src={logo} alt="e-commerce" />
+              <div>
+                {<PersonIcon />}
+                {<ShoppingBagIcon />}
+              </div>
+            </div>
           <div className="bottom">
             <p>Jewelry & Accessories</p>
             <p>Clothing & Shoes</p>
@@ -37,18 +54,8 @@ export function Navbar() {
             <p>Art & Collectibles </p>
             <p>Craft Supplies & Tools </p>
           </div>
+        </nav>
         )}
-
-        {/* <div className="bottom"> 
-          <p>Jewelry & Accessories</p>
-          <p>Clothing & Shoes</p>  
-          <p>Home & Living</p>  
-          <p>Wedding & Party</p>  
-          <p>Toys & Entertainment</p>
-          <p>Art & Collectibles </p>
-          <p>Craft Supplies & Tools </p>
-        </div> */}
-      </nav>
     </div>
   )
 }
