@@ -35,5 +35,6 @@ import ProductZara from "../BeetSellere/ProductZara"
           </div>
           )})
           }
+          </div>
     </>);
     }
