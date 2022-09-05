@@ -1,28 +1,35 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-// import  {ProductsList} from "../ProductsList/ProductsList"
+import { ProductCard } from '../ProductCard/ProductCard'
+import { Link } from 'react-router-dom'
 
 export const Cart = () => {
 
   const dispatch = useDispatch()
 
-  const {error, loading, cartReducer} = useSelector(state=>{
-    console.log(state)      // TODO el estado de redux
-    console.log(state.cartReducer) // Solo el reducer del Cart (1 de todo el state de redux)
+  const {error, loading, cart} = useSelector(state=>{
+    // console.log(state)          // TODOs los reducers
+    console.log(state.cartReducer) // SOLO el reducer del carrito
     return state.cartReducer
   })
 
   return (
     <div>
-      Cart
+    Cart Route
+    <Link to="/"> Keep Shopping</Link>
 
-      {cartReducer && cartReducer.map(()=>{
-        return (
-          <div>
-            card component con el producto
-            {/* <ProductsList /> */}
-          </div>
-        )
+      {cart && cart.map((productInCart, i)=>{
+          return (
+            <div key={i}>
+              <ProductCard 
+                description={productInCart.description}
+                category={productInCart.category}
+                price={productInCart.price}
+                beforePrice ={productInCart.beforePrice}
+                product={productInCart}
+              />
+            </div>
+          )
       })}
 
     </div>

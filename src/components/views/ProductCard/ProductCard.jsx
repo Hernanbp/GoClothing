@@ -2,7 +2,7 @@ import "./styles.css"
 //import { useEffect, useState } from "react"
 import { useDispatch } from "react-redux"
 import {addToCart} from "../redux/ReduxFunctions"
-
+import Swal from "sweetalert2"
 
 export function ProductCard(props) {
 
@@ -10,7 +10,11 @@ const dispatch = useDispatch()
 
 const handleAddToCart = (product) => {
   dispatch(addToCart(product))
-  console.log("producto agregado al carrito")
+  Swal.fire({
+    icon: "success",
+    title: "agregaste al carrito",
+    timer: 1000
+  })
 }
 
   //const [fetchedData, setFetchedData] = useState(null)
