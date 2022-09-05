@@ -1,4 +1,6 @@
 .nav-container {
+  justify-content: center;
+  display: flex;
   position: absolute;
   top: 0;
   z-index: 1000;
@@ -14,6 +16,11 @@
   top: 0;
   gap: 1em;
 }
+
+.navbar_desktop {
+  width: 1300px;
+}
+
 .navbar_desktop > .top {
   max-width: 100%;
   justify-content: space-between;
