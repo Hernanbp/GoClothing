@@ -2,7 +2,7 @@ import "./styles.css"
 //import { useEffect, useState } from "react"
 
 
-export function Product(props) {
+export function ProductCard(props) {
   //const [fetchedData, setFetchedData] = useState(null)
   /* 
   useEffect(() => {
@@ -31,9 +31,6 @@ export function Product(props) {
       //   .catch(err => console.error(err))
   },[])
 */
-
-  // ESTA FUNC. la TENEMOS Q LLAMAR productCard:
- 
   return (
     <>
       <div className="card-container"> 

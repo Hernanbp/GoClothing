@@ -1,13 +1,13 @@
 import "./ProductSectionStyles.css"
-import hardcodeProducts from "../../Product/ProductZara"
-import  {Product} from "../../Product"
+import HardcodeZara from "../../ProductCard/HardcodeZara"
+import  {ProductCard} from "../../ProductCard/ProductCard"
 
 
 export default function ProductSection (props) {
     const {title} = props;
   return (
     <>
-      <div className="bestSellere-main">
+      <div className="bestSellers-main">
             <div>
                 <h2>{title}</h2>
                 <div>
@@ -20,10 +20,10 @@ export default function ProductSection (props) {
                         </ul>
                         <button>Show All</button>
                     </div>
-                    <div className="bestSellere-products">
-                        {hardcodeProducts.map( (item)=>{
+                    <div className="bestSellers-products">
+                        {HardcodeZara.map( (item)=>{
                         return (
-                            <Product 
+                            <ProductCard 
                             key={item.id} 
                             description={item.description}
                             category={item.category}
