@@ -1,7 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import { Home, Login, Register, Cart } from "./components/views";
 
-import { BestSellere } from "./components/views/BestSellere";
 const App = () => {
   return (
     <Routes>
@@ -9,7 +8,6 @@ const App = () => {
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/cart" element={<Cart />} />
-      <Route path="/zara" element={<BestSellere />} />
     </Routes>
   );
 };

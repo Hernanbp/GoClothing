@@ -1,8 +1,7 @@
 import "./BestSellereStyles.css"
 import  ProductSection  from "./ProductSection/ProductSection"
 
-
-export function BestSellere() {
+export function BeetSellere() {
   return (
     <>
       <section className="bestSellere-section">
@@ -22,6 +21,7 @@ export function BestSellere() {
         </div>
         <ProductSection title={"New Product"}></ProductSection>
         <ProductSection title={"Best Sellers"}></ProductSection>
+        {/* <AllProducts title={"Best Sellers"}></AllProducts> */}
         <div className="bestSellere-footer">
             <h2>Follow Products And Discounts On Instagram</h2>
 

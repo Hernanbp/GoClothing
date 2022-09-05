@@ -67,9 +67,11 @@
     margin: 10px;
 }
 .bestSellere-footer ul li img{
-    width: 200px;
-    height: 200px;
+  width: 200px;
+  height: 200px; 
+  opacity: 1;
 }
+
 .bestSellere-footer h3{
     font-family: Roboto;
     font-size: 45px;
