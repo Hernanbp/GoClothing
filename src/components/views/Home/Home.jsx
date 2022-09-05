@@ -1,4 +1,4 @@
-import { Header, Footer, BeetSellere } from "../../views"
+import { Navbar, Header, Footer, BeetSellere } from "../../views"
 //falta el navBar
 import brand from "../../svgs/brand.svg"
 import "./styles.css"
@@ -29,8 +29,7 @@ export function Home() {
 
   return (
     <>
-      {/*
-        <Navbar /> */}
+      <Navbar /> 
       <Header />
       <section className="home-section">
         <div className="container-home">

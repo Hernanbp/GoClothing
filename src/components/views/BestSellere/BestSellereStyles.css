@@ -3,6 +3,7 @@
 .bestSellere-section{
     display: flex;
     flex-direction: column;
+    margin-top: 30px;
 }
 .bestSellere-header{
     background-image: url('/public/assets/zaraBackground.png');
