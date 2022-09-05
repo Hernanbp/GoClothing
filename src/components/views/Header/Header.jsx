@@ -3,7 +3,7 @@ import "./styles.css"
 
 export const Header = () => {
   return (
-    <header>
+    <header id="header">
       <FlowerPatternOne className="FlowerPatternOne" />
       <div className="container">
         <div className="call-to-action">

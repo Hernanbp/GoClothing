@@ -82,9 +82,9 @@ header a {
   transform: scale(0.8);
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1385px) {
   header {
-    padding: 4em 2em;
+    padding: 10em 2em;
   }
 
   .header-container-img {
@@ -127,6 +127,7 @@ header a {
   .call-to-action {
     min-width: 400px;
     max-width: 550px;
+    padding-right: 35px;
   }
 }
 
