@@ -1,6 +1,6 @@
 import "./ProductSectionStyles.css"
-import hardcodeProducts from "../../Product/ProductZara"
-import  {Product} from "../../Product"
+import HardcodeZara from "../../ProductCard/HardcodeZara"
+import  {ProductCard} from "../../ProductCard/ProductCard"
 
 
 export default function ProductSection (props) {
@@ -21,9 +21,9 @@ export default function ProductSection (props) {
                         <button>Show All</button>
                     </div>
                     <div className="bestSellers-products">
-                        {hardcodeProducts.map( (item)=>{
+                        {HardcodeZara.map( (item)=>{
                         return (
-                            <Product 
+                            <ProductCard 
                             key={item.id} 
                             description={item.description}
                             category={item.category}
