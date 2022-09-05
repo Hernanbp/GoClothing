@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import  {ProductsList} from "../ProductsList/ProductsList"
+// import  {ProductsList} from "../ProductsList/ProductsList"
 
 export const Cart = () => {
 

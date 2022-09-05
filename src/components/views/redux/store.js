@@ -2,7 +2,7 @@
 // import { composeWithDevTools } from "@redux-devtools/extension"
 // import thunk from "redux-thunk";
 import { createStore } from "redux";
-import {rootReducer, cartReducer} from "./reduxFunctions"
+import {rootReducer, cartReducer} from "./ReduxFunctions"
 
 export const store = createStore(
     rootReducer,

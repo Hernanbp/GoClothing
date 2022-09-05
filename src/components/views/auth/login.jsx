@@ -29,8 +29,8 @@ const navigate = useNavigate()
  }
 
  const validationSchema = Yup.object().shape({
-    userName: Yup.string().required("* Campo obligatorio"),
-    password: Yup.string().min(6, "* Minimo 6 caracteres").required("* Campo obligatorio")
+    userName: Yup.string().required("* Required field"),
+    password: Yup.string().min(6, "* Min 6 characters").required("* Required field")
  });
 
 const onSubmit = () => {
@@ -43,7 +43,7 @@ const onSubmit = () => {
   .then(data => {
     // console.log(data)
     const token = data.data.result.token;
-    console.log(token)
+    // console.log(token)
     localStorage.setItem("token", token)
     Swal.fire({
       icon: "success",
