@@ -1,15 +1,15 @@
 import React from 'react'
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { useFormik } from "formik"
 import * as Yup from 'yup';
 import logo from '../../svgs/logo.svg'
 // import Swal from 'sweetalert2';
 import "./auth.styles.css"
-// import axios from "axios"
+import axios from "axios"
 
 export const Register = () => {
 
-  // const navigate = useNavigate()
+  const navigate = useNavigate()
 
   const linkStyle = {
     textDecoration: 'none',
@@ -24,20 +24,36 @@ export const Register = () => {
 
   let initialValues = {
     userName:"",
-    password:""
+    password:"",
+    email:"",
  }
 
  const validationSchema = Yup.object().shape({
     userName: Yup.string().required("* Required field"),
-    password: Yup.string().min(6, "* Min 6 characters").required("* Required field")
+    password: Yup.string().min(6, "* Min 6 characters").required("* Required field"),
+    email: Yup.string().email("* debe ser una email valido").required("* ingrese el mail")
  });
 
-const onSubmit = () => {
-  // console.log("fue ")
+
+ const onSubmit = () => {
+  axios.post("https://goscrum-api.alkemy.org/auth/register", {
+    user: {
+      userName: values.userName,
+      password: values.password,
+      email: values.email,
+      teamID: "9cdbd108-f924-4383-947d-8f0c651d0dad",
+      role: "Team Member",
+      continent: "America",
+      region: "Brazil"
+  },
+  })
+  .then(data => {
+    navigate("/login", {replace:true})
+  })
 }
 
   const formik = useFormik( {initialValues, validationSchema, onSubmit} );
-  const {handleSubmit, handleChange, values, errors} = formik
+  const {handleSubmit, handleChange, values, touched, errors} = formik
   return (
     <>
     <section className='auth-page-container'>
@@ -53,7 +69,7 @@ const onSubmit = () => {
               </div>
             <form onSubmit={handleSubmit}>
               <div className='input-section'>
-                <div className='social-container'>
+                {/* <div className='social-container'>
                   <img src="../assets/facebook-logo.png" alt="" />
                   <img src="../assets/google-logo.png" alt="" />
                 </div>
@@ -61,12 +77,17 @@ const onSubmit = () => {
                   <div className='first-line'></div>
                   OR
                   <div className='second-line'></div>
+                </div> */}
+                <div className='input-container'>
+                  <label>Email</label>
+                  <input className='text-input' onChange={handleChange} value={values.email} name="email" />
                 </div>
+                {errors.email && touched.email && <div className="error-color">{errors.email}</div>}
                 <div className='input-container'>
                   <label>Username</label>
                   <input className='text-input' onChange={handleChange} value={values.userName} name="userName" />
                 </div>
-                  {errors.userName && <div className="error-color">{errors.userName}</div>}
+                  {errors.userName && touched.userName && <div className="error-color">{errors.userName}</div>}
                 <div className='input-container'> 
                   <label>Password</label>
                   <input className='text-input' onChange={handleChange} value={values.password} name="password" type="password"/>
