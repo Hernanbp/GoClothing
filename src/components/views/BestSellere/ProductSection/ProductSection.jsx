@@ -1,5 +1,5 @@
 import "./ProductSectionStyles.css"
-
+import hardcodeProducts from "../../Product/ProductZara"
 import  {Product} from "../../Product"
 
 
@@ -21,7 +21,17 @@ export default function ProductSection (props) {
                         <button>Show All</button>
                     </div>
                     <div className="bestSellere-products">
-                        <Product />
+                        {hardcodeProducts.map( (item)=>{
+                        return (
+                            <Product 
+                            key={item.id} 
+                            description={item.description}
+                            category={item.category}
+                            price={item.price}
+                            beforePrice ={item.beforePrice} 
+                            />
+                            )}
+                        )}
                     </div>
                 </div>
             </div>
@@ -55,3 +65,4 @@ return (
 }
 </div> */
 /* LO QUE ERA <ProductsList></ProductsList> */
+
