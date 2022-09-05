@@ -1,8 +1,8 @@
 import "./styles.css"
 //import { useEffect, useState } from "react"
-import ProductZara from "./ProductZara"
 
-export function Product() {
+
+export function Product(props) {
   //const [fetchedData, setFetchedData] = useState(null)
   /* 
   useEffect(() => {
@@ -37,27 +37,22 @@ export function Product() {
   return (
     <>
       <div className="card-container"> 
-        {
-        ProductZara.map( (item)=>{
-          return (
-          <div key={item.id} className="item"> 
+          <div key={props.id} className="item"> 
             <div className="item-title">
               <img src="../assets/p1.png" alt=""/>
               <button>SALE</button>
             </div >
             <div className="item-description">
-              <h3> {item.description}</h3>
+              <h3> {props.description}</h3>
                 <div>
-                  <p> {item.category}</p>
+                  <p> {props.category}</p>
                   <div>
-                    <p className={item.beforePrice === "" ? "": "discount"}> {item.beforePrice}</p>
-                    <p> {item.price}</p>
+                    <p className={props.beforePrice === "" ? "": "discount"}> {props.beforePrice}</p>
+                    <p> {props.price}</p>
                   </div>
               </div>
             </div>
           </div>
-          )})
-        }
       </div>
     </>);
 }
