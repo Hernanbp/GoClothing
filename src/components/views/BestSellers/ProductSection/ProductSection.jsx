@@ -28,7 +28,8 @@ export default function ProductSection (props) {
                             description={item.description}
                             category={item.category}
                             price={item.price}
-                            beforePrice ={item.beforePrice} 
+                            beforePrice ={item.beforePrice}
+                            product={item}
                             />
                             )}
                         )}

@@ -1,8 +1,22 @@
 import "./styles.css"
 //import { useEffect, useState } from "react"
-
+import { useDispatch } from "react-redux"
+import {addToCart} from "../redux/ReduxFunctions"
+import Swal from "sweetalert2"
 
 export function ProductCard(props) {
+
+const dispatch = useDispatch()
+
+const handleAddToCart = (product) => {
+  dispatch(addToCart(product))
+  Swal.fire({
+    icon: "success",
+    title: "agregaste al carrito",
+    timer: 1000
+  })
+}
+
   //const [fetchedData, setFetchedData] = useState(null)
   /* 
   useEffect(() => {
@@ -43,6 +57,7 @@ export function ProductCard(props) {
               <h3> {props.description}</h3>
                 <div>
                   <p> {props.category}</p>
+                  <button onClick={() => handleAddToCart(props.product)}>SALE</button> {/*HORRIBLE, pero para implementar REDUX*/}
                   <div>
                     <p className={props.beforePrice === "" ? "": "discount"}> {props.beforePrice}</p>
                     <p> {props.price}</p>
