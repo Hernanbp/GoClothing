@@ -1,27 +1,27 @@
 /* -------------------------------------- ALL PRODUCTS --------------------------------------*/
 
-.bestSellere-main {
+.bestSellers-main {
     display: flex;
     justify-content: center;
     margin-top: 50px;
 }
 
-.bestSellere-main > div > h2{
+.bestSellers-main > div > h2{
     font-size: 40px;
     text-align: center;
 }
-.bestSellere-main > div > div > div {
+.bestSellers-main > div > div > div {
     display: flex;
     justify-content: space-between;
     width: 90%;
     margin: auto;
 }
-.bestSellere-main > div > div > div > ul > li{
+.bestSellers-main > div > div > div > ul > li{
     display: inline;
     cursor: pointer;
     padding: 0.5rem;
 }
-.bestSellere-main > div > div > div > button{
+.bestSellers-main > div > div > div > button{
     border: 1px solid #000;
     padding: 0.2rem;
     background-color: #000;

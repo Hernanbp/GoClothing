@@ -7,7 +7,7 @@ export default function ProductSection (props) {
     const {title} = props;
   return (
     <>
-      <div className="bestSellere-main">
+      <div className="bestSellers-main">
             <div>
                 <h2>{title}</h2>
                 <div>
@@ -20,7 +20,7 @@ export default function ProductSection (props) {
                         </ul>
                         <button>Show All</button>
                     </div>
-                    <div className="bestSellere-products">
+                    <div className="bestSellers-products">
                         {hardcodeProducts.map( (item)=>{
                         return (
                             <Product 

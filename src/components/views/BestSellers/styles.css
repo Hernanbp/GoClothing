@@ -1,11 +1,11 @@
-/* -------------------------------------- bestSellere --------------------------------------*/
+/* -------------------------------------- bestSellers --------------------------------------*/
 
-.bestSellere-section{
+.bestSellers-section{
     display: flex;
     flex-direction: column;
     margin-top: 30px;
 }
-.bestSellere-header{
+.bestSellers-header{
     background-image: url('/public/assets/zaraBackground.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -16,18 +16,18 @@
     align-items: center;
 }
 
-.bestSellere-header > div{
+.bestSellers-header > div{
     padding: 200px;
 }
 
-.bestSellere-header > div >h1{
+.bestSellers-header > div >h1{
     font-size: 100px;
     margin: 0;
     padding: 0;
     color: #ffff;
 }
 
-.bestSellere-header > div > p{
+.bestSellers-header > div > p{
     font-family: Roboto;
     font-size: 26px;
     font-weight: 400;
@@ -39,19 +39,19 @@
     color: #ffff;
 }
 
-.bestSellere-header > div > button{
+.bestSellers-header > div > button{
     color: #000;
     background-color: #ffff;
     cursor: pointer;
     padding: 0.5rem;
 }
 
-.bestSellere-footer{
+.bestSellers-footer{
     text-align: center;
     background-color: #F1F1F1;
     margin-top: 50px;
 }
-.bestSellere-footer h2{
+.bestSellers-footer h2{
     font-family: Roboto;
     font-size: 45px;
     font-weight: 500;
@@ -59,21 +59,21 @@
     letter-spacing: 0.1em;
     margin: 50px auto 20px auto;
 }
-.bestSellere-footer ul {
+.bestSellers-footer ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
-.bestSellere-footer ul li{
+.bestSellers-footer ul li{
     margin: 10px;
 }
-.bestSellere-footer ul li img{
+.bestSellers-footer ul li img{
   width: 200px;
   height: 200px; 
   opacity: 1;
 }
 
-.bestSellere-footer h3{
+.bestSellers-footer h3{
     font-family: Roboto;
     font-size: 45px;
     font-weight: 500;
@@ -82,11 +82,11 @@
     margin: 20px auto 50px auto;
 }
 
-.bestSellere-footer div{
+.bestSellers-footer div{
     color:white;
     margin-bottom: 30px;
 }
-.bestSellere-footer div input{
+.bestSellers-footer div input{
     width: 40%;
     margin: 20px 20px;
     padding: 5px 20px;
@@ -95,7 +95,7 @@
     outline: 0px;
     border-bottom: 2px solid #000;
 }
-.bestSellere-footer div button{
+.bestSellers-footer div button{
     font-weight: bold;
     padding: 5px 20px;
     background:none;
