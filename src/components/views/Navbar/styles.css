@@ -27,6 +27,7 @@
 }
 .navbar_desktop > .bottom {
   /* border: 2px solid blue; */
+  margin-top: 14px;
   display: flex;
   justify-content: space-between;
 }
