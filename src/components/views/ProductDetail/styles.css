@@ -2,15 +2,22 @@
 
 
 .product-section {
-    padding-top: 16.4em;
+    padding: 16.4em 2em 0 2em;
     max-width: 1300px;
     margin: auto;
+    height: 100vh;
+}
+
+.product-section * {
+    font-family: 'Roboto';
+    font-style: normal;
 }
 
 .product-section .product-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    gap: 2em;
 }
 
 .product-section .product-info {
@@ -29,16 +36,45 @@
     color: #1E1E1E;
 }
 
+.product-section .product-img {
+    display: flex;
+    justify-content: center;
+    height: 560px;
+    width: 560px;
+    min-width: 450px;
+    min-height: 450px;
+}
+
+
 .product-section .product-info .price {
     margin-top: 8px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    color: #686363;
 }
 
 .product-section .product-info .description {
     margin-top: 50px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 21px;
+    color: #686363;
 }
 
 .product-section .product-info .size {
     margin-top: 37px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #686363;
+}
+
+.product-section .product-info .size > span {
+    margin-top: 37px;
+    font-weight: 500;
+    color: #1E1E1E;
 }
 
 .product-section .product-info .buttons {
@@ -63,6 +99,22 @@
     width: 133px;
 }
 
+.size-options > div > span:nth-child(1) {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    color: #1E1E1E;
+}
+
+.size-options > div > span:nth-child(2) {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #686363;
+}
+
+
+
 .product-section .size-options > div:hover {
     border: 1px solid #686363;
 }
@@ -70,3 +122,48 @@
 .product-section .size-options > .select {
     border: 1px solid #686363;
 }
+
+.product-section .buttons {
+   display: flex;
+   gap: 16px;
+   align-items: center;
+}
+
+.product-section .buttons button {
+    cursor: pointer;
+    padding: 12px;
+    width: 100%;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.product-section .buttons button:nth-child(1) {
+    background: #1E2832;
+    color: #F6F6F6;
+}
+
+.product-section .buttons button:nth-child(3) {
+    background: #ffff;
+    color: #1E1E1E;
+    border: 1px solid #E9E5E5;
+}
+
+.product-section .buttons button:nth-child(1):hover {
+    background: #B18A75;
+    color: #F6F6F6;
+}
+
+.product-section .buttons button:nth-child(3):hover {
+    background: #E9E5E5;
+}
+.product-section .buttons > span {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #686363;
+}
+
+

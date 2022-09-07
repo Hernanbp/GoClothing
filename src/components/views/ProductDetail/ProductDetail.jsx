@@ -1,22 +1,18 @@
-import React, { useState } from 'react'
+import { useParams } from "react-router-dom";
+import { getProductById } from "../../../helpers/getProductById";
 import { Navbar } from "../../views";
+import { ProductSize } from "./ProductSize";
 import "./styles.css"
+
 
 export const ProductDetail = () => {
 
     // arreglar para que cree una url con el id
     // poner objeto en otro archivo
 
-    const product = {
-        _id: "purse-zara",
-        name: "Purse Zara",
-        description: "Sleek and timeless. Titanium glasses with an innovative bridge. A frame to suit every face, Morgan is a classic shape.",
-        price: 275,
-        category: "purse"
-    }
+    const { _id } = useParams();
     
-
-    const [selected, setSelected] = useState(1)
+    const products = getProductById(_id)
 
 
 
@@ -27,22 +23,17 @@ export const ProductDetail = () => {
             <div className='product-container'>
 
                 <div className='product-img'>
-                    <img src="" alt="'product_img" />
+                    <img src={`../assets/${products.img}`} alt="product_img" />
                 </div>
 
 
                 <div className='product-info'>
-                    <h1 className='title'>{product.name}</h1>
-                    <span className='price'>${product.price}</span>
-                    <p className='description'>{product.description}</p>
+                    <h1 className='title'>{products.name}</h1>
+                    <span className='price'>€{products.price}*</span>
+                    <p className='description'>{products.description}</p>
 
                     {/* crear comp aparte, mandar cosas por ref() para que aparezca  "Select Size:" y renderize segun cat*/}
-                    <span className='size'>Select Size:   </span>
-                    <div className='size-options'>
-                        <div className={selected === 1 && "select"} onClick={ () => setSelected(1)}><span>134mm</span><span>Medium</span></div>
-                        <div className={selected === 2 && "select"} onClick={ () => setSelected(2)}><span>134mm</span><span>Medium</span></div>
-                        <div className={selected === 3 && "select"} onClick={ () => setSelected(3)}><span>134mm</span><span>Medium</span></div>
-                    </div>
+                    <ProductSize />
 
                     <div className='buttons'>
                         <button>Add to Bag</button>
