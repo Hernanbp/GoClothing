@@ -10,7 +10,7 @@ export default function ProductSection (props) {
       <div className="bestSellers-main">
             <div>
                 <h2>{title}</h2>
-                <div>
+                <div className="bestSellers-main-list">
                     
                     <div>
                         <ul>

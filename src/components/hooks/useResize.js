@@ -1,19 +1,20 @@
-import {useEffect, useState} from "react" 
+import { useEffect, useState } from "react";
 
-export const useResize = ()=>{
-    const [phoneScreen, setPhoneScreen] = useState(
-        window.innerWidth < 900 ? true : false
-    )
+export const useResize = () => {
+  const [phoneScreen, setPhoneScreen] = useState(
+    window.innerWidth < 900 ? true : false
+  );
 
-    const handleResize = ()=>{
-        if (window.innerWidth < 900) setPhoneScreen(true)
-        else setPhoneScreen(false)
-    }
-useEffect(()=>{
-    handleResize()
-    window.addEventListener("resize", handleResize)
-    return ()=> window.removeEventListener("resize", handleResize)
-})
+  const handleResize = () => {
+    if (window.innerWidth < 900) setPhoneScreen(true);
+    else setPhoneScreen(false);
+  };
 
-    return { phoneScreen}
-}
+  useEffect(() => {
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  });
+
+  return { phoneScreen };
+};
