@@ -1,4 +1,5 @@
-import { useParams } from "react-router-dom";
+import { useMemo } from "react";
+import { useParams, Link } from "react-router-dom";
 import { getProductById } from "../../../helpers/getProductById";
 import { Navbar } from "../../views";
 import { ProductSize } from "./ProductSize";
@@ -12,8 +13,7 @@ export const ProductDetail = () => {
 
     const { _id } = useParams();
     
-    const products = getProductById(_id)
-
+    const products = useMemo( () => getProductById( _id ), [ _id ])
 
 
   return (
@@ -36,9 +36,9 @@ export const ProductDetail = () => {
                     <ProductSize />
 
                     <div className='buttons'>
-                        <button>Add to Bag</button>
+                        <Link to="/products">Add to Bag</Link>
                         <span>or</span>
-                        <button>Go to Home</button>
+                        <Link to="/products">Go to Products</Link>
                     </div>
                 </div>
 

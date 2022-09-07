@@ -140,23 +140,36 @@
     line-height: 20px;
 }
 
-.product-section .buttons button:nth-child(1) {
+.product-section .buttons a {
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    padding: 12px;
+    width: 100%;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.product-section .buttons a:nth-child(1) {
     background: #1E2832;
     color: #F6F6F6;
 }
 
-.product-section .buttons button:nth-child(3) {
+.product-section .buttons a:nth-child(3) {
     background: #ffff;
     color: #1E1E1E;
     border: 1px solid #E9E5E5;
 }
 
-.product-section .buttons button:nth-child(1):hover {
+.product-section .buttons a:nth-child(1):hover {
     background: #B18A75;
     color: #F6F6F6;
 }
 
-.product-section .buttons button:nth-child(3):hover {
+.product-section .buttons a:nth-child(3):hover {
     background: #E9E5E5;
 }
 .product-section .buttons > span {

@@ -16,7 +16,7 @@ export const products =[
         description: "Sleek and timeless. Titanium glasses with an innovative bridge. A frame to suit every face, Morgan is a classic shape.",
         price: 280,
         category: "purse",
-        img: "img004.png"
+        img: "img00.png"
     },
     {
         _id: "pants-zara",
@@ -24,7 +24,7 @@ export const products =[
         description: "Sleek and timeless. Titanium glasses with an innovative bridge. A frame to suit every face, Morgan is a classic shape.",
         price: 500,
         category: "purse",
-        img: "img004.png"
+        img: "img001.png"
     },
     {
         _id: "glasses-zara",
@@ -32,7 +32,7 @@ export const products =[
         description: "Sleek and timeless. Titanium glasses with an innovative bridge. A frame to suit every face, Morgan is a classic shape.",
         price: 1000,
         category: "purse",
-        img: "img004.png"
+        img: "img002.png"
     },
     {
         _id: "shoes-zara",
@@ -40,6 +40,6 @@ export const products =[
         description: "Sleek and timeless. Titanium glasses with an innovative bridge. A frame to suit every face, Morgan is a classic shape.",
         price: 376,
         category: "purse",
-        img: "img004.png"
+        img: "img003.png"
     },
 ]

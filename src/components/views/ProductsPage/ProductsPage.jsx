@@ -7,16 +7,18 @@ import { products } from '../../../data/prducts'
 export const ProductsPage = () => {
   return (
     <>
-    <div>ProductsPage</div>
+    <h1>ProductsPage</h1>
+    <hr />
     {
                 products.map( product => (
-                    <div>
+                    <div key={product._id}>
                         <h2>{product.name}</h2>
                         <p>{product.description}</p>
-                        <Link to={`/hero/${product._id}`}>Más..</Link>
+                        <Link to={`/products/${product._id}`}>Más..</Link>
                     </div>
                 ))
-            }
+              }
+              <Link to='/'>Go to Home</Link>
     </>
   )
 }
