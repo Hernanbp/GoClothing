@@ -132,9 +132,12 @@ header a {
 }
 
 @media only screen and (max-width: 800px) {
+  header {
+    padding-top: 8em;
+  }
   .container {
     flex-direction: column;
-    gap: 6em;
+    gap: 4em;
     align-items: center;
   }
 
@@ -143,6 +146,9 @@ header a {
   }
 
   .header-container-img {
-    width: 80%;
+    width: 70%;
+  }
+  .call-to-action {
+    padding-right: 0px;
   }
 }

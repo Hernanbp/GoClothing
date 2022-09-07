@@ -106,10 +106,23 @@
 }
 
 @media only screen and (max-width: 800px) {
+  /*PARTE NUEVA*/
+  .home-section {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    background-color: red;
+  }
+  .container-home {
+    display: flex;
+    justify-content: center;
+    padding: 5em 10em;
+    background: #fff;
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+  }
   .brands {
     transform: scale(0.55);
   }
-
   .main-product {
     margin-right: 3rem;
   }
