@@ -7,7 +7,7 @@ export const products =[
         name: "Purse Zara",
         description: "Sleek and timeless. Titanium glasses with an innovative bridge. A frame to suit every face, Morgan is a classic shape.",
         price: 275,
-        category: "purse",
+        category: "purses",
         img: "img004.png"
     },
     {
@@ -15,7 +15,7 @@ export const products =[
         name: "Jacket Zara",
         description: "Sleek and timeless. Titanium glasses with an innovative bridge. A frame to suit every face, Morgan is a classic shape.",
         price: 280,
-        category: "purse",
+        category: "pants",
         img: "img00.png"
     },
     {
@@ -23,7 +23,7 @@ export const products =[
         name: "Pants Zara",
         description: "Sleek and timeless. Titanium glasses with an innovative bridge. A frame to suit every face, Morgan is a classic shape.",
         price: 500,
-        category: "purse",
+        category: "shoes",
         img: "img001.png"
     },
     {
@@ -31,7 +31,7 @@ export const products =[
         name: "Glasses Zara",
         description: "Sleek and timeless. Titanium glasses with an innovative bridge. A frame to suit every face, Morgan is a classic shape.",
         price: 1000,
-        category: "purse",
+        category: "t-shirts",
         img: "img002.png"
     },
     {
@@ -39,7 +39,7 @@ export const products =[
         name: "Shoes Zara",
         description: "Sleek and timeless. Titanium glasses with an innovative bridge. A frame to suit every face, Morgan is a classic shape.",
         price: 376,
-        category: "purse",
+        category: "jackets",
         img: "img003.png"
     },
 ]

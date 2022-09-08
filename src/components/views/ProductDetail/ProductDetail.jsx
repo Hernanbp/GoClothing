@@ -15,7 +15,6 @@ export const ProductDetail = () => {
     
     const products = useMemo( () => getProductById( _id ), [ _id ])
 
-
   return (
     <>
         <Navbar />
@@ -33,7 +32,7 @@ export const ProductDetail = () => {
                     <p className='description'>{products.description}</p>
 
                     {/* crear comp aparte, mandar cosas por ref() para que aparezca  "Select Size:" y renderize segun cat*/}
-                    <ProductSize />
+                    <ProductSize products={products} />
 
                     <div className='buttons'>
                         <Link to="/products">Add to Bag</Link>
