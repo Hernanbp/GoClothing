@@ -6,3 +6,5 @@ export * from "./auth";
 export * from "./Navbar";
 export * from "./BestSellers";
 export * from "./ProductCard";
+export * from "./ProductDetail";
+export * from './ProductsPage'
