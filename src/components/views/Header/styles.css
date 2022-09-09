@@ -81,7 +81,7 @@ header a {
   margin-right: 8px;
   transform: scale(0.8);
 }
-
+/**/
 @media only screen and (max-width: 1385px) {
   header {
     padding: 10em 2em;
@@ -131,10 +131,14 @@ header a {
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 600px) {
+  header {
+    padding: 6.5em 2rem;
+  }
+  
   .container {
     flex-direction: column;
-    gap: 6em;
+    gap: 4em;
     align-items: center;
   }
 
@@ -143,6 +147,9 @@ header a {
   }
 
   .header-container-img {
-    width: 80%;
+    width: 70%;
+  }
+  .call-to-action {
+    padding-right: 0px;
   }
 }

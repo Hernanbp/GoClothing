@@ -27,3 +27,12 @@
     background-color: #000;
     color: white;
 }
+@media only screen and (max-width: 600px) {
+    .bestSellers-main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 50px;
+    }
+}
+  

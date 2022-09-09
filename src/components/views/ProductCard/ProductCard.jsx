@@ -59,8 +59,8 @@ const handleAddToCart = (product) => {
                   <p> {props.category}</p>
                   <button onClick={() => handleAddToCart(props.product)}>SALE</button> {/*HORRIBLE, pero para implementar REDUX*/}
                   <div>
-                    <p className={props.beforePrice === "" ? "": "discount"}> {props.beforePrice}</p>
-                    <p> {props.price}</p>
+                    <p className={props.beforePrice === "" ? "": "discount"}> {props.beforePrice==="" ? "" : `$`+props.beforePrice}</p>
+                    <p> {`$`+ props.price}</p>
                   </div>
               </div>
             </div>

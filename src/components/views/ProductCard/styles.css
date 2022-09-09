@@ -154,3 +154,25 @@
     gap: 1em;
   }
 } */
+
+@media only screen and (max-width: 600px) {
+  .bestSellers-products{
+    flex-direction: column;
+  }
+  .card-container{
+    flex-direction: column;
+  }
+  .item-description{
+    flex-direction: row;
+  }
+  .item {
+    margin: 1em 0;
+  }
+  .item > div{
+    width: 80%;
+    margin: auto;
+  }
+  .item > div > img{
+    height: 400px;
+  }
+}

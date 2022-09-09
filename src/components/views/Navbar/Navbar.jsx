@@ -21,7 +21,7 @@ export function Navbar() {
         {phoneScreen ? (
             <nav className="navbar_phone">
               <img src={logo} alt="e-commerce" />
-              <div>
+              <div className="navbar_svg">
                 {<PersonIcon />}
                 {<ShoppingBagIcon />}
                 <MenuIcon onClick={handleToggle}/>
