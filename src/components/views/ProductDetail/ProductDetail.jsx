@@ -4,6 +4,9 @@ import { getProductById } from "../../../helpers/getProductById";
 import { Navbar } from "../../views";
 import { ProductSize } from "./ProductSize";
 import "./styles.css"
+import { useDispatch } from "react-redux"
+import {addToCart} from "../redux/ReduxFunctions"
+import Swal from "sweetalert2"
 
 
 export const ProductDetail = () => {
@@ -11,10 +14,21 @@ export const ProductDetail = () => {
     // arreglar para que cree una url con el id
     // poner objeto en otro archivo
 
+    const dispatch = useDispatch()
+
+    const handleAddToCart = (product) => {
+      dispatch(addToCart(product))
+      Swal.fire({
+        icon: "success",
+        title: "agregaste al carrito",
+        timer: 1000
+      })
+    }
+
     const { _id } = useParams();
     
     const products = useMemo( () => getProductById( _id ), [ _id ])
-
+    console.log(products)
   return (
     <>
         <Navbar />
@@ -35,7 +49,7 @@ export const ProductDetail = () => {
                     <ProductSize products={products} />
 
                     <div className='buttons'>
-                        <Link to="/products">Add to Bag</Link>
+                        <Link to="/products" onClick={() => handleAddToCart(products)}>Add to Bag</Link>
                         <span>or</span>
                         <Link to="/products">Go to Products</Link>
                     </div>
