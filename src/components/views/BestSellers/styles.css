@@ -106,7 +106,7 @@
 }
 
 
-@media all and (max-width: 800px) {
+@media all and (max-width: 600px) {
     .bestSellers-header{
         background-image: url('/public/assets/zaraBackground.png');
         background-repeat: no-repeat;
@@ -118,7 +118,7 @@
     }
     
     .bestSellers-header > div{
-        padding: 0rem;
+        padding: 0.5rem;
     }
     
     .bestSellers-header > div >h1{
@@ -128,71 +128,29 @@
     .bestSellers-header > div > p{
         font-size: 1rem;
         text-align: center;
-        margin: 0.2rem 0rem;
+        margin: 0.2rem auto;
+        width: 70%;
     }
     
     .bestSellers-header > div > button{
         margin: 0 0 1rem 0;
     }
     /*FALTA ESTA PARTE */
-    .bestSellers-footer{
-        text-align: center;
-        background-color: #F1F1F1;
-        margin-top: 50px;
-    }
     .bestSellers-footer h2{
-        font-family: Roboto;
-        font-size: 45px;
-        font-weight: 500;
-        line-height: 53px;
-        letter-spacing: 0.1em;
-        margin: 50px auto 20px auto;
-    }
-    .bestSellers-footer ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
-    .bestSellers-footer ul li{
-        margin: 10px;
+        font-size: 40px;
     }
     .bestSellers-footer ul li img{
-      width: 200px;
-      height: 200px; 
-      opacity: 1;
+      width: 60px;
+      height: 60px;
     }
     
     .bestSellers-footer h3{
-        font-family: Roboto;
-        font-size: 45px;
-        font-weight: 500;
-        line-height: 53px;
-        letter-spacing: 0.1em;
-        margin: 20px auto 50px auto;
+        font-size: 40px;
     }
     
     .bestSellers-footer div{
         color:white;
         margin-bottom: 30px;
     }
-    .bestSellers-footer div input{
-        width: 40%;
-        margin: 20px 20px;
-        padding: 5px 20px;
-        background:none;
-        border: none;
-        outline: 0px;
-        border-bottom: 2px solid #000;
-    }
-    .bestSellers-footer div button{
-        font-weight: bold;
-        padding: 5px 20px;
-        background:none;
-        border: none;
-        outline: 0px;
-        border-bottom: 2px solid #000;
-        cursor: pointer;
-    }
-    
 }
   
