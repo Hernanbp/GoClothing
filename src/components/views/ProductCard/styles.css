@@ -166,7 +166,7 @@
     flex-direction: row;
   }
   .item {
-    margin: 1em 0;
+    margin: 1em 0 3rem 0;
   }
   .item > div{
     width: 80%;

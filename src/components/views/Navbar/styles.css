@@ -1,11 +1,12 @@
 .nav-container {
   justify-content: center;
   display: flex;
-  position: absolute;
+  position: relative;
   top: 0;
   z-index: 1000;
   width: 100%;
   padding: 2em 0;
+  background-color: #f1f1f1;
 }
 
 .navbar {
@@ -29,6 +30,7 @@
   /* border: 2px solid blue; */
   display: flex;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 .navbar_desktop > .bottom > p {
@@ -49,13 +51,46 @@
 }
 .showing {
   display:flex;
+  z-index: 21;
 }
-
+.showing p{
+  cursor: pointer;
+}
 .hidden {
   display: none;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (min-width:601px) and (max-width: 1100px){ 
+
+  .navbar_desktop > .top {
+    width: 90%;
+    margin: 1rem auto;
+  }
+  .navbar_desktop > .bottom {
+    width: 95%;
+    margin: auto;
+  }
+  .showing {
+    align-items: center;
+    gap: 1em;
+    background-color: #f1f1f1;
+    flex-direction: column;
+    border: solid 1px #989898;
+    border-radius: 4px;
+    padding: 1em 0;
+    width: 90%;
+  }
+  .navbar_svg:nth-child(3){
+    cursor: pointer;
+    position: relative;
+  }
+  .showing {
+    position: absolute;
+    top: 100px ;
+    left: 6%;
+  }
+}
+@media only screen and (max-width: 600px) {
   .showing {
     align-items: center;
     gap: 1em;
