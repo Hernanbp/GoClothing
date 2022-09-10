@@ -14,6 +14,7 @@
     display: flex;
     justify-content: end;
     align-items: center;
+    margin-bottom: 1rem;
 }
 
 .bestSellers-header > div{
@@ -68,9 +69,9 @@
     margin: 10px;
 }
 .bestSellers-footer ul li img{
-  width: 200px;
-  height: 200px; 
-  opacity: 1;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
 }
 
 .bestSellers-footer h3{
@@ -105,8 +106,18 @@
     cursor: pointer;
 }
 
-
-@media all and (max-width: 600px) {
+@media only screen and (min-width:701px) and (max-width: 1100px) {
+    .bestSellers-header > div{
+        padding: 3rem;
+        width: 100%;
+    }
+    .bestSellers-footer ul li img{
+      width: 100%;
+      height: 100%;
+    }
+    
+}
+@media all and (max-width: 700px) {
     .bestSellers-header{
         background-image: url('/public/assets/zaraBackground.png');
         background-repeat: no-repeat;
@@ -137,15 +148,15 @@
     }
     /*FALTA ESTA PARTE */
     .bestSellers-footer h2{
-        font-size: 40px;
+        font-size: 2rem;
     }
     .bestSellers-footer ul li img{
-      width: 60px;
-      height: 60px;
-    }
+        width: 100%;
+        height: 100%;
+      }
     
     .bestSellers-footer h3{
-        font-size: 40px;
+        font-size: 2rem;
     }
     
     .bestSellers-footer div{
