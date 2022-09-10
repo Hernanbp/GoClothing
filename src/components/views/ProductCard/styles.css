@@ -154,7 +154,11 @@
     gap: 1em;
   }
 } */
-
+@media only screen and (min-width:701px) and (max-width: 1100px) {
+  .item-description h3{
+    font-size: 15px;
+  }
+}
 @media only screen and (max-width: 600px) {
   .bestSellers-products{
     flex-direction: column;
@@ -164,6 +168,9 @@
   }
   .item-description{
     flex-direction: row;
+  }
+  .item-description h3{
+    font-size: 15px;
   }
   .item {
     margin: 1em 0 3rem 0;

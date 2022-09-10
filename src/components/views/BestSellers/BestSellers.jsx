@@ -12,7 +12,6 @@ export function BestSellers() {
                 <img src="./img/zaraLogo.png" alt="NO EXISTE LA IMG" />
                 */
             }
-            
             <div>
                 <h1>ZARA</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur id accusantium minima. Dolores ratione, asperiores sint numquam.</p>
