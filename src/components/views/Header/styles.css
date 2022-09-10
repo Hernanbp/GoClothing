@@ -65,7 +65,7 @@ header a {
   min-width: 750px;
 }
 
-.shop-now {
+.shop-now a {
   background: #1e2832;
   padding: 0.05em 1em;
   width: fit-content;
@@ -109,7 +109,7 @@ header a {
     font-size: 20px;
   }
 
-  .shop-now {
+  .shop-now a {
     padding: 4px 16px;
   }
 
