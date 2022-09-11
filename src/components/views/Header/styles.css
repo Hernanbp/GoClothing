@@ -1,10 +1,9 @@
 header {
   display: flex;
   justify-content: center;
-  padding: 3em 2rem;
+  padding: 3rem 2rem;
   background: #f1f1f1;
   position: relative;
-  padding-top: 10em;
 }
 
 header img {
@@ -69,13 +68,14 @@ header a {
   background: #1e2832;
   padding: 0.05em 1em;
   width: fit-content;
-}
-
-.shop-now > a {
   display: flex;
   font-size: 1.25rem;
   align-items: center;
   text-transform: capitalize;
+}
+.shop-now a:hover{
+  background: #5c7894;
+  color: white;
 }
 .shop-now > a > svg {
   margin-right: 8px;
@@ -84,7 +84,7 @@ header a {
 
 @media only screen and (min-width:601px) and (max-width: 1100px){ 
   header {
-    padding: 0.5em 2rem;
+    padding: 1em 2rem;
   }
   .header-container-img {
     width: 40%;

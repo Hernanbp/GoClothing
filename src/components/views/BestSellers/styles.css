@@ -45,8 +45,12 @@
     background-color: #ffff;
     cursor: pointer;
     padding: 0.5rem;
+    font-size: 1.2rem;
+    align-items: center;
 }
-
+.bestSellers-header > div > button:hover{
+    text-decoration:underline #000;
+}
 .bestSellers-footer{
     text-align: center;
     background-color: #F1F1F1;
@@ -72,6 +76,11 @@
     width: 100%;
     height: 100%;
     opacity: 1;
+    transition: all .2s;
+    cursor: pointer;
+}
+.bestSellers-footer ul li img:hover{
+    transform: scale(1.1);
 }
 
 .bestSellers-footer h3{

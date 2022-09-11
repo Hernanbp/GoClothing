@@ -7,10 +7,8 @@ export const Footer = () => {
 
     return (
         <footer>
-
             <section className="data">
-                <div>
-
+                <div className='data-class'>
                     <div className='social'>
                         <img src="../assets/logo.png" alt="coral_logo" />
                         <p>
