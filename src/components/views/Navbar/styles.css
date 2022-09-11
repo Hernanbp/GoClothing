@@ -5,12 +5,8 @@
   top: 0;
   z-index: 1000;
   width: 100%;
-   background-color: #f1f1f1;
-   padding: 2rem 0;
-/*   
-  */
-  
-  padding: 2em 2em;
+  background-color: #f1f1f1;
+  padding: 2rem 2rem;
 }
 
 .navbar {
@@ -40,8 +36,16 @@
 
 .navbar_desktop > .bottom > p {
   font-family: Poppins, sans-serif;
+  transition: all 0.5s;
+  text-align: center;
 }
 
+.navbar_desktop > .bottom > p:hover {
+  color: black;
+  border-radius: 5px;
+  transform: scale(1.1);
+  background: #f1f1f1;
+}
 .navbar_phone {
   display: flex;
   justify-content: space-between;
@@ -105,15 +109,17 @@
     border-radius: 4px;
     padding: 1em 0;
     width: 90%;
+    position: absolute;
+    top: 100px ;
+    left: 6%;
   }
   .navbar_svg:nth-child(3){
     cursor: pointer;
     position: relative;
     z-index: 10;
   }
-  .showing {
-    position: absolute;
-    top: 100px ;
-    left: 6%;
+  .showing p:hover{
+    text-decoration: underline black;        /* Subrayado rojo */
+
   }
 }
