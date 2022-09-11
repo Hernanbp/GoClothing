@@ -119,7 +119,6 @@
     z-index: 10;
   }
   .showing p:hover{
-    text-decoration: underline black;        /* Subrayado rojo */
-
+    text-decoration: underline black;
   }
 }

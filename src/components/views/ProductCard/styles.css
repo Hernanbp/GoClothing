@@ -12,7 +12,8 @@
 .item > div > img{
   width: 100%;
   height: auto;
-  position: relative;
+  object-fit: cover;
+  cursor: pointer;
 }
 
 .item > div > button{
