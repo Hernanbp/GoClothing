@@ -64,6 +64,14 @@ footer label, footer a {
     display: flex;
     flex-direction: column;
 }
+.data > div > div > ul >li{
+    transition: transform .2s;
+}
+.data > div > div > ul >li:hover{
+    background-color: #F1F1F1;
+    transform: scale(1.1);
+    border-radius: 5px;
+}
 
 .data > div > div > h4 {
     margin-bottom: 25px;
@@ -87,7 +95,6 @@ footer label, footer a {
     height: 34px;
     margin-bottom: 30px;
 }
-
 
 .disclaimer {
     width: 100%;
@@ -143,6 +150,9 @@ footer label, footer a {
         grid-column-start: d;
         grid-column-end:d;
     }
+    .data > div > div > ul, .data > div > div{
+        align-items: center;
+    }
 }
 
 @media only screen and (max-width: 660px) {
@@ -160,6 +170,18 @@ footer label, footer a {
         align-items: center;
         margin-bottom: 1rem;
     }
+    .data > div > div > ul{
+        width: 100%;
+        text-align: center;
+        padding: 0.3rem;
+    }
+    .data > div > div > ul> li{
+        width: 100%;
+    }
+    .data > div > div > ul >li:hover{
+        border-radius: 5px;
+    }
+    
     .disclaimer > div > img {
         display: none;
     }
