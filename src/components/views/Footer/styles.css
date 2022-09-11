@@ -118,22 +118,47 @@ footer label, footer a {
     height: 24px;
 }
 
-@media only screen and (max-width: 860px) {
+@media only screen and (min-width:601px) and (max-width: 1100px) {
+
 
     .data > div {
-        flex-direction: column;
-        gap: 60px;
-    }
-}
-
-@media only screen and (max-width: 660px) {
-    .data {
-        text-align: center;
+        display: grid;
+        grid-template-areas: "a a a"
+                    "b c d";
     }
     .social {
         align-items: center;
         width: 100%;
         margin: auto;
+        grid-column-start: a;
+        grid-column-end:a;
+    }
+    .catalog{
+        grid-template-areas: b;
+    }
+    .about-us{
+        grid-template-areas: b;
+    }
+    .customer-services{
+        grid-column-start: d;
+        grid-column-end:d;
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    .data{
+        padding-top: 4rem;
+    }
+    .data > div {
+        display: grid;
+        grid-template-areas: "a a a"
+                    "b"
+                    "c"
+                    "d";
+    }
+    .social, .catalog, .customer-services, .about-us{
+        align-items: center;
+        margin-bottom: 1rem;
     }
     .disclaimer > div > img {
         display: none;
