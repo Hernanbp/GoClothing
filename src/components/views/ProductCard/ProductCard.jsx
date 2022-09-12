@@ -6,16 +6,16 @@ import Swal from "sweetalert2"
 
 export function ProductCard(props) {
 
-const dispatch = useDispatch()
+  const dispatch = useDispatch()
 
-const handleAddToCart = (product) => {
-  dispatch(addToCart(product))
-  Swal.fire({
-    icon: "success",
-    title: "agregaste al carrito",
-    timer: 1000
-  })
-}
+  const handleAddToCart = (product) => {
+    dispatch(addToCart(product))
+    Swal.fire({
+      icon: "success",
+      title: "agregaste al carrito",
+      timer: 1000
+    })
+  }
 
   //const [fetchedData, setFetchedData] = useState(null)
   /* 
@@ -51,14 +51,14 @@ const handleAddToCart = (product) => {
           <div key={props.id} className="item"> 
             <div className="item-title">
               <img src="../assets/p1.png" alt=""/>
-              <button>SALE</button>
+              <button onClick={() => handleAddToCart(props.product)}>SALE</button>{/*HORRIBLE, pero para implementar REDUX*/}
             </div >
             <div className="item-description">
-              <h3> {props.description}</h3>
+              <h3> {props.description.slice(0, 10) + '...'}</h3>
                 <div>
                   <p> {props.category}</p>
-                  <button onClick={() => handleAddToCart(props.product)}>SALE</button> {/*HORRIBLE, pero para implementar REDUX*/}
                   <div>
+                    <button onClick={() => handleAddToCart(props.product)}>Shop</button>{/*HORRIBLE, pero para implementar REDUX*/}
                     <p className={props.beforePrice === "" ? "": "discount"}> {props.beforePrice==="" ? "" : `$`+props.beforePrice}</p>
                     <p> {`$`+ props.price}</p>
                   </div>

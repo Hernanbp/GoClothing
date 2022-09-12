@@ -53,7 +53,7 @@ export function Home() {
                 <div className="tooltip">
                   <p>{name}</p>
                   <p>{quantity} Products</p>
-                </div>
+                </div>  
               </div>
             ))}
           </div>
