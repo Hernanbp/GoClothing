@@ -2,8 +2,7 @@ import "./styles.css"
 //import { useEffect, useState } from "react"
 import ProductZara from "../BeetSellere/ProductZara"
 
-
-  export function ProductsList() {
+export function ProductsList() {
   //const [fetchedData, setFetchedData] = useState(null)
   /* 
   useEffect(() => {
@@ -34,8 +33,7 @@ import ProductZara from "../BeetSellere/ProductZara"
 */
   return (
     <>
-    {
-      /*
+      {/*
       <div className="card-container"> 
     
         P list
@@ -54,33 +52,31 @@ import ProductZara from "../BeetSellere/ProductZara"
         }
       </div>
       
-      */
-
-    }
-      <div className="card-container"> 
-        {
-        ProductZara.map( (item)=>{
+      */}
+      <div className="card-container">
+        {ProductZara.map((item) => {
           return (
-          <div key={item.id} className="item"> 
-          <div className="item-title">
-            <img src="../assets/p1.png" alt=""/>
-            <button>SALE</button>
-          </div >
-          <div className="item-description">
-            <h3> {item.description}</h3>
-              <div>
-                <p> {item.category}</p>
+            <div key={item.id} className="item">
+              <div className="item-title">
+                <img src="../assets/p1.png" alt="" />
+                <button>SALE</button>
+              </div>
+              <div className="item-description">
+                <h3> {item.description}</h3>
                 <div>
-                  <p className={item.beforePrice === "" ? "": "discount"}> {item.beforePrice}</p>
-                  <p> {item.price}</p>
+                  <p> {item.category}</p>
+                  <div>
+                    <p className={item.beforePrice === "" ? "" : "discount"}>
+                      {" "}
+                      {item.beforePrice}
+                    </p>
+                    <p> {item.price}</p>
+                  </div>
                 </div>
               </div>
-          </div>
-            
-          </div>
+            </div>
           )
-        })
-        }
+        })}
       </div>
     </>
   )
