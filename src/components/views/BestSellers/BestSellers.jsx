@@ -1,27 +1,27 @@
-import "./BeetSellereStyles.css"
-import  AllProducts  from "../AllProducts/AllProducts"
+import "./styles.css"
+import  ProductSection  from "./ProductSection/ProductSection"
 
-export function BeetSellere() {
+export function BestSellers() {
   return (
     <>
-      <section className="beetSellere-section">
-        <div className="beetSellere-header">
+      <section className="bestSellers-section">
+        <div className="bestSellers-header">
             {
                 /*
                 Es la palabra ZARA, de fondo, GRIS
                 <img src="./img/zaraLogo.png" alt="NO EXISTE LA IMG" />
                 */
             }
-            
             <div>
                 <h1>ZARA</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur id accusantium minima. Dolores ratione, asperiores sint numquam.</p>
                 <button>See Collection</button>
             </div>
         </div>
-        <AllProducts title={"New Product"}></AllProducts>
-        <AllProducts title={"Best Sellers"}></AllProducts>
-        <div className="beetSellere-footer">
+        <ProductSection title={"New Product"}></ProductSection>
+        <ProductSection title={"Best Sellers"}></ProductSection>
+        {/* <AllProducts title={"Best Sellers"}></AllProducts> */}
+        <div className="bestSellers-footer">
             <h2>Follow Products And Discounts On Instagram</h2>
 
             <ul>

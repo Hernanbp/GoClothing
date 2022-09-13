@@ -9,19 +9,19 @@ export const Sidebar = () => {
     <div className="sidebar">
       <ul>
         <li>
-          <Link to="/products">
+          <Link to="/dashboard/products">
             <ShoppingBasketIcon />
             Products
           </Link>
         </li>
         <li>
-          <Link to="/createNewProduct">
+          <Link to="/dashboard/createNewProduct">
             <AddCircleIcon />
             Create New Product
           </Link>
         </li>
         <li>
-          <Link to="/updateProduct">
+          <Link to="/dashboard/updateProduct">
             <UpdateIcon />
             Update Product
           </Link>

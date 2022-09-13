@@ -1,26 +1,30 @@
-import { Navbar, Header, Footer } from "../../views"
+import { Navbar, Header, Footer, BestSellers } from "../../views"
+//falta el navBar
 import brand from "../../svgs/brand.svg"
 import "./styles.css"
-import { BeetSellere } from "../BeetSellere"
 
 export function Home() {
   const products = [
     {
+      id:1,
       img: "../assets/img001.png",
       name: "Jacket",
       quantity: 103,
     },
     {
+      id:2,
       img: "../assets/img002.png",
       name: "Jacket",
       quantity: 103,
     },
     {
+      id:3,
       img: "../assets/img003.png",
       name: "Dress",
       quantity: 55,
     },
     {
+      id:4,
       img: "../assets/img004.png",
       name: "Jacket",
       quantity: 103,
@@ -29,7 +33,7 @@ export function Home() {
 
   return (
     <>
-      <Navbar />
+      <Navbar /> 
       <Header />
       <section className="home-section">
         <div className="container-home">
@@ -43,18 +47,18 @@ export function Home() {
             <img src="../assets/img00.png" alt="" />
           </div>
           <div className="grid-products">
-            {products.map(({ img, name, quantity }) => (
-              <div className="img-container">
+            {products.map(({ img, name, quantity, id }) => (
+              <div key={id} className="img-container">
                 <img src={img} alt={name} />
                 <div className="tooltip">
                   <p>{name}</p>
                   <p>{quantity} Products</p>
-                </div>
+                </div>  
               </div>
             ))}
           </div>
         </div>
-        <BeetSellere />
+        <BestSellers />
       </section>
       <Footer />
     </>

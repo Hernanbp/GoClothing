@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom"
 import { BagIcon, FlowerPatternOne } from "../../svgs"
 import "./styles.css"
 
 export const Header = () => {
   return (
-    <header>
+    <header id="header">
       <FlowerPatternOne className="FlowerPatternOne" />
       <div className="container">
         <div className="call-to-action">
@@ -12,12 +13,12 @@ export const Header = () => {
             you can explore any shop many different collections from various
             brands are here.
           </p>
-          <button className="shop-now">
-            <a href="#shop">
+          <div className="shop-now">
+            <Link to='/products'>
               <BagIcon stroke="#fff" />
               shop now
-            </a>
-          </button>
+            </Link>
+          </div>
         </div>
 
         <div className="header-container-img">

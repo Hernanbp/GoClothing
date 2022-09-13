@@ -6,6 +6,7 @@ import SearchIcon from "@mui/icons-material/Search"
 import MenuIcon from "@mui/icons-material/Menu"
 import logo from "../../svgs/logo.svg"
 import { useResize } from "../../hooks/useResize"
+import {Link} from "react-router-dom"
 
 export function Navbar() {
   const [show, setShow] = useState()
@@ -20,7 +21,7 @@ export function Navbar() {
         {phoneScreen ? (
             <nav className="navbar_phone">
               <img src={logo} alt="e-commerce" />
-              <div>
+              <div className="navbar_svg">
                 {<PersonIcon />}
                 {<ShoppingBagIcon />}
                 <MenuIcon onClick={handleToggle}/>
@@ -42,7 +43,8 @@ export function Navbar() {
               <img src={logo} alt="e-commerce" />
               <div>
                 {<PersonIcon />}
-                {<ShoppingBagIcon />}
+                {/* {<ShoppingBagIcon />} */}
+                {<Link to="/cart"> <ShoppingBagIcon /> </Link>}
               </div>
             </div>
           <div className="bottom">

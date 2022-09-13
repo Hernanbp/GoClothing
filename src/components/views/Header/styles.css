@@ -1,10 +1,9 @@
 header {
   display: flex;
   justify-content: center;
-  padding: 5em 10em;
+  padding: 3rem 2rem;
   background: #f1f1f1;
   position: relative;
-  padding-top: 10em;
 }
 
 header img {
@@ -48,7 +47,7 @@ header a {
 }
 
 .header-container-img {
-  z-index: 1000;
+  z-index: 20;
 }
 
 .container {
@@ -65,28 +64,28 @@ header a {
   min-width: 750px;
 }
 
-.shop-now {
+.shop-now a {
   background: #1e2832;
   padding: 0.05em 1em;
   width: fit-content;
-}
-
-.shop-now > a {
   display: flex;
   font-size: 1.25rem;
   align-items: center;
   text-transform: capitalize;
+}
+.shop-now a:hover{
+  background: #5c7894;
+  color: white;
 }
 .shop-now > a > svg {
   margin-right: 8px;
   transform: scale(0.8);
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (min-width:601px) and (max-width: 1100px){ 
   header {
-    padding: 4em 2em;
+    padding: 1em 2rem;
   }
-
   .header-container-img {
     width: 40%;
   }
@@ -110,7 +109,7 @@ header a {
     font-size: 20px;
   }
 
-  .shop-now {
+  .shop-now a {
     padding: 4px 16px;
   }
 
@@ -127,13 +126,47 @@ header a {
   .call-to-action {
     min-width: 400px;
     max-width: 550px;
+    padding-right: 35px;
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 600px) {
+  header {
+    padding: 0.5em 2rem;
+  }
+  .header-container-img {
+    width: 40%;
+  }
+  header p {
+    min-width: 300px;
+    max-width: 550px;
+  }
+  header img {
+    width: 100%;
+    min-width: 250px;
+  }
+  header h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  header a {
+    font-size: 20px;
+  }
+
+  .shop-now {
+    padding: 4px 16px;
+  }
+
+  header p {
+    font-size: 22px;
+    line-height: 42px;
+    margin-bottom: 42px;
+  }
+
   .container {
     flex-direction: column;
-    gap: 6em;
+    gap: 4em;
     align-items: center;
   }
 
@@ -142,6 +175,10 @@ header a {
   }
 
   .header-container-img {
-    width: 80%;
+    width: 70%;
+  }
+  .call-to-action {
+    padding-right: 0px;
+    min-width: 300px;
   }
 }

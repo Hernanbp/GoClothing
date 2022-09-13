@@ -1,5 +1,6 @@
 import { useState } from "react"
 import axios from "axios"
+import { Link } from "react-router-dom"
 
 export const CreateNewProduct = () => {
   const [title, setTitle] = useState("")
@@ -11,13 +12,16 @@ export const CreateNewProduct = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
 
-    const resp = await axios.post("http://localhost:3500/product", {
-      title,
-      description,
-      price,
-      image: "https://picsum.photos/200/300",
-      category: "Electronics",
-    })
+    const resp = await axios.post(
+      "https://alkcommerceback.herokuapp.com/products",
+      {
+        title,
+        description,
+        price,
+        image: "https://picsum.photos/200/300",
+        category: "Electronics",
+      }
+    )
 
     setProducts([...products, resp.data])
     console.log(title)
@@ -25,7 +29,7 @@ export const CreateNewProduct = () => {
 
   return (
     <form className="form-dashboard" onSubmit={handleSubmit}>
-      <h2>New Product</h2>
+      <h2>Add a new Product</h2>
       <label htmlFor="title">title</label>
       <input
         type="text"
@@ -47,8 +51,12 @@ export const CreateNewProduct = () => {
         value={price}
         onChange={(e) => setPrice(e.target.value)}
       />
-
-      <button>Publish</button>
+      <div className="buttons-dashboard">
+        <Link to="/dashboard/products">
+          <button>Cancel</button>
+        </Link>
+        <button>Publish Product</button>
+      </div>
     </form>
   )
 }
