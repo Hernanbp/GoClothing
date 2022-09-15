@@ -21,21 +21,19 @@ export const DashProducts = () => {
     })()
   },[])
 
-  // const handleRemoveProduct = async (id) => {
-  //   const resp = await axios.delete(
-  //     `https://alkcommerceback.herokuapp.com/products/${id}`
-  //   )
-  //   setProducts(products.filter((product) => product.id !== id))
+  const handleRemoveProduct = async (id) => {
+    const resp = await axios.delete(`https://alkcommerceback.herokuapp.com/products/${id}`)
+    setDataFromApi(dataFromApi.filter((product) => product.id !== id))
 
-  //   console.log(resp)
-  // }
+    console.log(resp)
+  }
 
   const content = dataFromApi?.map(({ title, price, category, _id }) => (
     <tr className="product-row" key={_id}>
       <td>{title}</td>
       <td>{category}</td>
       <td>${price}</td>
-      {/* <td onClick={handleRemoveProduct(_id)}>Remove</td> */}
+      <td onClick={() => handleRemoveProduct(_id)}>Remove</td>
     </tr>
   ))
 
