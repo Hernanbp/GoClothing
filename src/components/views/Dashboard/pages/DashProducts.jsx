@@ -3,39 +3,39 @@ import { useEffect, useState } from "react"
 import SearchIcon from "@mui/icons-material/Search"
 
 export const DashProducts = () => {
-  const [products, setProducts] = useState([])
-
-  const getAllProducts = async () => {
-    const resp = await axios.get(
-      "https://alkcommerceback.herokuapp.com/products",
-      {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    )
-    setProducts(resp.data)
-  }
-
+  // const [products, setProducts] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [dataFromApi, setDataFromApi] = useState([])
+  
   useEffect(() => {
-    getAllProducts()
-  }, [])
+    (async function () {
+      try{
+        const res = await axios.get('https://alkcommerceback.herokuapp.com/products')
+        console.log(res.data)
+        setDataFromApi(res.data)
+        setLoading(false)
+      }
+      catch(err){
+        console.log(err)
+      }
+    })()
+  },[])
 
-  const handleRemoveProduct = async (id) => {
-    const resp = await axios.delete(
-      `https://alkcommerceback.herokuapp.com/products/${id}`
-    )
-    setProducts(products.filter((product) => product.id !== id))
+  // const handleRemoveProduct = async (id) => {
+  //   const resp = await axios.delete(
+  //     `https://alkcommerceback.herokuapp.com/products/${id}`
+  //   )
+  //   setProducts(products.filter((product) => product.id !== id))
 
-    console.log(resp)
-  }
+  //   console.log(resp)
+  // }
 
-  const content = products?.map(({ title, price, category, _id }) => (
+  const content = dataFromApi?.map(({ title, price, category, _id }) => (
     <tr className="product-row" key={_id}>
       <td>{title}</td>
       <td>{category}</td>
       <td>${price}</td>
-      <td onClick={handleRemoveProduct(_id)}>Remove</td>
+      {/* <td onClick={handleRemoveProduct(_id)}>Remove</td> */}
     </tr>
   ))
 
