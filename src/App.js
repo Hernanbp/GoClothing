@@ -1,8 +1,4 @@
-import { BestSellers } from "./components/views/BestSellers"
-import { Dashboard } from "./components/views/Dashboard/Dashboard"
-import { DashProducts } from "./components/views/Dashboard/pages/DashProducts"
-import { CreateNewProduct } from "./components/views/Dashboard/pages/CreateNewProduct"
-import { UpdateProduct } from "./components/views/Dashboard/pages/UpdateProduct"
+import { Dashboard } from "../src/components/views/Dashboard/Dashboard"
 import { Routes, Route } from "react-router-dom"
 import {
   Home,
@@ -11,7 +7,11 @@ import {
   Cart,
   ProductDetail,
   ProductsPage,
+  BestSellers,
 } from "./components/views"
+import { CreateNewProduct } from "./components/views/Dashboard/pages/CreateNewProduct"
+import { DashProducts } from "./components/views/Dashboard/pages/DashProducts"
+import { UpdateProduct } from "./components/views/Dashboard/pages/UpdateProduct"
 
 const App = () => {
   return (
