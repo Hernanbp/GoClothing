@@ -1,5 +1,17 @@
-import { Routes, Route } from "react-router-dom";
-import { Home, Login, Register, Cart, ProductDetail, ProductsPage } from "./components/views";
+import { Dashboard } from "../src/components/views/Dashboard/Dashboard"
+import { Routes, Route } from "react-router-dom"
+import {
+  Home,
+  Login,
+  Register,
+  Cart,
+  ProductDetail,
+  ProductsPage,
+  BestSellers,
+} from "./components/views"
+import { CreateNewProduct } from "./components/views/Dashboard/pages/CreateNewProduct"
+import { DashProducts } from "./components/views/Dashboard/pages/DashProducts"
+import { UpdateProduct } from "./components/views/Dashboard/pages/UpdateProduct"
 
 const App = () => {
   return (
@@ -8,12 +20,20 @@ const App = () => {
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/cart" element={<Cart />} />
+      <Route path="/zara" element={<BestSellers />} />
+      <Route path="/dashboard" element={<Dashboard />}>
+        <Route path="/dashboard/products" element={<DashProducts />} />
+        <Route path="/dashboard/updateProduct" element={<UpdateProduct />} />
+        <Route
+          path="/dashboard/createNewProduct"
+          element={<CreateNewProduct />}
+        />
+      </Route>
 
       <Route path="/products" element={<ProductsPage />} />
       <Route path="/products/:_id" element={<ProductDetail />} />
-
     </Routes>
-  );
-};
+  )
+}
 
-export default App;
+export default App
