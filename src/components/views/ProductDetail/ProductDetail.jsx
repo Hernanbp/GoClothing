@@ -29,6 +29,7 @@ export const ProductDetail = () => {
     
     const products = useMemo( () => getProductById( _id ), [ _id ])
     console.log(products)
+
   return (
     <>
         <Navbar />
@@ -36,7 +37,7 @@ export const ProductDetail = () => {
             <div className='product-container'>
 
                 <div className='product-img'>
-                    <img src={`../assets/${products.img}`} alt="product_img" />
+                    <img src={`../../assets/${products.img}`} alt="product_img" />
                 </div>
 
 
@@ -45,7 +46,6 @@ export const ProductDetail = () => {
                     <span className='price'>€{products.price}*</span>
                     <p className='description'>{products.description}</p>
 
-                    {/* crear comp aparte, mandar cosas por ref() para que aparezca  "Select Size:" y renderize segun cat*/}
                     <ProductSize products={products} />
 
                     <div className='buttons'>
