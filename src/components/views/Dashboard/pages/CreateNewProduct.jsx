@@ -24,7 +24,7 @@ export const CreateNewProduct = () => {
     )
 
     setProducts([...products, resp.data])
-    console.log(title)
+    console.log(resp)
   }
 
   return (
