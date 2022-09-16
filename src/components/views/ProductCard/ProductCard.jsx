@@ -16,35 +16,7 @@ export function ProductCard(props) {
       timer: 1000
     })
   }
-
-  //const [fetchedData, setFetchedData] = useState(null)
-  /* 
-  useEffect(() => {
-    (async function () {
-      const res = await fetch('https://fakestoreapi.com/products')
-      const apiData = await res.json()
-      console.log(apiData)
-      setFetchedData(apiData)
-    })()
-    // (async function () {
-    //   fetch('https://fakestoreapi.com/products')
-    //     .then(res=>res.json())
-    //     .then(data => {
-    //       // console.log(data)
-    //       setFetchedData(data)
-    //     })
-    //     .catch(err => console.error(err))
-    // }
-    // )()
-      // fetch('https://fakestoreapi.com/products')
-      //   .then(res=>res.json())
-      //   .then(data => {
-      //     // console.log(data)
-      //     setFetchedData(data)
-      //   })
-      //   .catch(err => console.error(err))
-  },[])
-*/
+  
   return (
     <>
       <div className="card-container"> 
