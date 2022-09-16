@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react'
 import axios from "axios";
 // import { ProductCard }from "../ProductCard/ProductCard"
+import Skeleton from "react-loading-skeleton"
 
 import { Link } from 'react-router-dom'
-import { products } from '../../../data/prducts'
 
 
 
@@ -47,22 +47,11 @@ export const ProductsPage = () => {
 
   return (
     <>
-    <h1>ProductsPage</h1>
-    <hr />
-      {products.map( product => (
-            <div key={product._id}>
-                <h2>{product.name}</h2>
-                <p>{product.description}</p>
-                <Link to={`/products/${product.category}/${product._id}`}>Más..</Link>
-            </div>
-        ))
-      }
-      <Link to='/'>Go to Home</Link>
-    
     <h1> USANDO LA API:</h1>
     <hr />
+    
 
-      {loading ? "skeleton loading" :         //ESTO TENDRIA Q USAR PRODUCT CARD
+      {loading ? <Skeleton /> :         //ESTO TENDRIA Q USAR PRODUCT CARD
         (dataFromApi.map( (apiProduct) => {
           return(
             <div key={apiProduct._id}>
