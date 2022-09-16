@@ -44,6 +44,7 @@ export const ProductDetail = () => {
     useEffect(() => {
       productsApi()
     }, [])
+    
     const { _id } = useParams();
     
     const product = useMemo( () => getProductById( _id, dataFromApi ), [ _id, dataFromApi ])
