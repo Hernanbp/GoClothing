@@ -26,7 +26,7 @@ export function ProductCard(props) {
               <button onClick={() => handleAddToCart(props.product)}>SALE</button>{/*HORRIBLE, pero para implementar REDUX*/}
             </div >
             <div className="item-description">
-              <h3> {props.description.slice(0, 10) + '...'}</h3>
+              <h3> {props.description.slice(0, 12) + '...'}</h3>
                 <div>
                   <p> {props.category}</p>
                   <div>

@@ -33,7 +33,6 @@
     transition: all 0.5s;
 }
 .bestSellers-main-list > div > button:hover{
-    text-decoration:underline white;
     background-color: rgb(71, 71, 71);
 }
 
