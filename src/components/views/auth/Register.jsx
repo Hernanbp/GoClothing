@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom"
 import { useFormik } from "formik"
 import * as Yup from 'yup';
 import logo from '../../svgs/logo.svg'
-// import Swal from 'sweetalert2';
+import Swal from 'sweetalert2';
 import "./auth.styles.css"
 import axios from "axios"
 
@@ -49,6 +49,11 @@ export const Register = () => {
   })
   .then(data => {
     navigate("/login", {replace:true})
+    Swal.fire({
+      icon: "success",
+      title: "Logged in!",
+      timer: 1500
+    })
   })
 }
 

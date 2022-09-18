@@ -22,8 +22,8 @@ export function Navbar() {
             <nav className="navbar_phone">
               <img src={logo} alt="e-commerce" />
               <div className="navbar_svg">
-                {<PersonIcon />}
-                {<ShoppingBagIcon />}
+              {<Link to="/login"> <PersonIcon /> </Link>}
+              {<Link to="/cart"> <ShoppingBagIcon /> </Link>}
                 <MenuIcon onClick={handleToggle}/>
               </div>
               <div className={show ? "showing": "hidden"}>
@@ -42,9 +42,8 @@ export function Navbar() {
               {<SearchIcon />}
               <img src={logo} alt="e-commerce" />
               <div>
-                {<PersonIcon />}
-                {/* {<ShoppingBagIcon />} */}
-                {<Link to="/cart"> <ShoppingBagIcon /> </Link>}
+              {<Link to="/login"> <PersonIcon /> </Link>}
+              {<Link to="/cart"> <ShoppingBagIcon /> </Link>}
               </div>
             </div>
           <div className="bottom">
