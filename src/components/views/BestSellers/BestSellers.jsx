@@ -12,7 +12,7 @@ export function BestSellers() {
                 <button>See Collection</button>
             </div>
         </div>
-        <ProductSection title={"New Product"}></ProductSection>
+        <ProductSection title={"New Products"}></ProductSection>
         <ProductSection title={"Best Sellers"}></ProductSection>
         <div className="bestSellers-footer">
             <h2>Follow Products And Discounts On Instagram</h2>
