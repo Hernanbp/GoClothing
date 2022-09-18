@@ -49,7 +49,7 @@
     align-items: center;
 }
 .bestSellers-header > div > button:hover{
-    text-decoration:underline #000;
+    background-color: #F1F1F1;
 }
 .bestSellers-footer{
     text-align: center;
