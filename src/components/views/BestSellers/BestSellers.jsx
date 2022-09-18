@@ -6,12 +6,6 @@ export function BestSellers() {
     <>
       <section className="bestSellers-section">
         <div className="bestSellers-header">
-            {
-                /*
-                Es la palabra ZARA, de fondo, GRIS
-                <img src="./img/zaraLogo.png" alt="NO EXISTE LA IMG" />
-                */
-            }
             <div>
                 <h1>ZARA</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur id accusantium minima. Dolores ratione, asperiores sint numquam.</p>
@@ -20,7 +14,6 @@ export function BestSellers() {
         </div>
         <ProductSection title={"New Product"}></ProductSection>
         <ProductSection title={"Best Sellers"}></ProductSection>
-        {/* <AllProducts title={"Best Sellers"}></AllProducts> */}
         <div className="bestSellers-footer">
             <h2>Follow Products And Discounts On Instagram</h2>
 

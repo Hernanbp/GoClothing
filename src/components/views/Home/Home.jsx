@@ -1,7 +1,11 @@
 import { Navbar, Header, Footer, BestSellers } from "../../views"
-//falta el navBar
 import brand from "../../svgs/brand.svg"
 import "./styles.css"
+
+import {useSelector, useDispatch} from "react-redux"
+import { useEffect } from "react"
+import axios from "axios"
+import {storeAllData} from "../redux/ReduxFunctions"
 
 export function Home() {
   const products = [
@@ -31,6 +35,26 @@ export function Home() {
     },
   ]
 
+  const dispatch = useDispatch()
+  const {allApiDataReducer} = useSelector(state =>{
+    // console.log(state)
+    // console.log(state.allApiDataReducer)
+    return state;
+  })
+
+  useEffect(() => {
+    (async function () {
+      try{
+        const res = await axios.get('https://alkcommerceback.herokuapp.com/products')
+        dispatch( storeAllData(res.data) ) //PONER todos los productos en redux
+        // console.log(allApiDataReducer) //igual aca no te llega a mostrar
+      }
+      catch(err){
+        console.log(err)
+      }
+    })()
+  },[])
+  
   return (
     <>
       <Navbar /> 
