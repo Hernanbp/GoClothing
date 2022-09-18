@@ -28,16 +28,16 @@ export function ProductCard(props) {
           <div key={props.id} className="item"> 
             <div className="item-title">
               <img src="../assets/p1.png" alt=""/>
-              <button onClick={() => handleAddToCart(props.product)}>SALE</button>{/*HORRIBLE, pero para implementar REDUX*/}
+              <button>SALE</button>{/*HORRIBLE, pero para implementar REDUX*/}
             </div >
             <div className="item-description">
               <h3> {props.description.slice(0, 12) + '...'}</h3>
                 <div>
                   <p> {props.category}</p>
                   <div>
-                    <button onClick={() => handleAddToCart(props.product)}>Shop</button>{/*HORRIBLE, pero para implementar REDUX*/}
-                    <p className={props.beforePrice === "" ? "": "discount"}> {props.beforePrice==="" ? "" : `$`+props.beforePrice}</p>
+                    {/* <p className={props.beforePrice === "" ? "": "discount"}> {props.beforePrice==="" ? "" : `$`+props.beforePrice}</p> */}
                     <p> {`$`+ props.price}</p>
+                    <button onClick={() => handleAddToCart(props.product)}>Shop</button>
                   </div>
               </div>
             </div>
