@@ -47,7 +47,7 @@ export const ProductsPage = () => {
     <hr />
     
 
-      {loading ? <Skeleton /> :         //ESTO TENDRIA Q USAR PRODUCT CARD
+      {loading ? <Skeleton count={15} height={"50px"}/> :         //ESTO TENDRIA Q USAR PRODUCT CARD
         (dataFromApi.map( (apiProduct) => {
           return(
             <div key={apiProduct._id}>
