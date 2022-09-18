@@ -157,6 +157,10 @@ label {
   outline: none;
 }
 
+.content > form > button {
+  background: none;
+}
+
 /*  product dashboard */
 table {
   border-collapse: collapse;

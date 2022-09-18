@@ -19,7 +19,7 @@ export const CreateNewProduct = () => {
         description,
         price,
         image: "https://picsum.photos/200/300",
-        category: "Electronics",
+        category: "Clothes",
       }
     )
 
