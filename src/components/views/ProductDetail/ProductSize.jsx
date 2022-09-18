@@ -43,9 +43,9 @@ export const ProductSize = ({products}) => {
     <>
         <span className='size'>Select Size: <span>Medium</span></span>
         <div className='size-options'>
-            <div className={selected === 1 && "select"} onClick={ () => setSelected(1)}><span>{ sizes.first.size }</span><span>{sizes.first.label}</span></div>
-            <div className={selected === 2 && "select"} onClick={ () => setSelected(2)}><span>{ sizes.second.size }</span><span>{sizes.second.label}</span></div>
-            <div className={selected === 3 && "select"} onClick={ () => setSelected(3)}><span>{ sizes.third.size }</span><span>{sizes.third.label}</span></div>
+            <div className={selected === 1 ? "select" : ""} onClick={ () => setSelected(1)}><span>{ sizes.first.size }</span><span>{sizes.first.label}</span></div>
+            <div className={selected === 2 ? "select" : ""} onClick={ () => setSelected(2)}><span>{ sizes.second.size }</span><span>{sizes.second.label}</span></div>
+            <div className={selected === 3 ? "select" : ""} onClick={ () => setSelected(3)}><span>{ sizes.third.size }</span><span>{sizes.third.label}</span></div>
         </div>
     </>
   )
