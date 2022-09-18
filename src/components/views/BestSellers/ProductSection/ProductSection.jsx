@@ -1,5 +1,5 @@
 import "./ProductSectionStyles.css"
-import HardcodeZara from "../../ProductCard/HardcodeZara"
+import HardcodeZara from "./HardcodeZara"
 import  {ProductCard} from "../../ProductCard/ProductCard"
 
 
