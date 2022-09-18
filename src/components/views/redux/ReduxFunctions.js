@@ -14,14 +14,20 @@ export const removeFromCart = (product)=>{
         payload: product,
     }
 }
-
+export const storeAllData = (arr)=>{
+    return{
+        type: "storeAllData",
+        payload: arr,
+    }
+}
 
 // reducers
 const initialState = {
     cart: [],
     loading: false,
-    error: ""
+    error: "",
 }
+
 
 export const cartReducer = (state = initialState, action)=>{
     switch(action.type){
@@ -41,8 +47,28 @@ export const cartReducer = (state = initialState, action)=>{
     }
 }
 
+const initialState2 = {
+    apiData: [],
+    loading: false,
+    error: "",
+
+}
+export const allApiDataReducer = (state=initialState2, action)=>{
+    switch(action.type){
+        case "storeAllData":
+            return{
+                ...state,
+                apiData: action.payload
+            }
+        default:{
+            return state
+        }
+    }
+}
+
 export const rootReducer =  combineReducers({
         cartReducer,
+        allApiDataReducer
     })
 
 
