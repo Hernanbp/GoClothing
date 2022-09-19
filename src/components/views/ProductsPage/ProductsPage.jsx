@@ -1,11 +1,9 @@
 import React, {useState, useEffect} from 'react'
 import axios from "axios";
-// import { ProductCard }from "../ProductCard/ProductCard"
-import Skeleton from "react-loading-skeleton"
-
-import { Link } from 'react-router-dom'
+import { ProductCard }from "../ProductCard/ProductCard"
 import { Navbar } from "../../views"
 import "./styles.css"
+import { SkeletonCard } from '../ProductCard/SkeletonCard';
 
 
 
@@ -78,19 +76,22 @@ export const ProductsPage = () => {
 
 
         <div className='product-list'>
-          {loading ? <Skeleton /> :         //ESTO TENDRIA Q USAR PRODUCT CARD
+          { !loading ?
             (products.map( (products) => {
               return(
-                <div key={products._id}>
-                    <h2>{products.title}</h2>
-                    <p>{products.description}</p>
-                    <p>{products.price}</p>
-                    <p>{products.category}</p>
-                    {/* <img src={products.image} /> */}
-                    <Link to={`/products/${products.category}/${products._id}`}>Más..</Link>
-                </div>
+                <ProductCard products={products}/>
               )})
-            )
+              ) 
+              :
+              <>
+                <SkeletonCard />
+                <SkeletonCard />
+                <SkeletonCard />
+                <SkeletonCard />
+                <SkeletonCard />
+                <SkeletonCard />
+                <SkeletonCard />
+              </>
           }
         </div>
       </div>

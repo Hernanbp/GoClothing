@@ -1,8 +1,6 @@
 .card-container{
   display: flex;
   flex-direction: row;
-  width: 100%;
-  margin: auto;
 }
 
 .item {
@@ -33,9 +31,20 @@
   background-color: black;
   padding: 0 0.2rem;
 }
-.item-title button{
+
+.item-title {
   cursor: pointer;
+  width: 312px;
+  height: 400px;
+  overflow: hidden;
 }
+
+.item-title img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
 .item-description h3{
   margin-top: 5px;
 }
@@ -48,7 +57,7 @@
 }
 .item-description div div p{
   padding: 2px;
-  color: #FF6F61;
+  color: #333;
 }
 .item-description div div button{
   font-size: 12px;

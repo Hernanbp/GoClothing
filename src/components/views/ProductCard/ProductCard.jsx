@@ -3,8 +3,16 @@ import "./styles.css"
 import { useDispatch } from "react-redux"
 import {addToCart} from "../redux/ReduxFunctions"
 import Swal from "sweetalert2"
+import { Link } from "react-router-dom";
 
-export function ProductCard(props) {
+
+
+
+
+
+export function ProductCard({ products }) {
+
+  console.log(products);
 
   const dispatch = useDispatch()
 
@@ -19,24 +27,27 @@ export function ProductCard(props) {
   
   return (
     <>
-      <div className="card-container"> 
-          <div key={props.id} className="item"> 
+      <div key={products._id} className="card-container"> 
+          <div className="item"> 
             <div className="item-title">
-              <img src="../assets/p1.png" alt=""/>
-              <button onClick={() => handleAddToCart(props.product)}>SALE</button>{/*HORRIBLE, pero para implementar REDUX*/}
+              <img src={products.image} alt=""/>
+              <button onClick={() => handleAddToCart(products.product)}>SALE</button>{/*HORRIBLE, pero para implementar REDUX*/}
             </div >
             <div className="item-description">
-              <h3> {props.description.slice(0, 10) + '...'}</h3>
+              <h3> {products.title}</h3>
                 <div>
-                  <p> {props.category}</p>
+                  <p> {products.category}</p>
                   <div>
-                    <button onClick={() => handleAddToCart(props.product)}>Shop</button>{/*HORRIBLE, pero para implementar REDUX*/}
-                    <p className={props.beforePrice === "" ? "": "discount"}> {props.beforePrice==="" ? "" : `$`+props.beforePrice}</p>
-                    <p> {`$`+ props.price}</p>
+                    {/* <button onClick={() => handleAddToCart(products.product)}>Shop</button>HORRIBLE, pero para implementar REDUX */}
+                    <p> {`$`+ products.price}</p>
+                    <Link to={`/products/${products.category}/${products._id}`}>Más..</Link>
                   </div>
               </div>
             </div>
           </div>
-      </div>
-    </>);
+      </div> 
+    </>
+    )
+
+
 }

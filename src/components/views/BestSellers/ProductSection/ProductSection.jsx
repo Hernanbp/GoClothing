@@ -24,12 +24,8 @@ export default function ProductSection (props) {
                         {HardcodeZara.map( (item)=>{
                         return (
                             <ProductCard 
-                            key={item.id} 
-                            description={item.description}
-                            category={item.category}
-                            price={item.price}
-                            beforePrice ={item.beforePrice}
-                            product={item}
+                            key={item.id}
+                            products={item}
                             />
                             )}
                         )}

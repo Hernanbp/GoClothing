@@ -4,7 +4,10 @@ import brand from "../../svgs/brand.svg"
 import "./styles.css"
 
 export function Home() {
-  const products = [
+
+
+
+  const productsSection = [
     {
       id:1,
       img: "../assets/img001.png",
@@ -47,7 +50,7 @@ export function Home() {
             <img src="../assets/img00.png" alt="" />
           </div>
           <div className="grid-products">
-            {products.map(({ img, name, quantity, id }) => (
+            {productsSection.map(({ img, name, quantity, id }) => (
               <div key={id} className="img-container">
                 <img src={img} alt={name} />
                 <div className="tooltip">
