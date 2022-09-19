@@ -4,13 +4,15 @@ import axios from "axios";
 import Skeleton from "react-loading-skeleton"
 
 import { Link } from 'react-router-dom'
+import { Navbar } from "../../views"
+import "./styles.css"
 
 
 
 export const ProductsPage = () => {
 
   // GET + POST
-    const [dataFromApi, setDataFromApi] = useState([])
+    const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -18,7 +20,7 @@ export const ProductsPage = () => {
       try{
         const res = await axios.get('https://alkcommerceback.herokuapp.com/products')
         console.log(res.data)
-        setDataFromApi(res.data)
+        setProducts(res.data)
         setLoading(false)
       }
       catch(err){
@@ -47,25 +49,53 @@ export const ProductsPage = () => {
 
   return (
     <>
-    <h1> USANDO LA API:</h1>
-    <hr />
-    
+    <Navbar />
+    <section className='productPage-section'>
+      <div className='container'>
+        <div className='controler'>
+          <div>
+            <h3>Search</h3>
+           <input type="text" />
+          </div>
 
-      {loading ? <Skeleton /> :         //ESTO TENDRIA Q USAR PRODUCT CARD
-        (dataFromApi.map( (apiProduct) => {
-          return(
-            <div key={apiProduct._id}>
-                <h2>{apiProduct.title}</h2>
-                <p>{apiProduct.description}</p>
-                <p>{apiProduct.price}</p>
-                <p>{apiProduct.category}</p>
-                {/* <img src={apiProduct.image} /> */}
-                <Link to={`/products/${apiProduct.category}/${apiProduct._id}`}>Más..</Link>
-            </div>
-          )})
-        )
-      }
-    
+          <div>
+            <h3>Maximum price</h3>
+            <input type="range" />
+          </div>
+
+          <div>
+            <h3>Categories</h3>
+            <ul>
+              <li>Pants</li>
+              <li>Shoes</li>
+              <li>Purses</li>
+              <li>T-Shirts</li>
+              <li>Jackets</li>
+            </ul>
+          </div>
+
+        </div>
+
+
+        <div className='product-list'>
+          {loading ? <Skeleton /> :         //ESTO TENDRIA Q USAR PRODUCT CARD
+            (products.map( (products) => {
+              return(
+                <div key={products._id}>
+                    <h2>{products.title}</h2>
+                    <p>{products.description}</p>
+                    <p>{products.price}</p>
+                    <p>{products.category}</p>
+                    {/* <img src={products.image} /> */}
+                    <Link to={`/products/${products.category}/${products._id}`}>Más..</Link>
+                </div>
+              )})
+            )
+          }
+        </div>
+      </div>
+    </section>
+  
     </>
   )
 }

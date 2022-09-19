@@ -1,0 +1,22 @@
+.productPage-section{
+    display: flex;
+    padding: 6em 2em 0 4em;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1300px;
+}
+
+.controler{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+}
