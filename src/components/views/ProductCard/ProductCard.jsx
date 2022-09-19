@@ -21,13 +21,14 @@ export function ProductCard(props) {
       timer: 1000
     })
   }
-  
+  const nikeImg = "https://static.nike.com/a/images/t_default/ce31ca84-32d3-454b-86b6-340cb6063de6/pantalones-de-entrenamiento-dri-fit-41n6G2.png"
   return (
     <>
       <div className="card-container"> 
           <div key={props.id} className="item"> 
             <div className="item-title">
-              <img src="../assets/p1.png" alt=""/>
+              {/* <img src={nikeImg} alt=""/> */}
+              <img src={props.image} alt=""/>
               <button>SALE</button>{/*HORRIBLE, pero para implementar REDUX*/}
             </div >
             <div className="item-description">
@@ -36,7 +37,7 @@ export function ProductCard(props) {
                   <p> {props.category}</p>
                   <div>
                     {/* <p className={props.beforePrice === "" ? "": "discount"}> {props.beforePrice==="" ? "" : `$`+props.beforePrice}</p> */}
-                    <p> {`$`+ props.price}</p>
+                    <p> {`$${props.price}`}</p>
                     <button onClick={() => handleAddToCart(props.product)}>Shop</button>
                   </div>
               </div>
