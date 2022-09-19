@@ -8,29 +8,29 @@ import axios from "axios"
 import {storeAllData} from "../redux/ReduxFunctions"
 
 export function Home() {
-  const products = [
+  const hardcodedProducts = [
     {
       id:1,
       img: "../assets/img001.png",
-      name: "Jacket",
+      name: "T-shirts",
       quantity: 103,
     },
     {
       id:2,
       img: "../assets/img002.png",
-      name: "Jacket",
+      name: "Pants",
       quantity: 103,
     },
     {
       id:3,
       img: "../assets/img003.png",
-      name: "Dress",
+      name: "Purses",
       quantity: 55,
     },
     {
       id:4,
       img: "../assets/img004.png",
-      name: "Jacket",
+      name: "Jackets",
       quantity: 103,
     },
   ]
@@ -71,7 +71,7 @@ export function Home() {
             <img src="../assets/img00.png" alt="" />
           </div>
           <div className="grid-products">
-            {products.map(({ img, name, quantity, id }) => (
+            {hardcodedProducts.map(({ img, name, quantity, id }) => (
               <div key={id} className="img-container">
                 <img src={img} alt={name} />
                 <div className="tooltip">
