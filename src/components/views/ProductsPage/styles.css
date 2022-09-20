@@ -22,3 +22,11 @@
     width: 100%;
     flex-wrap: wrap;
 }
+
+.productPage-section li{
+    cursor: pointer;
+}
+
+.productPage-section .controler button{
+    cursor: pointer;
+}
