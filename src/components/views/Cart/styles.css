@@ -1,0 +1,43 @@
+.cart > div{
+    display: flex;
+    border: 3px solid black;
+    justify-content: center;
+    gap: 1.5em;
+    background-color: rgb(238, 238, 238);
+}
+.cart-left{
+    display: grid;
+    border: 3px solid green;
+    grid-template-columns: 1fr;
+    background-color: blue;
+    width: 40%;
+}
+.cart-right{
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+    width: 40%;
+    max-width: 350px;
+}
+.cart-right > div{
+    display: flex;
+    justify-content: space-evenly;
+    width: 85%;
+    /* border: 2px red solid; */
+}
+.cart-right > div > p{
+    background-color: white;
+    margin-top: 0.25em;
+    padding: 0.5em;
+    width: 90%;
+    /* border: 4px green solid; */
+}
+.cart-right > button {
+    width: 85%;
+    padding: 1em;
+    margin-top: 1em;
+    /* border: black 3px solid; */
+    border-radius: 3%;
+    background-color: rgb(212, 192, 75);
+    color: white;
+}
