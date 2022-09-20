@@ -7,10 +7,21 @@
 }
 .cart-left{
     display: grid;
-    border: 3px solid green;
     grid-template-columns: 1fr;
-    background-color: blue;
+    /* border: 3px solid green; */
+    /* background-color: blue; */
     width: 40%;
+}
+.cart-left > tbody > tr {
+    background-color: white;
+    /* border: 2px solid red; */
+}
+.cart-left > tbody > tr > td {
+    width: 16.66%;
+    padding: 1em;
+    text-align: center;
+    border: none;
+    border-top: 1.5px rgb(238, 238, 238) solid;
 }
 .cart-right{
     display: flex;

@@ -19,22 +19,35 @@ export const Cart = () => {
       <Navbar />
       <h2>Cart</h2>
       <div> {/*SIN NOMBRE*/}
-        <div className='cart-left'>
-          {cart ? (cart.map((productInCart, i)=>{
-            return (
-                <ProductCard 
-                  key={i}
-                  title={productInCart.title}
-                  image={productInCart.image}
-                  category={productInCart.category}
-                  price={productInCart.price}
-                  product={productInCart}
-                />
-            )
-          }))
-          : <h3>NO HAY NADA</h3>
-          }
-        </div>
+        <table className='cart-left'> 
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>PRODUCT</td>
+              <td>PRICE</td>
+              <td>QUANTITY</td>
+              <td>CATEGORY</td>
+              <td>SUBTOTAL</td>
+            </tr>
+            {cart ? (cart.map((productInCart, i)=>{
+              return (
+                <tr>
+                  <td onClick={()=>{console.log("sacar del carrito")}}>X</td>
+                  <td><img src={productInCart.image} style={{width:"50%"}}/></td>
+                  <td>{productInCart.title}</td>
+                  <td>{productInCart.price}$</td>
+                  <td>{productInCart.category}</td>
+                  <td>quantity(hard)</td>
+                  <td>subtotal(hard)</td>
+                  </tr>
+              )
+            }))
+            : <h3>NO HAY NADA</h3>
+            }
+          </tbody>
+        </table>
+
         <div className="cart-right">
           <h3>Cart totals</h3>
           <div>
@@ -47,11 +60,10 @@ export const Cart = () => {
           </div>
           <button>Proceed to checkout</button>
         </div>
+
       </div>
   
 
     </div>
   )
 }
-
-
