@@ -30,3 +30,7 @@
 .productPage-section .controler button{
     cursor: pointer;
 }
+
+.select {
+    font-weight: bold
+}

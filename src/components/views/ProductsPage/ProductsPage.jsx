@@ -17,13 +17,13 @@ export const ProductsPage = () => {
   const [renderList, setRenderList] = useState(null)
   const [catFilter, setCatFilter] = useState(null)
   const searchInput = useRef()
+  const [selected, setSelected] = useState(null)
 
   
   useEffect(() => {
     (async function () {
       try{
         const res = await axios.get('https://alkcommerceback.herokuapp.com/products')
-        console.log(res.data)
         setProducts(res.data)
         setLoading(false)
       }
@@ -71,6 +71,8 @@ export const ProductsPage = () => {
   }, 1000)
 
   const handleCaregory = (event) => {
+    console.log(event);
+    event.target.classList.add("hola")
     let filter = products.filter(data => (data.category.toLocaleLowerCase() === event.target.innerHTML.toLowerCase()))
     setRenderList(filter)
     setCatFilter(filter)
@@ -80,13 +82,13 @@ export const ProductsPage = () => {
     setRenderList(products)
     setSearch("")
     setCatFilter(null)
+    setSelected(null)
     searchInput.current.value = ""
   }
 
   // poner negrita en la cat seleccionada
   // arreglar buscador + categoria
   
-  console.log(renderList);
 
   return (
     <>
@@ -105,11 +107,41 @@ export const ProductsPage = () => {
           <div>
             <h3>Categories</h3>
             <ul>
-              <li value="pants" onClick={ (event) => handleCaregory(event)}>Pants</li>
-              <li value="shoes" onClick={handleCaregory}>Shoes</li>
-              <li value="purses" onClick={handleCaregory}>Purses</li>
-              <li value="t-shirts" onClick={handleCaregory}>T-Shirts</li>
-              <li value="jackets" onClick={handleCaregory}>Jackets</li>
+              <li
+                value="pants"
+                className={selected === 1 ? "select" : ""}
+                onClick={ (event) => handleCaregory(event) & setSelected(1) }
+              >
+                Pants
+              </li>
+              <li
+                  value="shoes"
+                  className={selected === 2 ? "select" : ""}
+                  onClick={ (event) => handleCaregory(event) & setSelected(2) }
+              >
+                Shoes
+              </li>
+              <li
+                value="purses"
+                className={selected === 3 ? "select" : ""}
+                onClick={ (event) => handleCaregory(event) & setSelected(3) }
+              >
+                Purses
+              </li>
+              <li
+                value="t-shirts" 
+                className={selected === 4 ? "select" : ""}
+                onClick={ (event) => handleCaregory(event) & setSelected(4)}
+              >
+                T-Shirts
+              </li>
+              <li
+                value="jackets"
+                className={selected === 5 ? "select" : ""}
+                onClick={ (event) => handleCaregory(event) & setSelected(5) }
+              >
+                Jackets
+              </li>
             </ul>
           </div>
           <button
