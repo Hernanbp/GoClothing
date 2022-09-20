@@ -24,7 +24,8 @@ export const Cart = () => {
         return (
           <div key={i}>
             <ProductCard 
-              description={productInCart.description}
+              title={productInCart.title}
+              // description={productInCart.description}
               category={productInCart.category}
               price={productInCart.price}
               beforePrice ={productInCart.beforePrice}

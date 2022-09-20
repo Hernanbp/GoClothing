@@ -32,7 +32,8 @@ export default function ProductSection (props) {
                             <ProductCard 
                                 key={item.id} 
                                 image={item.image}
-                                description={item.description}
+                                title={item.title}
+                                // description={item.description}
                                 category={item.category}
                                 price={item.price}
                                 beforePrice ={item.beforePrice}
