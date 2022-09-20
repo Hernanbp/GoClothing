@@ -2,6 +2,9 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { ProductCard } from '../ProductCard/ProductCard'
 import { Link } from 'react-router-dom'
+import "./styles.css"
+import {Navbar} from "../Navbar/Navbar"
+import {Footer} from "../Footer/Footer"
 
 export const Cart = () => {
 
@@ -12,44 +15,56 @@ export const Cart = () => {
     return state.cartReducer
   })
 
-  const cartLocalS = JSON.parse(localStorage.getItem("cart"));
   return (
-    <div>
-    Cart Route
-    <Link to="/"> Keep Shopping</Link>
+    <div className='cart'>
+      <Navbar />
+      <h2>Cart</h2>
+      <div> {/*SIN NOMBRE*/}
+        <table className='cart-left'> 
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>PRODUCT</td>
+              <td>PRICE</td>
+              <td>QUANTITY</td>
+              <td>CATEGORY</td>
+              <td>SUBTOTAL</td>
+            </tr>
+            {cart ? (cart.map((productInCart, i)=>{
+              return (
+                <tr>
+                  <td onClick={()=>{console.log("sacar del carrito")}}>X</td>
+                  <td><img src={productInCart.image} style={{width:"50%"}}/></td>
+                  <td>{productInCart.title}</td>
+                  <td>{productInCart.price}$</td>
+                  <td>{productInCart.category}</td>
+                  <td>1=</td>
+                  <td>4500$=</td>
+                  </tr>
+              )
+            }))
+            : <h3>NO HAY NADA</h3>
+            }
+          </tbody>
+        </table>
 
-    {cart.length > 1 ? 
-      (cart.map((productInCart, i)=>{
-        return (
-          <div key={i}>
-            <ProductCard 
-              description={productInCart.description}
-              category={productInCart.category}
-              price={productInCart.price}
-              beforePrice ={productInCart.beforePrice}
-              product={productInCart}
-            />
+        <div className="cart-right">
+          <h3>Cart totals</h3>
+          <div>
+            <p>SUBTOTAL</p>
+            <p>2000(hard)</p>
           </div>
-        )
-      }))
-      :
-      (cartLocalS.map((productInCart, i)=>{
-            return (
-              <div key={i}>
-                <ProductCard 
-                  description={productInCart.description}
-                  category={productInCart.category}
-                  price={productInCart.price}
-                  beforePrice ={productInCart.beforePrice}
-                  product={productInCart}
-                />
-              </div>
-            )
-          }))
-      }
+          <div>
+            <p>TOTAL</p>
+            <p>3800(hard)</p>
+          </div>
+          <button>Proceed to checkout</button>
+        </div>
+
+      </div>
+      <Footer />
 
     </div>
   )
 }
-
-

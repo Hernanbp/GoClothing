@@ -11,10 +11,10 @@ export function ProductCard(props) {
   const handleAddToCart = (product) => {
     dispatch(addToCart(product)) //subir a redux
     // Subir/actualizar a localstorage
-      const stringCart = localStorage.getItem("cart");
-      const viejo = JSON.parse(stringCart)
-      viejo.push(product);
-      localStorage.setItem("cart", JSON.stringify(viejo));
+      // const stringCart = localStorage.getItem("cart");
+      // const viejo = JSON.parse(stringCart)
+      // viejo.push(product);
+      // localStorage.setItem("cart", JSON.stringify(viejo));
     Swal.fire({
       icon: "success",
       title: "agregaste al carrito",
@@ -32,7 +32,8 @@ export function ProductCard(props) {
               <button>SALE</button>{/*HORRIBLE, pero para implementar REDUX*/}
             </div >
             <div className="item-description">
-              <h3> {props.description.slice(0, 12) + '...'}</h3>
+              {/* <h3> {props.description.slice(0, 12) + '...'}</h3> */}
+              <h3> {props.title}</h3>
                 <div>
                   <p> {props.category}</p>
                   <div>
