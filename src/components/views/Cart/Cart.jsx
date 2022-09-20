@@ -4,6 +4,7 @@ import { ProductCard } from '../ProductCard/ProductCard'
 import { Link } from 'react-router-dom'
 import "./styles.css"
 import {Navbar} from "../Navbar/Navbar"
+import {Footer} from "../Footer/Footer"
 
 export const Cart = () => {
 
@@ -38,8 +39,8 @@ export const Cart = () => {
                   <td>{productInCart.title}</td>
                   <td>{productInCart.price}$</td>
                   <td>{productInCart.category}</td>
-                  <td>quantity(hard)</td>
-                  <td>subtotal(hard)</td>
+                  <td>1=</td>
+                  <td>4500$=</td>
                   </tr>
               )
             }))
@@ -62,7 +63,7 @@ export const Cart = () => {
         </div>
 
       </div>
-  
+      <Footer />
 
     </div>
   )
