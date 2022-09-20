@@ -2,6 +2,7 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { ProductCard } from '../ProductCard/ProductCard'
 import { Link } from 'react-router-dom'
+import "./styles.css"
 
 export const Cart = () => {
 
@@ -12,43 +13,28 @@ export const Cart = () => {
     return state.cartReducer
   })
 
-  // const cartLocalS = JSON.parse(localStorage.getItem("cart"));
-
   return (
     <div>
     Cart Route
     <Link to="/"> Keep Shopping</Link>
 
-    {cart.length > 1 ? 
+    {cart ? 
       (cart.map((productInCart, i)=>{
         return (
-          <div key={i}>
             <ProductCard 
+              key={i}
               title={productInCart.title}
+              image={productInCart.image}
               // description={productInCart.description}
               category={productInCart.category}
               price={productInCart.price}
               beforePrice ={productInCart.beforePrice}
               product={productInCart}
             />
-          </div>
         )
       }))
       :
       "NO HAY NADA"
-      // (cartLocalS.map((productInCart, i)=>{
-      //       return (
-      //         <div key={i}>
-      //           <ProductCard 
-      //             description={productInCart.description}
-      //             category={productInCart.category}
-      //             price={productInCart.price}
-      //             beforePrice ={productInCart.beforePrice}
-      //             product={productInCart}
-      //           />
-      //         </div>
-      //       )
-      //     }))
       }
 
     </div>
