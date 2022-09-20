@@ -12,7 +12,8 @@ export const Cart = () => {
     return state.cartReducer
   })
 
-  const cartLocalS = JSON.parse(localStorage.getItem("cart"));
+  // const cartLocalS = JSON.parse(localStorage.getItem("cart"));
+
   return (
     <div>
     Cart Route
@@ -33,19 +34,20 @@ export const Cart = () => {
         )
       }))
       :
-      (cartLocalS.map((productInCart, i)=>{
-            return (
-              <div key={i}>
-                <ProductCard 
-                  description={productInCart.description}
-                  category={productInCart.category}
-                  price={productInCart.price}
-                  beforePrice ={productInCart.beforePrice}
-                  product={productInCart}
-                />
-              </div>
-            )
-          }))
+      "NO HAY NADA"
+      // (cartLocalS.map((productInCart, i)=>{
+      //       return (
+      //         <div key={i}>
+      //           <ProductCard 
+      //             description={productInCart.description}
+      //             category={productInCart.category}
+      //             price={productInCart.price}
+      //             beforePrice ={productInCart.beforePrice}
+      //             product={productInCart}
+      //           />
+      //         </div>
+      //       )
+      //     }))
       }
 
     </div>
