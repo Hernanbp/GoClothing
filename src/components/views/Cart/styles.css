@@ -114,11 +114,45 @@
     .cart-phone > tbody > div{
         display: flex;
         flex-direction: column;
+        margin-bottom: 2rem;
     }
     .cart-phone > tbody > div> tr{
         display: flex;
-        flex-direction: row;
-        align-items: stretch;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+    }
+    .cart-phone > tbody > div> tr > td{
+        display: flex;
         width: 100%;
+        padding: 1rem 1.3rem;
+    }
+    .cart-phone > tbody > div> tr > td:first-child {
+        justify-content: start;
+    }
+    .cart-phone > tbody > div> tr > td:nth-child(2) {
+        justify-content: end;
+    }
+    tr, td{
+        border:none;
+    }
+    .td-img, .td-x{
+        justify-content: center !important;
+    }
+    .td-x a {
+        height: 25px;
+        line-height: 25px;  
+        width: 25px;  
+        font-size: 1em;
+        font-weight: bold;
+        border-radius: 50%;
+        text-align: center;
+        border: #000000 solid 1px;
+        cursor: pointer;
+        transition: all 0.5s;
+    }
+    .td-x a:hover{
+        border-color: #c7ab62;
+        color: #c7ab62;
     }
 }
