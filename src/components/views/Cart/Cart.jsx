@@ -16,7 +16,7 @@ export const Cart = () => {
   })
 
 
-  const [showPhone, setShowPhone] = useState(true);
+  const [showPhone, setShowPhone] = useState(600);
   console.log(window.innerWidth);
   function resizeListener() {
     setShowPhone (window.innerWidth);
@@ -35,8 +35,44 @@ export const Cart = () => {
       <span id="width"></span>
       <div className='cart-container'>
         {
-          showPhone < 500 ?  
-          <table className='cart-phone'> 
+          showPhone > 500 ?
+          <table className='cart-left'> 
+            <tbody>
+              <tr>
+                <td></td>
+                <td></td>
+                <td>PRODUCT</td>
+                <td>PRICE</td>
+                <td>QUANTITY</td>
+                <td>CATEGORY</td>
+                <td>SUBTOTAL</td>
+              </tr>
+              {cart.length > 0 ? (cart.map((productInCart, i)=>{
+                return (
+                  <tr>
+                    <td onClick={()=>{console.log("sacar del carrito")}}>X</td>
+                    <td><img src={productInCart.image} style={{width:"50%"}} alt=""/></td>
+                    <td>{productInCart.title}</td>
+                    <td>{productInCart.price}$</td>
+                    <td>{productInCart.category}</td>
+                    <td>1=</td>
+                    <td>4500$=</td>
+                  </tr>
+                )
+              }))
+              :
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><h3>Sorry, the cart is empty!</h3></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              }
+            </tbody>
+          </table>:<table className='cart-phone'> 
             <tbody>
               {cart.length > 0 ? (cart.map((productInCart, i)=>{
                 return (
@@ -72,43 +108,6 @@ export const Cart = () => {
               :
               <tr>
                 <td><h3>Sorry, the cart is empty!</h3></td>
-              </tr>
-              }
-            </tbody>
-          </table>:
-          <table className='cart-left'> 
-            <tbody>
-              <tr>
-                <td></td>
-                <td></td>
-                <td>PRODUCT</td>
-                <td>PRICE</td>
-                <td>QUANTITY</td>
-                <td>CATEGORY</td>
-                <td>SUBTOTAL</td>
-              </tr>
-              {cart.length > 0 ? (cart.map((productInCart, i)=>{
-                return (
-                  <tr>
-                    <td onClick={()=>{console.log("sacar del carrito")}}>X</td>
-                    <td><img src={productInCart.image} style={{width:"50%"}} alt=""/></td>
-                    <td>{productInCart.title}</td>
-                    <td>{productInCart.price}$</td>
-                    <td>{productInCart.category}</td>
-                    <td>1=</td>
-                    <td>4500$=</td>
-                  </tr>
-                )
-              }))
-              :
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td><h3>Sorry, the cart is empty!</h3></td>
-                <td></td>
-                <td></td>
-                <td></td>
               </tr>
               }
             </tbody>

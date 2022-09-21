@@ -129,6 +129,7 @@
     }
     .cart-phone > tbody > div> tr > td:first-child {
         justify-content: start;
+        font-weight: 800;
     }
     .cart-phone > tbody > div> tr > td:nth-child(2) {
         justify-content: end;
