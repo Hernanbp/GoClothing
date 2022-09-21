@@ -1,17 +1,22 @@
 import "./ProductSectionStyles.css"
-import HardcodeZara from "../../ProductCard/HardcodeZara"
 import  {ProductCard} from "../../ProductCard/ProductCard"
+
+import {useSelector} from "react-redux"
 
 
 export default function ProductSection (props) {
     const {title} = props;
+
+    const{apiData} = useSelector(state=>{
+        return state.allApiDataReducer;
+    })
+
   return (
     <>
       <div className="bestSellers-main">
             <div>
                 <h2>{title}</h2>
                 <div className="bestSellers-main-list">
-                    
                     <div>
                         <ul>
                             <li>All Products</li>
@@ -21,9 +26,9 @@ export default function ProductSection (props) {
                         <button>Show All</button>
                     </div>
                     <div className="bestSellers-products">
-                        {HardcodeZara.map( (item)=>{
+                        {apiData.map( (item)=>{
                         return (
-                            <ProductCard 
+                            <ProductCard
                             key={item.id}
                             products={item}
                         />

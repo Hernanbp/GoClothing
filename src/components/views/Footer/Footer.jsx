@@ -26,11 +26,11 @@ export const Footer = () => {
                     <div className="catalog">
                         <h4>CATALOG</h4>
                         <ul>
-                            <li>Necklaces</li>
-                            <li>hoodies</li>
-                            <li>Jewelry Box</li>
-                            <li>t-shirt</li>
-                            <li>jacket</li>
+                            <li>T-shirts</li>
+                            <li>Jackets</li>
+                            <li>Pants</li>
+                            <li>Shoes</li>
+                            <li>Purses</li>
                         </ul>
                     </div>
 

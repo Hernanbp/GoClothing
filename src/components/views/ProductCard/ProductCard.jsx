@@ -17,7 +17,12 @@ export function ProductCard({ products }) {
   const dispatch = useDispatch()
 
   const handleAddToCart = (product) => {
-    dispatch(addToCart(product))
+    dispatch(addToCart(product)) //subir a redux
+    // Subir/actualizar a localstorage
+      // const stringCart = localStorage.getItem("cart");
+      // const viejo = JSON.parse(stringCart)
+      // viejo.push(product);
+      // localStorage.setItem("cart", JSON.stringify(viejo));
     Swal.fire({
       icon: "success",
       title: "agregaste al carrito",

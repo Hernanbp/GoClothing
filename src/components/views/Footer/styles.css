@@ -53,6 +53,7 @@ footer label, footer a {
 
 .data > div {
     display: flex;
+    align-items: center;
     max-width: 1300px;
     width: 88%;
     gap: 20px;

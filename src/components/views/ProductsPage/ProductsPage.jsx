@@ -5,6 +5,9 @@ import { Navbar } from "../../views"
 import "./styles.css"
 import { SkeletonCard } from '../ProductCard/SkeletonCard';
 import debounce from 'lodash.debounce'
+// import { Link } from 'react-router-dom'
+// import { useSelector } from 'react-redux';
+
 
 
 
@@ -65,6 +68,32 @@ export const ProductsPage = () => {
       console.log(err)
     }
   }*/
+
+  //   const{apiData} = useSelector(state=>{
+  //     return state.allApiDataReducer
+  //   })
+    
+  // useEffect(() => {
+  //   if(apiData.length > 1){ //si hay esta guardada en redux (de la pag principal)
+  //     setDataFromApi(apiData)
+  //     setLoading(false)
+  //     console.log("por redux")
+  //   } else{
+  //      (async function () {
+  //       try{
+  //         const res = await axios.get('https://alkcommerceback.herokuapp.com/products')
+  //         console.log(res.data)
+  //         setDataFromApi(res.data)
+  //         setLoading(false)
+  //         console.log("por request")
+  //       }
+  //       catch(err){
+  //         console.log(err)
+  //       }
+  //     })()
+  //   }
+  // },[])
+
 
   const handleSearch = debounce((event) => {
     setSearch(event.target.value)
@@ -148,7 +177,6 @@ export const ProductsPage = () => {
             onClick={handleClear}
           >
             Clear Filters</button>
-
         </div>
         </div>
 
@@ -178,7 +206,6 @@ export const ProductsPage = () => {
         </div>
       </div>
     </section>
-  
     </>
   )
 }
