@@ -15,7 +15,12 @@ export function Navbar() {
   const handleToggle = ()=>{
     setShow((prevState) => !prevState)
   }
-
+  const user = localStorage.getItem('user')
+  const [userLogin, setUserLogin] = useState(user);
+  const closeUser = ()=>{
+    const user = localStorage.removeItem('user')
+    setUserLogin (user)
+  }
   return (
     <div className="nav-container">
         {phoneScreen ? (
@@ -24,10 +29,14 @@ export function Navbar() {
                 /*
                 La idea es que haciendo click en la imagen pueda volver al home
                 <Link to="/"> <img src={logo} alt="e-commerce" /> </Link>
-              */}
+              */
+              }
               <img src={logo} alt="e-commerce" />
               <div className="navbar_svg">
-              {<Link to="/login"> <PersonIcon /> </Link>}
+              <div>
+              {<Link to="/login"> <PersonIcon /></Link>}
+              </div>
+
               {<Link to="/cart"> <ShoppingBagIcon /> </Link>}
                 <MenuIcon onClick={handleToggle}/>
               </div>
@@ -47,8 +56,13 @@ export function Navbar() {
               {<SearchIcon />}
               <img src={logo} alt="e-commerce" />
               <div>
-              {<Link to="/login"> <PersonIcon /> </Link>}
-              {<Link to="/cart"> <ShoppingBagIcon /> </Link>}
+                { userLogin ? 
+                <div>
+                  <h5>Welcome {user}!</h5>
+                  <button onClick={closeUser}>X</button>
+                </div>
+                :<Link to="/login"> <PersonIcon /></Link>}
+                {<Link to="/cart"> <ShoppingBagIcon /> </Link>}
               </div>
             </div>
           <div className="bottom">
