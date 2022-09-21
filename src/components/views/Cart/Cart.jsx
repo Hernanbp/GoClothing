@@ -21,6 +21,7 @@ export const Cart = () => {
       <h2>Your Cart</h2>
       {
         /* algun icono de un carrito */
+        console.log(cart)
       }
       <div className='cart-container'>
         <table className='cart-left'> 
@@ -34,7 +35,7 @@ export const Cart = () => {
               <td>CATEGORY</td>
               <td>SUBTOTAL</td>
             </tr>
-            {cart === "null" ? (cart.map((productInCart, i)=>{
+            {cart.length > 0 ? (cart.map((productInCart, i)=>{
               return (
                 <tr>
                   <td onClick={()=>{console.log("sacar del carrito")}}>X</td>
