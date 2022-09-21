@@ -71,8 +71,6 @@ export const ProductsPage = () => {
   }, 1000)
 
   const handleCaregory = (event) => {
-    console.log(event);
-    event.target.classList.add("hola")
     let filter = products.filter(data => (data.category.toLocaleLowerCase() === event.target.innerHTML.toLowerCase()))
     setRenderList(filter)
     setCatFilter(filter)
@@ -95,8 +93,9 @@ export const ProductsPage = () => {
     <Navbar />
     <section className='productPage-section'>
       <div className='container'>
+        <div>
         <div className='controler'>
-          <div>
+          <div className='search-product'>
             <h3>Search</h3>
            <input
             ref={searchInput}
@@ -104,7 +103,7 @@ export const ProductsPage = () => {
             onChange={handleSearch}
            />
           </div>
-          <div>
+          <div className='select-category'>
             <h3>Categories</h3>
             <ul>
               <li
@@ -145,10 +144,12 @@ export const ProductsPage = () => {
             </ul>
           </div>
           <button
+            className='clear-filters'
             onClick={handleClear}
           >
             Clear Filters</button>
 
+        </div>
         </div>
 
 
