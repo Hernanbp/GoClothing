@@ -15,14 +15,22 @@ export function Navbar() {
   const handleToggle = ()=>{
     setShow((prevState) => !prevState)
   }
-
+  const user = localStorage.getItem('user')
+  const [userLogin, setUserLogin] = useState(user);
+  const closeUser = ()=>{
+    const user = localStorage.removeItem('user')
+    setUserLogin (user)
+  }
   return (
     <div className="nav-container">
         {phoneScreen ? (
             <nav className="navbar_phone">
               <Link to="/"><img src={logo} alt="e-commerce" /></Link>
               <div className="navbar_svg">
-              {<Link to="/login"> <PersonIcon /> </Link>}
+              <div>
+              {<Link to="/login"> <PersonIcon /></Link>}
+              </div>
+
               {<Link to="/cart"> <ShoppingBagIcon /> </Link>}
                 <MenuIcon onClick={handleToggle}/>
               </div>
@@ -42,8 +50,13 @@ export function Navbar() {
               {<SearchIcon />}
               <Link to="/"><img src={logo} alt="e-commerce" /></Link>
               <div>
-              {<Link to="/login"> <PersonIcon /> </Link>}
-              {<Link to="/cart"> <ShoppingBagIcon /> </Link>}
+                { userLogin ? 
+                <div>
+                  <h5>Welcome {user}!</h5>
+                  <button onClick={closeUser}>X</button>
+                </div>
+                :<Link to="/login"> <PersonIcon /></Link>}
+                {<Link to="/cart"> <ShoppingBagIcon /> </Link>}
               </div>
             </div>
           <div className="bottom">
