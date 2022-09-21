@@ -8,6 +8,7 @@ import axios from "axios"
 import {storeAllData} from "../redux/ReduxFunctions"
 
 export function Home() {
+
   const hardcodedProducts = [
     {
       id:1,
@@ -53,7 +54,7 @@ export function Home() {
         console.log(err)
       }
     })()
-  },[])
+  },[dispatch])
   
   return (
     <>

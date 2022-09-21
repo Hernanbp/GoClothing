@@ -1,5 +1,4 @@
 import "./ProductSectionStyles.css"
-import HardcodeZara from "./HardcodeZara"
 import  {ProductCard} from "../../ProductCard/ProductCard"
 
 import {useSelector} from "react-redux"
@@ -29,16 +28,10 @@ export default function ProductSection (props) {
                     <div className="bestSellers-products">
                         {apiData.map( (item)=>{
                         return (
-                            <ProductCard 
-                                key={item.id} 
-                                image={item.image}
-                                title={item.title}
-                                // description={item.description}
-                                category={item.category}
-                                price={item.price}
-                                beforePrice ={item.beforePrice}
-                                product={item}
-                            />
+                            <ProductCard
+                            key={item.id}
+                            products={item}
+                        />
                             )}
                         )}
                     </div>
