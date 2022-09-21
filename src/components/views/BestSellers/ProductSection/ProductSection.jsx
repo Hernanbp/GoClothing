@@ -26,7 +26,7 @@ export default function ProductSection (props) {
                             <ProductCard 
                             key={item.id}
                             products={item}
-                            />
+                        />
                             )}
                         )}
                     </div>
