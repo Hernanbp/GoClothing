@@ -7,9 +7,13 @@
     background-color: #f1f1f1;
 }
 .cart > h2{
-    background-color: #f1f1f1;
-    padding-left: 13%;
-    font-size: 3.5rem;
+    padding-left: 14%;
+    font-size: 3rem;
+    font-weight: 100;
+    font-family: 'Playfair Display', serif;
+}
+.cart > h3{
+    padding-left: 14%;
     font-weight: 100;
     font-family: 'Playfair Display', serif;
 }
@@ -101,6 +105,20 @@
         width: 100%;
     }
     .cart-right > button {
+        width: 100%;
+    }
+    .cart-phone > tbody{
+        display: flex;
+        flex-direction: column;
+    }
+    .cart-phone > tbody > div{
+        display: flex;
+        flex-direction: column;
+    }
+    .cart-phone > tbody > div> tr{
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
         width: 100%;
     }
 }
