@@ -16,15 +16,16 @@ export const Cart = () => {
   })
 
 
-  const [showPhone, setShowPhone] = useState(600);
+  const [showPhone, setShowPhone] = useState();
   console.log(window.innerWidth);
   function resizeListener() {
     setShowPhone (window.innerWidth);
   }
+  //por si cambia en la misma pantalla
   window.addEventListener("resize", resizeListener);
 
   return (
-    <div className='cart'>
+    <div className='cart' onLoad={resizeListener}>
       <Navbar />
       <h3>Home / Cart</h3>
       <h2>Cart</h2>
