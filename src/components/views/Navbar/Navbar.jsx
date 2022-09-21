@@ -20,6 +20,11 @@ export function Navbar() {
     <div className="nav-container">
         {phoneScreen ? (
             <nav className="navbar_phone">
+              {
+                /*
+                La idea es que haciendo click en la imagen pueda volver al home
+                <Link to="/"> <img src={logo} alt="e-commerce" /> </Link>
+              */}
               <img src={logo} alt="e-commerce" />
               <div className="navbar_svg">
               {<Link to="/login"> <PersonIcon /> </Link>}
