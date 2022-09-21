@@ -53,11 +53,11 @@ export const Cart = () => {
                   <tr>
                     <td onClick={()=>{console.log("sacar del carrito")}}>X</td>
                     <td><img src={productInCart.image} style={{width:"50%"}} alt=""/></td>
-                    <td>{productInCart.title}</td>
+                    <td style={{color:"rgb(212, 192, 75)", fontWeight:"900"}}>{productInCart.title}</td>
                     <td>{productInCart.price}$</td>
-                    <td>{productInCart.category}</td>
-                    <td>1=</td>
-                    <td>4500$=</td>
+                    <td style={{color:"rgb(212, 192, 75)", fontWeight:"900"}}>{productInCart.category}</td>
+                    <td>{/*productInCart.quantity*/}1=</td>
+                    <td>{/*productInCart.price*productInCart.quantity*/}4500$=</td>
                   </tr>
                 )
               }))
