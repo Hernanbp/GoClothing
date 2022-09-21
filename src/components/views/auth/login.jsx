@@ -45,6 +45,16 @@ const onSubmit = () => {
     const token = data.data.result.token;
     // console.log(token)
     localStorage.setItem("token", token)
+
+    /*DEBERIA estar OK */
+    console.log(data.data.result.user.userName);
+    if (data.data.result.user.userName === "admin") {
+      localStorage.setItem("admin", "admin")
+    }
+    else{
+      localStorage.setItem("user", data.data.result.user.userName)
+    }
+    
     Swal.fire({
       icon: "success",
       title: "Logged in!",
