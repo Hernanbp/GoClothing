@@ -170,8 +170,8 @@ label {
 }
 
 .search:focus-within {
-  border: 1px solid #6ca5f0f0;
-  outline: 4px solid #a4c9fa66;
+  border: 1px solid #b18a75dc;
+  outline: 4px solid #b18a752d;
 }
 
 .search > input {
@@ -186,6 +186,16 @@ label {
 
 .content > form > button {
   background: none;
+}
+
+.form-dashboard > input:focus {
+  border: 1px solid #b18a75dc;
+  outline: 4px solid #b18a7514;
+}
+
+.form-dashboard > textarea:focus {
+  border: 1px solid #b18a75dc;
+  outline: 4px solid #b18a7514;
 }
 
 /*  product dashboard */
