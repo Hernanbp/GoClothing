@@ -34,8 +34,11 @@ export const DashProducts = () => {
 
   useEffect(() => {
     setContent(
-      dataFromApi?.map(({ title, price, category, _id }) => (
+      dataFromApi?.map(({ image, title, price, category, _id }) => (
         <tr className="product-row" key={_id}>
+          <td className="prod-img">
+            <img src={image} alt="productImage" />
+          </td>
           <td>{title}</td>
           <td>{category}</td>
           <td>${price}</td>
@@ -44,6 +47,7 @@ export const DashProducts = () => {
               className="delete-icon"
               onClick={() => handleRemoveProduct(_id)}
             />
+            Delete
           </td>
         </tr>
       ))
@@ -57,13 +61,17 @@ export const DashProducts = () => {
   const handleSearchChange = (e) => {
     if (!e.target.value) {
       setContent(
-        dataFromApi?.map(({ title, price, category, _id }) => (
+        dataFromApi?.map(({ image, title, price, category, _id }) => (
           <tr className="product-row" key={_id}>
+            <td className="prod-img">
+              <img src={image} alt="productImage" />
+            </td>
             <td>{title}</td>
             <td>{category}</td>
             <td>${price}</td>
             <td>
               <DeleteIcon onClick={() => handleRemoveProduct(_id)} />
+              Delete
             </td>
           </tr>
         ))
@@ -78,13 +86,20 @@ export const DashProducts = () => {
 
     if (e.target.value) {
       setContent(
-        filtered.map(({ title, price, category, _id }) => (
+        filtered.map(({ image, title, price, category, _id }) => (
           <tr className="product-row" key={_id}>
+            <td className="prod-img">
+              <img src={image} alt="productImage" />
+            </td>
             <td data-label="Name">{title}</td>
             <td data-label="Category">{category}</td>
             <td data-label="Price">${price}</td>
-            <td data-label="Actions" onClick={() => handleRemoveProduct(_id)}>
-              Remove
+            <td>
+              <DeleteIcon
+                className="delete-icon"
+                onClick={() => handleRemoveProduct(_id)}
+              />
+              Delete
             </td>
           </tr>
         ))
@@ -111,6 +126,7 @@ export const DashProducts = () => {
         <table>
           <tbody>
             <tr>
+              <th>Image</th>
               <th>Name</th>
               <th>Category</th>
               <th>Price</th>

@@ -9,7 +9,9 @@ export const Dashboard = () => {
     <div className="dashboard">
       <div className="dashboard-nav-container">
         <div className="dashboard-nav">
-          <img src={logo} alt="logo" />
+          <Link to="/">
+            <img src={logo} alt="logo" />
+          </Link>
           <div className="nav-links">
             <p>
               Logged in as: <br /> <b>admin@email.com</b>
