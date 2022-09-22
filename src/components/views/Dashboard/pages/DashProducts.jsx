@@ -72,10 +72,12 @@ export const DashProducts = () => {
       setContent(
         filtered.map(({ title, price, category, _id }) => (
           <tr className="product-row" key={_id}>
-            <td>{title}</td>
-            <td>{category}</td>
-            <td>${price}</td>
-            <td onClick={() => handleRemoveProduct(_id)}>Remove</td>
+            <td data-label="Name">{title}</td>
+            <td data-label="Category">{category}</td>
+            <td data-label="Price">${price}</td>
+            <td data-label="Actions" onClick={() => handleRemoveProduct(_id)}>
+              Remove
+            </td>
           </tr>
         ))
       )
@@ -106,8 +108,8 @@ export const DashProducts = () => {
               <th>Price</th>
               <th>Actions</th>
             </tr>
-            {content}
           </tbody>
+          <tbody>{content}</tbody>
         </table>
       )}
     </div>
