@@ -1,6 +1,7 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 import SearchIcon from "@mui/icons-material/Search"
+import DeleteIcon from "@mui/icons-material/Delete"
 
 export const DashProducts = () => {
   // const [products, setProducts] = useState([])
@@ -38,7 +39,12 @@ export const DashProducts = () => {
           <td>{title}</td>
           <td>{category}</td>
           <td>${price}</td>
-          <td onClick={() => handleRemoveProduct(_id)}>Remove</td>
+          <td>
+            <DeleteIcon
+              className="delete-icon"
+              onClick={() => handleRemoveProduct(_id)}
+            />
+          </td>
         </tr>
       ))
     )
@@ -56,7 +62,9 @@ export const DashProducts = () => {
             <td>{title}</td>
             <td>{category}</td>
             <td>${price}</td>
-            <td onClick={() => handleRemoveProduct(_id)}>Remove</td>
+            <td>
+              <DeleteIcon onClick={() => handleRemoveProduct(_id)} />
+            </td>
           </tr>
         ))
       )
@@ -89,7 +97,7 @@ export const DashProducts = () => {
       <h1>Products</h1>
       <form className="search" onSubmit={handleSubmitSearch}>
         <button>
-          <SearchIcon />
+          <SearchIcon style={{ color: "#18273af0" }} />
         </button>
         <input
           onChange={handleSearchChange}
