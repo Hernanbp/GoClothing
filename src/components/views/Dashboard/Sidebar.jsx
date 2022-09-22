@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket"
 import AddCircleIcon from "@mui/icons-material/AddCircle"
 import UpdateIcon from "@mui/icons-material/Update"
+import SettingsIcon from "@mui/icons-material/Settings"
 
 export const Sidebar = () => {
   return (
@@ -11,7 +12,7 @@ export const Sidebar = () => {
         <li>
           <Link to="/dashboard/products">
             <ShoppingBasketIcon />
-            Products
+            All Products
           </Link>
         </li>
         <li>
@@ -23,7 +24,13 @@ export const Sidebar = () => {
         <li>
           <Link to="/dashboard/updateProduct">
             <UpdateIcon />
-            Update Product
+            Update a Product
+          </Link>
+        </li>
+        <li>
+          <Link to="#">
+            <SettingsIcon />
+            Settings
           </Link>
         </li>
       </ul>

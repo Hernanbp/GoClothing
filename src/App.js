@@ -1,5 +1,5 @@
 import { Dashboard } from "../src/components/views/Dashboard/Dashboard"
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route, Navigate } from "react-router-dom"
 import {
   Home,
   Login,
@@ -21,8 +21,13 @@ const App = () => {
       <Route path="/register" element={<Register />} />
       <Route path="/cart" element={<Cart />} />
       <Route path="/zara" element={<BestSellers />} />
-      <Route path="/dashboard" element={<Dashboard />}>
-        <Route path="/dashboard/products" element={<DashProducts />} />
+      <Route path="dashboard" element={<Dashboard />}>
+        <Route
+          index
+          path="/dashboard"
+          element={<Navigate to="/dashboard/products" replace />}
+        />
+        <Route path="products" element={<DashProducts />} />
         <Route path="/dashboard/updateProduct" element={<UpdateProduct />} />
         <Route
           path="/dashboard/createNewProduct"
