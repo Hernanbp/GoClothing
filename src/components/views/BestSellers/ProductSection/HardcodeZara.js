@@ -2,6 +2,7 @@ const HardcodeZara = [
   {
     title: "Nike",
     description: "Nike Sportswear Futura Luxe",
+    image: "../assets/p1.png",
     price: 1300,
     beforePrice: 1500,
     category: "Bag",
@@ -11,6 +12,7 @@ const HardcodeZara = [
   {
     title: "Adidas",
     description: "Adidas Sportswear Futura",
+    image: "../assets/p1.png",
     price: 1400,
     beforePrice: 1700,
     category: "Bag",
@@ -20,6 +22,7 @@ const HardcodeZara = [
   {
     title: "Puma",
     description: "Puma Sportswear Futura Luxe",
+    image: "../assets/p1.png",
     price: 1500,
     beforePrice: "",
     category: "Bag",
@@ -29,6 +32,7 @@ const HardcodeZara = [
   {
     title: "fila",
     description: "fila Sportswear Futura Luxe",
+    image: "../assets/p1.png",
     price: 1600,
     beforePrice: "",
     category: "Bag",

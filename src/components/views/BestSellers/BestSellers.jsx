@@ -18,12 +18,12 @@ export function BestSellers() {
             <h2>Follow Products And Discounts On Instagram</h2>
 
             <ul>
-                <li><img src="../assets/ig01.png" alt="NO se encutgenas" /></li>
-                <li><img src="../assets/ig02.png" alt="NO se encutgenas" /></li>
-                <li><img src="../assets/ig03.png" alt="NO se encutgenas" /></li>
-                <li><img src="../assets/ig04.png" alt="NO se encutgenas" /></li>
-                <li><img src="../assets/ig05.png" alt="NO se encutgenas" /></li>
-                <li><img src="../assets/ig06.png" alt="NO se encutgenas" /></li>
+                <li><img src="../assets/ig01.png" alt="img" /></li>
+                <li><img src="../assets/ig02.png" alt="img" /></li>
+                <li><img src="../assets/ig03.png" alt="img" /></li>
+                <li><img src="../assets/ig04.png" alt="img" /></li>
+                <li><img src="../assets/ig05.png" alt="img" /></li>
+                <li><img src="../assets/ig06.png" alt="img" /></li>
             </ul>
 
             <h3>Or Suscribe To The Newsletter</h3>
