@@ -27,7 +27,7 @@ export const DashProducts = () => {
     const resp = await axios.delete(
       `https://alkcommerceback.herokuapp.com/products/${id}`
     )
-    setDataFromApi(dataFromApi.filter((product) => product.id !== id))
+    setDataFromApi(dataFromApi.filter((product) => product._id !== id))
 
     console.log(resp)
   }
@@ -39,14 +39,12 @@ export const DashProducts = () => {
           <td className="prod-img">
             <img src={image} alt="productImage" />
           </td>
+          <td>{_id}</td>
           <td>{title}</td>
           <td>{category}</td>
           <td>${price}</td>
-          <td>
-            <DeleteIcon
-              className="delete-icon"
-              onClick={() => handleRemoveProduct(_id)}
-            />
+          <td onClick={() => handleRemoveProduct(_id)}>
+            <DeleteIcon className="delete-icon" />
             Delete
           </td>
         </tr>
@@ -66,11 +64,12 @@ export const DashProducts = () => {
             <td className="prod-img">
               <img src={image} alt="productImage" />
             </td>
+            <td>{_id}</td>
             <td>{title}</td>
             <td>{category}</td>
             <td>${price}</td>
-            <td>
-              <DeleteIcon onClick={() => handleRemoveProduct(_id)} />
+            <td onClick={() => handleRemoveProduct(_id)}>
+              <DeleteIcon className="delete-icon" />
               Delete
             </td>
           </tr>
@@ -91,14 +90,12 @@ export const DashProducts = () => {
             <td className="prod-img">
               <img src={image} alt="productImage" />
             </td>
+            <td data-label="id">{_id}</td>
             <td data-label="Name">{title}</td>
             <td data-label="Category">{category}</td>
             <td data-label="Price">${price}</td>
-            <td>
-              <DeleteIcon
-                className="delete-icon"
-                onClick={() => handleRemoveProduct(_id)}
-              />
+            <td onClick={() => handleRemoveProduct(_id)}>
+              <DeleteIcon className="delete-icon" />
               Delete
             </td>
           </tr>
@@ -127,6 +124,7 @@ export const DashProducts = () => {
           <tbody>
             <tr>
               <th>Image</th>
+              <th>Id</th>
               <th>Name</th>
               <th>Category</th>
               <th>Price</th>

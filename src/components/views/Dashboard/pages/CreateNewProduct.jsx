@@ -1,12 +1,13 @@
 import { useState } from "react"
-import axios from "axios"
 import { Link } from "react-router-dom"
+import axios from "axios"
+import FileBase64 from "react-file-base64"
 
 export const CreateNewProduct = () => {
   const [title, setTitle] = useState("")
   const [description, setDescription] = useState("")
   const [price, setPrice] = useState(0)
-
+  const [image, setImage] = useState("")
   const [products, setProducts] = useState([])
 
   const handleSubmit = async (e) => {
@@ -18,7 +19,7 @@ export const CreateNewProduct = () => {
         title,
         description,
         price,
-        image: "https://picsum.photos/200/300",
+        image,
         category: "Clothes",
       }
     )
@@ -50,6 +51,12 @@ export const CreateNewProduct = () => {
         name="price"
         value={price}
         onChange={(e) => setPrice(e.target.value)}
+      />
+      <label htmlFor="image">Image</label>
+      <FileBase64
+        type="file"
+        multiple={false}
+        onDone={({ base64 }) => setImage(base64)}
       />
       <div className="buttons-dashboard">
         <Link to="/dashboard/products">
