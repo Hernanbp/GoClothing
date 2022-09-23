@@ -27,10 +27,7 @@ export function Navbar() {
             <nav className="navbar_phone">
               <Link to="/"><img src={logo} alt="e-commerce" /></Link>
               <div className="navbar_svg">
-              <div>
               {<Link to="/login"> <PersonIcon /></Link>}
-              </div>
-
               {<Link to="/cart"> <ShoppingBagIcon /> </Link>}
                 <MenuIcon onClick={handleToggle}/>
               </div>
