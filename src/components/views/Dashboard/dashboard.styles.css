@@ -128,7 +128,7 @@
 .sidebar {
   background-color: #fff;
   width: 18em;
-  height: calc(100vh - 80px);
+  height: calc(100vh);
   border-right: 1px solid #bdc3c7;
 }
 
@@ -261,7 +261,7 @@ th:nth-of-type(1) {
   border-top-left-radius: 8px;
 }
 
-th:nth-of-type(5) {
+th:nth-of-type(6) {
   border-top-right-radius: 8px;
 }
 

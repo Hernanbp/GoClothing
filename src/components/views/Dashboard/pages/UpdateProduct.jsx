@@ -1,5 +1,6 @@
 import axios from "axios"
 import React, { useState } from "react"
+import FileBase64 from "react-file-base64"
 import { Link } from "react-router-dom"
 
 export const UpdateProduct = () => {
@@ -7,6 +8,7 @@ export const UpdateProduct = () => {
   const [title, setTitle] = useState("")
   const [description, setDescription] = useState("")
   const [price, setPrice] = useState(0)
+  const [image, setImage] = useState("")
   const [id, setId] = useState("")
 
   const handleUpdate = async (e) => {
@@ -18,7 +20,7 @@ export const UpdateProduct = () => {
         title,
         description,
         price,
-        image: "https://picsum.photos/200/300",
+        image,
         category: "Clothes",
       }
     )
@@ -57,6 +59,12 @@ export const UpdateProduct = () => {
         name="price"
         value={price}
         onChange={(e) => setPrice(e.target.value)}
+      />
+      <label htmlFor="image">Image</label>
+      <FileBase64
+        type="file"
+        multiple={false}
+        onDone={({ base64 }) => setImage(base64)}
       />
       <div className="buttons-dashboard">
         <Link to="/dashboard/products">
