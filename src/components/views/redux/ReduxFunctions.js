@@ -32,9 +32,14 @@ const initialState = {
 export const cartReducer = (state = initialState, action)=>{
     switch(action.type){
         case "addToCart":
+                const addedProduct={
+                    ...action.payload,
+                    quantity:1
+                }
             return{
                 ...state,
-                cart: [...state.cart, action.payload]
+                cart: [...state.cart, addedProduct]
+                // cart: [...state.cart, action.payload]
             }
         // case "removeFromCart":
         //     return{
