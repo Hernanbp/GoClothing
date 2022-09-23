@@ -65,16 +65,17 @@ header a {
 }
 
 .shop-now a {
-  background: #1e2832;
+  background: #1a293dd4;
   padding: 0.05em 1em;
   width: fit-content;
   display: flex;
   font-size: 1.25rem;
   align-items: center;
   text-transform: capitalize;
+  transition: 0.25s linear;
 }
-.shop-now a:hover{
-  background: #5c7894;
+.shop-now a:hover {
+  background: #b18a75dc;
   color: white;
 }
 .shop-now > a > svg {
@@ -82,7 +83,7 @@ header a {
   transform: scale(0.8);
 }
 
-@media only screen and (min-width:601px) and (max-width: 1100px){ 
+@media only screen and (min-width: 601px) and (max-width: 1100px) {
   header {
     padding: 1em 2rem;
   }
