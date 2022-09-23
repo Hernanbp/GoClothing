@@ -44,8 +44,8 @@ export const Cart = () => {
                 <td></td>
                 <td>PRODUCT</td>
                 <td>PRICE</td>
-                <td>QUANTITY</td>
                 <td>CATEGORY</td>
+                <td>QUANTITY</td>
                 <td>SUBTOTAL</td>
               </tr>
               {cart.length > 0 ? (cart.map((productInCart, i)=>{
@@ -56,8 +56,8 @@ export const Cart = () => {
                     <td style={{color:"rgb(212, 192, 75)", fontWeight:"900"}}>{productInCart.title}</td>
                     <td>{productInCart.price}$</td>
                     <td style={{color:"rgb(212, 192, 75)", fontWeight:"900"}}>{productInCart.category}</td>
-                    <td>{/*productInCart.quantity*/}1=</td>
-                    <td>{/*productInCart.price*productInCart.quantity*/}4500$=</td>
+                    <td>{productInCart.quantity}</td>
+                    <td>{productInCart.price*productInCart.quantity}</td>
                   </tr>
                 )
               }))
@@ -120,11 +120,20 @@ export const Cart = () => {
           <h3>Cart totals</h3>
           <div>
             <p>SUBTOTAL</p>
-            <p>2000(hard)</p>
+            <p>
+              {cart.length <= 0 ? "0" : (cart.reduce((total, product)=>{
+                return total + product.price
+              }))}
+            </p>
           </div>
           <div>
             <p>TOTAL</p>
-            <p>3800(hard)</p>
+            <p>
+              {cart.length <= 0 ? "0" : (
+                cart.reduce((total, product)=>{
+                return total + product.price
+              }))}
+            </p>
           </div>
           <button>Proceed to checkout</button>
         </div>
