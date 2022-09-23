@@ -120,11 +120,20 @@ export const Cart = () => {
           <h3>Cart totals</h3>
           <div>
             <p>SUBTOTAL</p>
-            <p>2000(hard)</p>
+            <p>
+              {cart.length <= 0 ? "0" : (cart.reduce((total, product)=>{
+                return total + product.price
+              }))}
+            </p>
           </div>
           <div>
             <p>TOTAL</p>
-            <p>3800(hard)</p>
+            <p>
+              {cart.length <= 0 ? "0" : (
+                cart.reduce((total, product)=>{
+                return total + product.price
+              }))}
+            </p>
           </div>
           <button>Proceed to checkout</button>
         </div>
