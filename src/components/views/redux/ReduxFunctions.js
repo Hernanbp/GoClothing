@@ -13,6 +13,21 @@ export const removeFromCart = (product) => {
     payload: product,
   }
 }
+
+export const decreaseQuantity = (id) => {
+  return {
+    type: "decreaseQuantity",
+    payload: id,
+  }
+}
+
+export const increaseQuantity = (id) => {
+  return {
+    type: "increaseQuantity",
+    payload: id,
+  }
+}
+
 export const storeAllData = (arr) => {
   return {
     type: "storeAllData",
@@ -43,13 +58,29 @@ export const cartReducer = (state = initialState, action) => {
                 : product
             )
           : [...state.cart, addedProduct],
-
-        // cart: [...state.cart, action.payload]
       }
     case "removeFromCart":
       return {
         ...state,
         cart: state.cart.filter((product) => product._id !== action.payload),
+      }
+    case "decreaseQuantity":
+      return {
+        ...state,
+        cart: state.cart.map((product) =>
+          product._id === action.payload
+            ? { ...product, quantity: product.quantity - 1 }
+            : product
+        ),
+      }
+    case "increaseQuantity":
+      return {
+        ...state,
+        cart: state.cart.map((product) =>
+          product._id === action.payload
+            ? { ...product, quantity: product.quantity + 1 }
+            : product
+        ),
       }
     default: {
       return state

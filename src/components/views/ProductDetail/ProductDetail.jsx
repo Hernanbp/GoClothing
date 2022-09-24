@@ -68,7 +68,7 @@ export const ProductDetail = () => {
                 <ProductSize products={product} />
 
                 <div className="buttons">
-                  <Link to="/products" onClick={() => handleAddToCart(product)}>
+                  <Link to="#" onClick={() => handleAddToCart(product)}>
                     Add to Bag
                   </Link>
                   <span>or</span>

@@ -5,13 +5,24 @@ import { Link } from "react-router-dom"
 import "./styles.css"
 import { Navbar } from "../Navbar/Navbar"
 import { Footer } from "../Footer/Footer"
-import { removeFromCart } from "../redux/ReduxFunctions"
+import { increaseQuantity, removeFromCart } from "../redux/ReduxFunctions"
+import { decreaseQuantity } from "../redux/ReduxFunctions"
+import AddIcon from "@mui/icons-material/Add"
+import RemoveIcon from "@mui/icons-material/Remove"
 
 export const Cart = () => {
   const dispatch = useDispatch()
 
   const handleRemoveFromCart = (id) => {
     dispatch(removeFromCart(id))
+  }
+
+  const handleDecreaseQuantity = (id) => {
+    dispatch(decreaseQuantity(id))
+  }
+
+  const handleIncreaseQuantity = (id) => {
+    dispatch(increaseQuantity(id))
   }
 
   const { error, loading, cart } = useSelector((state) => {
@@ -82,7 +93,27 @@ export const Cart = () => {
                     >
                       {productInCart.category}
                     </td>
-                    <td>{productInCart.quantity}</td>
+                    <td className="quantity-td">
+                      <button
+                        onClick={() =>
+                          productInCart.quantity > 1
+                            ? handleDecreaseQuantity(productInCart._id)
+                            : handleRemoveFromCart(productInCart._id)
+                        }
+                        className="btn-quantity"
+                      >
+                        <RemoveIcon />
+                      </button>
+                      <b>{productInCart.quantity}</b>
+                      <button
+                        onClick={() =>
+                          handleIncreaseQuantity(productInCart._id)
+                        }
+                        className="btn-quantity"
+                      >
+                        <AddIcon />
+                      </button>
+                    </td>
                     <td>{productInCart.price * productInCart.quantity}</td>
                   </tr>
                 ))
@@ -142,11 +173,11 @@ export const Cart = () => {
                       </tr>
                       <tr>
                         <td>QUANTITY:</td>
-                        <td>1=</td>
+                        <td>{productInCart.quantity}</td>
                       </tr>
                       <tr>
                         <td>SUBTOTAL:</td>
-                        <td>4500$=</td>
+                        <td>4500$</td>
                       </tr>
                     </div>
                   )
