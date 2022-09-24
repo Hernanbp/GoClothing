@@ -36,7 +36,14 @@ export const cartReducer = (state = initialState, action) => {
       }
       return {
         ...state,
-        cart: [...state.cart, addedProduct],
+        cart: state.cart.find((product) => product._id === addedProduct._id)
+          ? state.cart.map((product) =>
+              product._id === addedProduct._id
+                ? { ...product, quantity: product.quantity + 1 }
+                : product
+            )
+          : [...state.cart, addedProduct],
+
         // cart: [...state.cart, action.payload]
       }
     case "removeFromCart":
