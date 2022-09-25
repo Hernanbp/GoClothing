@@ -15,8 +15,13 @@
     justify-content: end;
     align-items: center;
     margin-bottom: 1rem;
+    position: relative;
 }
-
+.bestSellers-header-img{
+    position: absolute;
+    top: 5%;
+    right: 0;
+}
 .bestSellers-header > div{
     padding: 200px;
 }
@@ -47,10 +52,12 @@
     padding: 0.5rem;
     font-size: 1.2rem;
     align-items: center;
+    transition: all 0.5s;
 }
 .bestSellers-header > div > button:hover{
     background-color: #F1F1F1;
 }
+
 .bestSellers-footer{
     text-align: center;
     background-color: #F1F1F1;
@@ -119,6 +126,13 @@
     .bestSellers-header > div{
         padding: 3rem;
         width: 100%;
+        text-align: center;
+    }
+    .bestSellers-header-img{
+        width: 30%;
+    }
+    .bestSellers-header > div >p{
+        margin: 1rem auto;
     }
     .bestSellers-footer ul li img{
       width: 100%;
@@ -136,7 +150,9 @@
         display: block;
         text-align: center;
     }
-    
+    .bestSellers-header-img{
+        width: 30%;
+    }
     .bestSellers-header > div{
         padding: 0.5rem;
     }
@@ -154,8 +170,8 @@
     
     .bestSellers-header > div > button{
         margin: 0 0 1rem 0;
-    }
-    /*FALTA ESTA PARTE */
+    } 
+
     .bestSellers-footer h2{
         font-size: 2rem;
     }
