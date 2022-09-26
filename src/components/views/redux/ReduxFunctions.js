@@ -28,6 +28,13 @@ export const increaseQuantity = (id) => {
   }
 }
 
+export const cartTotal = (total) => {
+  return {
+    type: "cartTotal",
+    payload: total,
+  }
+}
+
 export const storeAllData = (arr) => {
   return {
     type: "storeAllData",
@@ -81,6 +88,14 @@ export const cartReducer = (state = initialState, action) => {
             ? { ...product, quantity: product.quantity + 1 }
             : product
         ),
+      }
+    case "cartTotal":
+      return {
+        ...state,
+        cart: state.cart.map((product) => ({
+          ...product,
+          total: product.quantity * product.price,
+        })),
       }
     default: {
       return state
