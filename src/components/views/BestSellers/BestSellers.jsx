@@ -10,7 +10,8 @@ export function BestSellers() {
                 <h1>ZARA</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur id accusantium minima. Dolores ratione, asperiores sint numquam.</p>
                 <button>See Collection</button>
-            </div>
+                
+            </div><img className="bestSellers-header-img" src="../assets/zaraLogo.png" alt="img" />
         </div>
         <ProductSection title={"New Products"}></ProductSection>
         <ProductSection title={"Best Sellers"}></ProductSection>

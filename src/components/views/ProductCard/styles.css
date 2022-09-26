@@ -14,22 +14,21 @@
 .item > div {
   position: relative;
 }
-.item > div > img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  cursor: pointer;
-}
-
 .item > div > button{
-  font-size: 12px;
+  font-size: 14px;
   position: absolute;
   top: 22px;
   left: 0;
   z-index: 0;
   color: white;
   background-color: black;
-  padding: 0 0.2rem;
+  padding: 0 0.3rem;
+  cursor: pointer;
+  transition: all 0.5s;
+
+}
+.item > div > button:hover{
+  background-color: rgb(71, 71, 71);
 }
 
 .item-title {
@@ -46,10 +45,6 @@
   cursor: pointer;
   transition: all 0.5s;
 }
-
-/* .item > div > button:hover{
-  background-color: rgb(71, 71, 71);
-} */
 
 .item-description h3{
   margin-top: 5px;
@@ -192,8 +187,15 @@
   }
   .item > div > img{
     width: 100%;
-    height: 300px;
+    height: 100%;
   }
+  .item-title {
+    cursor: pointer;
+    width: 250px;
+    height: 300px;
+    overflow: hidden;
+  }
+  
 }
 @media only screen and (max-width: 699px) {
   .bestSellers-products{
@@ -217,6 +219,6 @@
   }
   .item > div > img{
     width: 100%;
-    height: 300px;
+    height: 100%;
   }
 }

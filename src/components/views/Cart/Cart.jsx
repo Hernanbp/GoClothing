@@ -122,7 +122,7 @@ export const Cart = () => {
                   <td></td>
                   <td></td>
                   <td></td>
-                  <td>
+                  <td >
                     <h3>Sorry, the cart is empty!</h3>
                   </td>
                   <td></td>
@@ -183,8 +183,8 @@ export const Cart = () => {
                   )
                 })
               ) : (
-                <tr>
-                  <td>
+                <tr className="sorry">
+                  <td >
                     <h3>Sorry, the cart is empty!</h3>
                   </td>
                 </tr>
