@@ -121,7 +121,6 @@
     border-bottom: 2px solid #000;
     cursor: pointer;
 }
-
 @media only screen and (min-width:701px) and (max-width: 1100px) {
     .bestSellers-header > div{
         padding: 3rem;

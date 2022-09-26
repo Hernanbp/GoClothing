@@ -35,7 +35,7 @@ export function ProductCard({ products }) {
       <div key={products._id} className="card-container"> 
           <div className="item"> 
             <div className="item-title">
-              <img src={products.image} alt=""/>
+              <Link to={`/products/${products.category}/${products._id}`}><img src={products.image} alt=""/></Link>
               <button onClick={() => handleAddToCart(products.product)}>SALE</button>{/*HORRIBLE, pero para implementar REDUX*/}
             </div >
             <div className="item-description">
@@ -45,7 +45,7 @@ export function ProductCard({ products }) {
                   <div>
                     {/* <button onClick={() => handleAddToCart(products.product)}>Shop</button>HORRIBLE, pero para implementar REDUX */}
                     <p> {`$`+ products.price}</p>
-                    <Link to={`/products/${products.category}/${products._id}`}>Más..</Link>
+                    <Link to={`/products/${products.category}/${products._id}`}>More..</Link>
                   </div>
               </div>
             </div>

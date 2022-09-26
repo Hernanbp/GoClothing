@@ -17,7 +17,7 @@ export default function ProductSection (props) {
             <div>
                 <h2>{title}</h2>
                 <div className="bestSellers-main-list">
-                    <div>
+                    <div className="bestSellers-main-list-auto">
                         <ul>
                             <li>All Products</li>
                             <li>T-Shirt</li>

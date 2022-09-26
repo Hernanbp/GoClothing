@@ -61,6 +61,9 @@ footer a {
   display: flex;
   flex-direction: column;
 }
+.data > div > div > h4 {
+  cursor: default;
+}
 .data > div > div > ul > li {
   transition: transform 0.2s;
 }
@@ -87,6 +90,7 @@ footer a {
 
 .social p {
   margin-bottom: 39px;
+  cursor: default;
 }
 
 .social > div {

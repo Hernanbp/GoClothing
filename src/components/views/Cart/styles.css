@@ -35,6 +35,14 @@
   border: none;
   border-top: 1.5px rgb(238, 238, 238) solid;
 }
+.sorry{
+  text-align: center;
+  display: flex;
+}
+.sorry > td{
+  width: 100%;
+}
+
 .cart-right {
   display: flex;
   flex-direction: column;

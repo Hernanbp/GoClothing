@@ -1,6 +1,7 @@
 import './styles.css'
 
 import { TwitterIcon, FacebookIcon, LinkedinIcon, DribbbleIcon, ArrowTopIcon } from '../../svgs'
+import { Link } from "react-router-dom"
 
 
 export const Footer = () => {
@@ -10,7 +11,9 @@ export const Footer = () => {
             <section className="data">
                 <div className='data-class'>
                     <div className='social'>
-                        <img src="../assets/logo.png" alt="coral_logo" />
+                        
+              <Link to="/"><img src="../assets/logo.png" alt="coral_logo" /></Link>
+
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
