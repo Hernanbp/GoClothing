@@ -9,6 +9,7 @@ export const CreateNewProduct = () => {
   const [price, setPrice] = useState(0)
   const [image, setImage] = useState("")
   const [products, setProducts] = useState([])
+  const [category, setCategory] = useState([])
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -20,12 +21,16 @@ export const CreateNewProduct = () => {
         description,
         price,
         image,
-        category: "Clothes",
+        category,
       }
     )
 
     setProducts([...products, resp.data])
-    console.log(resp)
+    setTitle("")
+    setDescription("")
+    setPrice(0)
+    setImage("")
+    setCategory([])
   }
 
   return (
@@ -52,6 +57,19 @@ export const CreateNewProduct = () => {
         value={price}
         onChange={(e) => setPrice(e.target.value)}
       />
+      <label htmlFor="category">category</label>
+      <select
+        value={category}
+        name="category"
+        onChange={(e) => setCategory(e.target.value)}
+      >
+        <option></option>
+        <option value="Pants">Pants</option>
+        <option value="Shoes">Shoes</option>
+        <option value="Purses">Purses</option>
+        <option value="T-Shirts">T-Shirts</option>
+        <option value="Jackets">Jackets</option>
+      </select>
       <label htmlFor="image">Image</label>
       <FileBase64
         type="file"
