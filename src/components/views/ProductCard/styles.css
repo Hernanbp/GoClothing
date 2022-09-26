@@ -22,8 +22,13 @@
   z-index: 0;
   color: white;
   background-color: black;
-  padding: 0 0.2rem;
+  padding: 0 0.3rem;
   cursor: pointer;
+  transition: all 0.5s;
+
+}
+.item > div > button:hover{
+  background-color: rgb(71, 71, 71);
 }
 
 .item-title {
