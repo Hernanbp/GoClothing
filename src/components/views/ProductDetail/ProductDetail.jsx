@@ -10,6 +10,7 @@ import Swal from "sweetalert2"
 import axios from "axios"
 import "./styles.css"
 
+
 export const ProductDetail = () => {
   const dispatch = useDispatch()
 
@@ -55,6 +56,10 @@ export const ProductDetail = () => {
         <>
           <Navbar />
           <section className="product-section">
+            {
+              /*Es mejor que sea una flecha en vez de BACK */
+            }
+          <Link to="/" className="button-back">BACK</Link>
             <div className="product-container">
               <div className="product-img">
                 <img src={product.image} alt="product_img" />
