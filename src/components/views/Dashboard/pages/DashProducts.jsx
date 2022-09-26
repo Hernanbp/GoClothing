@@ -2,6 +2,7 @@ import axios from "axios"
 import { useEffect, useState } from "react"
 import SearchIcon from "@mui/icons-material/Search"
 import DeleteIcon from "@mui/icons-material/Delete"
+import { SkeletonTable } from "../SkeletonTable"
 
 export const DashProducts = () => {
   // const [products, setProducts] = useState([])
@@ -118,7 +119,7 @@ export const DashProducts = () => {
         />
       </form>
       {loading ? (
-        <p>Loading...</p>
+        <SkeletonTable />
       ) : (
         <table>
           <tbody>
