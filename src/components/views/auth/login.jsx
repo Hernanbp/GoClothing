@@ -30,7 +30,7 @@ const navigate = useNavigate()
 
  const validationSchema = Yup.object().shape({
     userName: Yup.string().required("* Required field"),
-    password: Yup.string().min(6, "* Min 6 characters").required("* Required field")
+    password: Yup.string().min(4, "* Min 4 characters").required("* Required field")
  });
 
 const onSubmit = () => {
