@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react"
-import { useParams, Link } from "react-router-dom"
+import { useParams, Link, useNavigate } from "react-router-dom"
 import { getProductById } from "../../../helpers/getProductById"
 import { Navbar } from "../../views"
 import { ProductSize } from "./ProductSize"
@@ -13,14 +13,25 @@ import "./styles.css"
 
 export const ProductDetail = () => {
   const dispatch = useDispatch()
+  const navigate = useNavigate();
 
   const handleAddToCart = (product) => {
-    dispatch(addToCart(product))
-    Swal.fire({
-      icon: "success",
-      title: "agregaste al carrito",
-      timer: 1000,
-    })
+    if (localStorage.getItem("user")) {
+      dispatch(addToCart(product))
+      Swal.fire({
+        icon: "success",
+        title: "agregaste al carrito",
+        timer: 1000,
+      })
+    }   
+    if ( !localStorage.getItem("user") ) {
+      Swal.fire({
+        icon: "error",
+        title: "You must first log in",
+        timer: 2000
+      })
+      navigate(-1)
+    }
   }
 
   const [dataFromApi, setDataFromApi] = useState([])
