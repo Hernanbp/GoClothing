@@ -2,14 +2,25 @@ import "./ProductSectionStyles.css"
 import  {ProductCard} from "../../ProductCard/ProductCard"
 
 import {useSelector} from "react-redux"
-
+import { useState } from "react";
+import { useEffect } from "react";
 
 export default function ProductSection (props) {
+    const [limit, setLimit] = useState(null)
+
     const {title} = props;
 
     const{apiData} = useSelector(state=>{
         return state.allApiDataReducer;
     })
+
+    console.log(apiData);
+    useEffect(() => {
+        setLimit(apiData.slice(0, 4))
+    }, [apiData])
+
+    console.log(limit);
+
 
   return (
     <>
@@ -26,14 +37,14 @@ export default function ProductSection (props) {
                         <button>Show All</button>
                     </div>
                     <div className="bestSellers-products">
-                        {apiData.map( (item)=>{
+                        {limit.map( (item)=>{
                         return (
                             <ProductCard
                             key={item.id}
                             products={item}
                         />
-                            )}
                         )}
+                    )}       
                     </div>
                 </div>
             </div>
