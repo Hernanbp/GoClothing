@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/goClothing/static/css/main.f6c56ba6.css",
+    "main.js": "/goClothing/static/js/main.a844c2d9.js",
+    "static/media/image-category-2.png": "/goClothing/static/media/image-category-2.e9833c98b0bc4feddd5b.png",
+    "static/media/zaraBackground.png": "/goClothing/static/media/zaraBackground.4f49753c21e2b33c94c5.png",
+    "static/media/brand.svg": "/goClothing/static/media/brand.76e1f7e95a1af0919edf15b8f973ae30.svg",
+    "static/media/logo.svg": "/goClothing/static/media/logo.ba62b6714e9fd7280c88e10aec656ccb.svg",
+    "index.html": "/goClothing/index.html",
+    "main.f6c56ba6.css.map": "/goClothing/static/css/main.f6c56ba6.css.map",
+    "main.a844c2d9.js.map": "/goClothing/static/js/main.a844c2d9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f6c56ba6.css",
+    "static/js/main.a844c2d9.js"
+  ]
+}
