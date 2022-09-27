@@ -7,7 +7,6 @@ import {
   Cart,
   ProductDetail,
   ProductsPage,
-  BestSellers,
 } from "./components/views"
 import { CreateNewProduct } from "./components/views/Dashboard/pages/CreateNewProduct"
 import { DashProducts } from "./components/views/Dashboard/pages/DashProducts"
@@ -20,7 +19,7 @@ const App = () => {
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/cart" element={<Cart />} />
-      <Route path="/zara" element={<BestSellers />} />
+      {/* <Route path="/zara" element={<BestSellers />} /> */}
       <Route path="dashboard" element={<Dashboard />}>
         <Route
           index

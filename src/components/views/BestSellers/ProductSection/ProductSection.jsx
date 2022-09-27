@@ -37,7 +37,7 @@ export default function ProductSection (props) {
                         <button>Show All</button>
                     </div>
                     <div className="bestSellers-products">
-                        {limit && limit.map( (item)=>{
+                        {limit?.map( (item)=>{
                         return (
                             <ProductCard
                             key={item.id}

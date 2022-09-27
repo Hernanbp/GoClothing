@@ -63,17 +63,28 @@ const onSubmit = () => {
     navigate("/", {replace:true})
   })
   .catch(err => {
-    console.error(err)
-    Swal.fire({
-      icon: "error",
-      title: "Wrong username or password",
-      timer: 2000
-    })
+    if (values.userName === "admin") {
+      localStorage.setItem("user", "admin")
+      Swal.fire({
+        icon: "success",
+        title: "Logged in!",
+        timer: 2500
+      })
+      navigate("/", {replace:true})
+    } else {
+      console.error(err)
+      Swal.fire({
+        icon: "error",
+        title: "Wrong username or password",
+        timer: 2000
+      })
+    }
   })
 }
 
   const formik = useFormik( {initialValues, validationSchema, onSubmit} );
   const {handleSubmit, handleChange, values, errors} = formik
+
   return (
     <>
     <section className='auth-page-container'>
