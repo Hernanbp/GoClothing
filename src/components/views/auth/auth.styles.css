@@ -48,6 +48,7 @@
 
 .auth-container {
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
   width: 50%;
@@ -261,6 +262,12 @@
   font-style: normal;
   font-size: 11px;
   color: #db5a73;
+}
+
+.go-home-button{
+  position: absolute;
+  top: 16px;
+  right: 16px;
 }
 
 @media only screen and (max-width: 800px) {

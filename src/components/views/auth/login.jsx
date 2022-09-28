@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link} from "react-router-dom"
 import { useNavigate } from "react-router-dom"
 import { useFormik } from "formik"
@@ -11,6 +11,15 @@ import axios from 'axios';
 
 export const Login = () => {
 
+  const navigate = useNavigate();
+
+    useEffect(() => {
+    if (localStorage.getItem("user")) {
+      navigate(-1)
+    }
+  }, [navigate])
+  
+
   const linkStyle = {
     textDecoration: 'none',
     fontWeight: 600,
@@ -21,7 +30,6 @@ export const Login = () => {
     marginLeft: '6px'
   };
 
-const navigate = useNavigate()
 
   let initialValues = {
     userName:"",
@@ -92,6 +100,7 @@ const onSubmit = () => {
         <div className='auth-img'></div>
 
         <div className='auth-container'>
+          <Link className='go-home-button' to="/">Go to home</Link>
           <div className='auth'>
               <img className='logo' src={logo} alt="brand_logo" />
               <div className='title'>
