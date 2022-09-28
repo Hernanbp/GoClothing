@@ -51,6 +51,9 @@ export function Navbar() {
                 <div>
                   <h5>Welcome {user}!</h5>
                   <button onClick={closeUser}>X</button>
+                  {
+                    localStorage.getItem('user') === "admin" && <Link to="/dashboard">Panel</Link>
+                  }
                 </div>
                 :<Link to="/login"> <PersonIcon /></Link>}
                 {<Link to="/cart"> <ShoppingBagIcon /> </Link>}

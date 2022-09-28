@@ -1,10 +1,22 @@
-import { Link, Outlet } from "react-router-dom"
+import { Link, Outlet, useNavigate } from "react-router-dom"
 import { Sidebar } from "./Sidebar"
 import "./dashboard.styles.css"
 import logo from "../../svgs/logo.svg"
 import LogoutIcon from "@mui/icons-material/Logout"
+import Swal from "sweetalert2"
 
 export const Dashboard = () => {
+
+  const navigate = useNavigate();
+
+  if (localStorage.getItem('user') !== "admin") {
+    navigate("/", {replace:true})
+    Swal.fire({
+      icon: "error",
+      title: "You have to be a superuser to enter here",
+      timer: 2000
+    })
+  }
   return (
     <div className="dashboard">
       <div className="dashboard-nav-container">

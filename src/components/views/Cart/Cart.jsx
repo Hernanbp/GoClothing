@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { ProductCard } from "../ProductCard/ProductCard"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import "./styles.css"
 import { Navbar } from "../Navbar/Navbar"
 import { Footer } from "../Footer/Footer"
@@ -9,8 +9,22 @@ import { increaseQuantity, removeFromCart } from "../redux/ReduxFunctions"
 import { decreaseQuantity } from "../redux/ReduxFunctions"
 import AddIcon from "@mui/icons-material/Add"
 import RemoveIcon from "@mui/icons-material/Remove"
+import Swal from "sweetalert2"
 
 export const Cart = () => {
+
+  const navigate = useNavigate();
+
+  if (!localStorage.getItem("user")) {
+    navigate("/login", {replace:true})
+    Swal.fire({
+      icon: "error",
+      title: "You must first log in",
+      timer: 2000
+    })
+  }
+
+
   const dispatch = useDispatch()
 
   const handleRemoveFromCart = (id) => {
@@ -39,6 +53,8 @@ export const Cart = () => {
   window.addEventListener("resize", resizeListener)
 
   console.log("este es el cart en CART: ", cart)
+
+
 
   return (
     <div className="cart" onLoad={resizeListener}>
