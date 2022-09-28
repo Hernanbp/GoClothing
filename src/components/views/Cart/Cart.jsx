@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { ProductCard } from "../ProductCard/ProductCard"
-import { Link, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import "./styles.css"
 import { Navbar } from "../Navbar/Navbar"
 import { Footer } from "../Footer/Footer"

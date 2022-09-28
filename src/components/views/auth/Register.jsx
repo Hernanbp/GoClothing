@@ -6,10 +6,19 @@ import logo from '../../svgs/logo.svg'
 import Swal from 'sweetalert2';
 import "./auth.styles.css"
 import axios from "axios"
+import { useEffect } from 'react';
 
 export const Register = () => {
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (localStorage.getItem("user")) {
+      navigate(-1)
+    }
+  }, [navigate])
+  
+
 
   const linkStyle = {
     textDecoration: 'none',
@@ -66,6 +75,7 @@ export const Register = () => {
         <div className='auth-img'></div>
 
         <div className='auth-container'>
+          <Link className='go-home-button' to="/">Go to home</Link>
           <div className='auth'>
               <img className='logo' src={logo} alt="brand_logo" />
               <div className='title'>
