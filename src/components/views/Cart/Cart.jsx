@@ -40,19 +40,19 @@ export const Cart = () => {
   }
 
   const { error, loading, cart } = useSelector((state) => {
-    console.log(state.cartReducer) // SOLO el reducer del carrito
+    // console.log(state.cartReducer) // SOLO el reducer del carrito
     return state.cartReducer
   })
 
   const [showPhone, setShowPhone] = useState()
-  console.log(window.innerWidth)
+  // console.log(window.innerWidth)
   function resizeListener() {
     setShowPhone(window.innerWidth)
   }
   //por si cambia en la misma pantalla
   window.addEventListener("resize", resizeListener)
 
-  console.log("este es el cart en CART: ", cart)
+  // console.log("este es el cart en CART: ", cart)
 
 
 
@@ -63,7 +63,7 @@ export const Cart = () => {
       <h2>Cart</h2>
       {
         /* algun icono de un carrito */
-        console.log(cart)
+        // console.log(cart)
       }
       <span id="width"></span>
       <div className="cart-container">
@@ -138,7 +138,7 @@ export const Cart = () => {
                   <td></td>
                   <td></td>
                   <td></td>
-                  <td >
+                  <td>
                     <h3>Sorry, the cart is empty!</h3>
                   </td>
                   <td></td>
@@ -154,7 +154,7 @@ export const Cart = () => {
               {cart.length > 0 ? (
                 cart.map((productInCart, i) => {
                   return (
-                    <div>
+                    <>
                       <tr>
                         <td className="td-img">
                           <img
@@ -195,12 +195,12 @@ export const Cart = () => {
                         <td>SUBTOTAL:</td>
                         <td>4500$</td>
                       </tr>
-                    </div>
+                    </>
                   )
                 })
               ) : (
                 <tr className="sorry">
-                  <td >
+                  <td>
                     <h3>Sorry, the cart is empty!</h3>
                   </td>
                 </tr>
