@@ -6,17 +6,16 @@ import LogoutIcon from "@mui/icons-material/Logout"
 import Swal from "sweetalert2"
 
 export const Dashboard = () => {
+  const navigate = useNavigate()
 
-  const navigate = useNavigate();
-
-  if (localStorage.getItem('user') !== "admin") {
-    navigate("/", {replace:true})
-    Swal.fire({
-      icon: "error",
-      title: "You have to be a superuser to enter here",
-      timer: 2000
-    })
-  }
+  // if (localStorage.getItem('user') !== "admin") {
+  //   navigate("/", {replace:true})
+  //   Swal.fire({
+  //     icon: "error",
+  //     title: "You have to be a superuser to enter here",
+  //     timer: 2000
+  //   })
+  // }
   return (
     <div className="dashboard">
       <div className="dashboard-nav-container">

@@ -301,3 +301,34 @@ table tr:nth-child(odd) {
   flex-direction: column;
   gap: 0.5em;
 }
+
+/*  media queries */
+
+@media (max-width: 800px) {
+  .sidebar {
+    display: none;
+  }
+
+  table > tbody > tr > th:nth-child(3) {
+    border-top-left-radius: 8px;
+  }
+
+  table > tbody > tr > td:nth-child(3) {
+    font-weight: bold;
+  }
+
+  table > tbody > tr > th:nth-child(2),
+  th:nth-child(1),
+  td:nth-child(2),
+  td:nth-child(1) {
+    display: none;
+  }
+
+  /* responsive table */
+}
+
+@media (max-width: 500px) {
+  .dashboard-nav > a > img {
+    display: none;
+  }
+}
