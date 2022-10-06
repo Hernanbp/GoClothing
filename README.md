@@ -3,7 +3,9 @@
 
 This was a collaborative project made for the Alkemy Acceleration program.
 
+## Live
 
+https://go-clothing-twxt.vercel.app/
 
 ## Tech Stack
 
@@ -12,7 +14,7 @@ This was a collaborative project made for the Alkemy Acceleration program.
 **Server:** Node, Express, MongoDB
 
 
-## Screenshots
+## Preview
 
 ![App Screenshot](https://i.imgur.com/hsCLyRY.png)
 
