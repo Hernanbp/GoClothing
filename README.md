@@ -30,7 +30,7 @@ This was a collaborative project made for the Alkemy Acceleration program.
 
 ## Installation
 
-Install my-project with yarn
+Install project with yarn
 
 ```bash
   yarn install 
